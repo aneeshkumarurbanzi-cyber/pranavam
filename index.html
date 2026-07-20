@@ -1,0 +1,4340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Gourishankaram - Sacred Wisdom & Vedic Rituals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+<style>
+/* ── DESIGN SYSTEM & CSS RESET ────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bk: #FAF8F4;         /* Warm ivory - main background */
+  --dk: #F2EDE3;         /* Warm cream - secondary background */
+  --dk2: #E8E0D0;        /* Deeper warm cream - tertiary */
+  --gold: #9A7B1E;       /* Antique dark gold */
+  --gold-glow: rgba(201, 162, 39, 0.35);
+  --gold-light: rgba(154, 123, 30, 0.1);
+  --gb: #C9A227;         /* Antique bright gold */
+  --saf: #C45B1A;        /* Deep saffron */
+  --red: #7B1E2E;        /* Deep temple maroon */
+  --cr: #1C1512;         /* Near-black charcoal - primary text */
+  --crd: rgba(28, 21, 18, 0.65); /* Secondary text */
+  --cx: 'Cinzel', Georgia, serif;
+  --lt: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --pd: clamp(1.5rem, 6vw, 5rem);
+  --mx: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bk);
+  color: var(--cr);
+  font-family: var(--lt);
+  font-size: 1rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── ULTRA-PREMIUM PRELOADER & CURTAIN UNVEIL ────────────────────────────── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.preloader-curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: radial-gradient(circle at center, #FAF8F4 0%, #F4EDE0 100%);
+  z-index: 1;
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 0 0 50px rgba(154, 123, 30, 0.15);
+}
+
+.preloader-curtain.left {
+  left: 0;
+  border-right: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.preloader-curtain.right {
+  right: 0;
+  border-left: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+#preloader.fade-out .preloader-curtain.left {
+  transform: translateX(-100%);
+}
+
+#preloader.fade-out .preloader-curtain.right {
+  transform: translateX(100%);
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease 0.8s, visibility 0.5s ease 0.8s;
+}
+
+.loader-container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 2.5rem 3rem;
+  border-radius: 24px;
+  background: rgba(250, 248, 244, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 60px rgba(154, 123, 30, 0.12), inset 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+#preloader.fade-out .loader-container {
+  opacity: 0;
+  transform: scale(0.9) translateY(-20px);
+}
+
+.mandala-wrapper {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mandala-glow-ring {
+  position: absolute;
+  inset: -15px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.25) 0%, rgba(201, 162, 39, 0) 70%);
+  animation: pulseHalo 3s ease-in-out infinite;
+}
+
+.mandala-svg-outer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spinMandalaCW 25s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.4));
+}
+
+.mandala-svg-inner {
+  position: absolute;
+  inset: 18px;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  animation: spinMandalaCCW 18s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(196, 91, 26, 0.35));
+}
+
+.om-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: var(--cx);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--gb);
+  transform: translate(-50%, -50%);
+  animation: pulseOm 2.5s ease-in-out infinite;
+  z-index: 3;
+}
+
+.loader-bar-wrap {
+  width: 220px;
+  height: 4px;
+  background: rgba(154, 123, 30, 0.15);
+  border-radius: 10px;
+  margin: 1.2rem auto 0.8rem;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #9A7B1E 0%, #C9A227 50%, #ffd700 100%);
+  border-radius: 10px;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.8);
+}
+
+.loader-percentage {
+  font-family: var(--cx);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-top: 0.2rem;
+}
+
+.loader-status {
+  font-size: 0.82rem;
+  color: var(--crd);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  height: 22px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+@keyframes spinMandalaCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinMandalaCCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes pulseHalo {
+  0%, 100% { opacity: 0.4; transform: scale(0.95); }
+  50% { opacity: 0.9; transform: scale(1.1); }
+}
+
+@keyframes pulseOm {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.12);
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.95));
+  }
+}
+
+/* ── SCROLL PROGRESS INDICATOR ────────────────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gb) 50%, #ffd700 100%);
+  z-index: 10002;
+  box-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
+  transition: width 0.1s linear;
+}
+
+/* ── AMBIENT AUDIO TOGGLE BUTTON ──────────────────────────────────────────── */
+.audio-btn {
+  background: rgba(250, 248, 244, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 20px;
+  color: var(--gold);
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  font-family: var(--lt);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.audio-btn:hover {
+  background: var(--gold-light);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+  transform: translateY(-1px);
+}
+
+.audio-btn.playing {
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.2) 0%, rgba(196, 91, 26, 0.15) 100%);
+  border-color: var(--gb);
+  color: var(--gb);
+  box-shadow: 0 0 15px rgba(201, 162, 39, 0.4);
+}
+
+.audio-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  display: inline-block;
+}
+
+.audio-btn.playing .audio-pulse-dot {
+  animation: audioPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes audioPulse {
+  0%, 100% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 4px currentColor); }
+}
+
+/* ── BACK TO TOP FLOATING BUTTON ──────────────────────────────────────────── */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(250, 248, 244, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(28, 21, 18, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: var(--gold);
+  color: #1C1512;
+  border-color: var(--gb);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(201, 162, 39, 0.35);
+}
+
+/* ── HEADER / NAV ──────────────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem var(--pd);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(180deg, rgba(250,248,244,0.9) 0%, rgba(250,248,244,0) 100%);
+  border-bottom: 1px solid transparent;
+}
+
+nav.solid {
+  background: rgba(250, 248, 244, 0.97);
+  backdrop-filter: blur(16px);
+  padding: 0.95rem var(--pd);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 24px rgba(28, 21, 18, 0.08);
+}
+
+.logo {
+  font-family: var(--cx);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--gb);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  transition: opacity 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.95;
+}
+
+.logo span {
+  display: block;
+  font-size: 0.62rem;
+  color: var(--crd);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  color: var(--crd);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gb);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-r {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 4px;
+  color: var(--gold);
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  font-family: var(--lt);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: var(--gold-light);
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.book-btn {
+  background: linear-gradient(135deg, var(--gold) 0%, #aa7c11 100%);
+  color: #1C1512;
+  border: none;
+  border-radius: 4px;
+  padding: 0.55rem 1.3rem;
+  font-family: var(--lt);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+  background: linear-gradient(135deg, var(--gb) 0%, var(--gold) 100%);
+}
+
+.ham {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.ham span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--cr);
+  transition: all 0.3s ease;
+}
+
+.ham.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.ham.open span:nth-child(2) { opacity: 0; }
+.ham.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mmenu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(250, 248, 244, 0.99);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.mmenu.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mmenu a {
+  color: var(--cr);
+  font-family: var(--cx);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.mmenu a:hover {
+  color: var(--gb);
+}
+
+/* ── HERO SECTION ─────────────────────────────────────────────────────────── */
+@keyframes heroShimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes heroGlowOrb {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50%       { opacity: 1.0; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 120px 0 80px;
+  /* Warm ivory shimmer — matches the site's light classic theme */
+  background: linear-gradient(
+    -45deg,
+    #FAF8F4, #F5EDD8, #FBF6EE,
+    #EFE5CE, #FAF8F4, #F7F1E5,
+    #F2E9D6, #FAF8F4
+  );
+  background-size: 400% 400%;
+  animation: heroShimmer 20s ease infinite;
+}
+
+/* Soft gold radial glow behind the content */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(700px, 95vw);
+  height: min(700px, 95vw);
+  background: radial-gradient(circle,
+    rgba(201, 162, 39, 0.18) 0%,
+    rgba(154, 123, 30, 0.09) 40%,
+    transparent 70%
+  );
+  animation: heroGlowOrb 7s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px;
+  }
+}
+
+#pc {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.om {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14rem, 32vw, 26rem);
+  color: rgba(154, 123, 30, 0.055);
+  animation: omSpin 120s linear infinite;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 0;
+}
+
+@keyframes omSpin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── SACRED POOJA HALL BACKGROUND WITH MOUSE PARALLAX ────────────────────── */
+.pooja-hall-bg {
+  position: absolute;
+  inset: -45px;
+  width: calc(100% + 90px);
+  height: calc(100% + 90px);
+  background: url('./temple_pooja_hall.png') center/cover no-repeat;
+  opacity: 0.22;
+  filter: sepia(0.2) saturate(1.15) brightness(0.95);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.8s ease;
+  will-change: transform;
+}
+
+/* ── DIYA OIL LAMP COMPONENT ────────────────────────────────────────────── */
+.diya-lamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 28px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 6px;
+  transition: transform 0.3s ease;
+}
+
+.diya-lamp:hover {
+  transform: scale(1.25);
+}
+
+.diya-base {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 10px;
+  background: linear-gradient(180deg, #ffd700 0%, #aa7c11 100%);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px rgba(154, 123, 30, 0.6);
+}
+
+.diya-base::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 4px;
+}
+
+.diya-flame {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 14px;
+  background: radial-gradient(ellipse at bottom, #ffffff 0%, #ffc107 40%, #ff5722 80%, transparent 100%);
+  border-radius: 50% 50% 35% 35%;
+  animation: diyaFlicker 1.8s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 10px #ff9800);
+}
+
+@keyframes diyaFlicker {
+  0% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 0.9; }
+  25% { transform: translateX(-50%) scale(1.18) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 14px #ffc107); }
+  50% { transform: translateX(-50%) scale(0.9) rotate(-1.5deg); opacity: 0.85; }
+  75% { transform: translateX(-50%) scale(1.1) rotate(2.5deg); opacity: 0.98; }
+  100% { transform: translateX(-50%) scale(1) rotate(0deg); opacity: 0.9; }
+}
+
+/* ── CUSTOM MAGNETIC CURSOR AURA (PREMIUM AWWWARDS STYLE) ────────────────── */
+@media (pointer: fine) {
+  body {
+    cursor: default;
+  }
+  
+  #cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--gb);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 100000;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out, background-color 0.3s ease;
+  }
+  
+  #cursor-aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid rgba(201, 162, 39, 0.45);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(1px);
+  }
+  
+  body.cursor-hover #cursor-aura {
+    width: 58px;
+    height: 58px;
+    border-color: var(--gb);
+    background: rgba(201, 162, 39, 0.12);
+  }
+
+  body.cursor-hover #cursor-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: #ffd700;
+  }
+}
+
+/* ── SPECULAR LIGHT REFLECTION SHIMMER FOR CARDS ──────────────────────────── */
+.sv-c, .gal-card, .news-card, .ts-c {
+  position: relative;
+  overflow: hidden;
+}
+
+.sv-c::before, .gal-card::before, .news-card::before, .ts-c::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(212, 175, 55, 0.18) 25%,
+    transparent 65%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.sv-c:hover::before, .gal-card:hover::before, .news-card:hover::before, .ts-c:hover::before {
+  opacity: 1;
+}
+
+/* ── CLIP-PATH & KINETIC SCROLL REVEALS ────────────────────────────────────── */
+.rv, .rvl, .rvr {
+  opacity: 0;
+  transform: translateY(35px) scale(0.97);
+  filter: blur(4px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rv.in, .rvl.in, .rvr.in {
+  opacity: 1;
+  transform: translateY(0) scale(1.0);
+  filter: blur(0px);
+}
+
+.hero-c {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 var(--pd);
+  pointer-events: none; /* Let clicks pass to canvas if needed */
+}
+
+.hero-c * {
+  pointer-events: auto; /* Enable hover/clicks back on buttons/text */
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.8rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.45rem 1.1rem;
+}
+
+.hero-title {
+  font-family: var(--cx);
+  font-size: clamp(2.6rem, 5.8vw, 5.4rem);
+  font-weight: 900;
+  line-height: 1.12;
+  color: var(--cr);
+  margin-bottom: 1.8rem;
+}
+
+.hero-title .ln {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUpHero 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-title .ln:nth-child(1) {
+  animation-delay: 0.4s;
+  background: linear-gradient(135deg, #1C1512 40%, #3D2B1F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title .ln:nth-child(2) {
+  animation-delay: 0.6s;
+  background: linear-gradient(135deg, var(--gb) 30%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title .ln:nth-child(3) {
+  animation-delay: 0.8s;
+  background: linear-gradient(135deg, #7B1E2E 40%, #C45B1A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeInUpHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--crd);
+  max-width: 580px;
+  margin: 0 auto 2.6rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpHero 1s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpHero 1s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+}
+
+.hscroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(28, 21, 18, 0.4);
+  animation: scrollPulse 2.5s ease infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, 0); }
+  50% { opacity: 0.85; transform: translate(-50%, 8px); }
+}
+
+/* ── BUTTONS ──────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  font-family: var(--lt);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.b-pri {
+  background: linear-gradient(135deg, var(--gold) 0%, #aa7c11 100%);
+  color: #1C1512;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.b-pri:hover {
+  background: linear-gradient(135deg, var(--gb) 0%, var(--gold) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.b-out {
+  background: transparent;
+  color: var(--cr);
+  border: 1px solid rgba(28, 21, 18, 0.25);
+}
+
+.b-out:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-3px);
+  background: var(--gold-light);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+}
+
+.b-go {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.b-go:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, #aa7c11 100%);
+  color: #1C1512;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* ── SECTION STRUCT ───────────────────────────────────────────────────────── */
+.sec {
+  padding: 7rem var(--pd);
+  position: relative;
+}
+
+.dk-s { background: var(--dk); box-shadow: inset 0 1px 0 rgba(212,175,55,0.1), inset 0 -1px 0 rgba(212,175,55,0.1); }
+.dk2-s { background: var(--dk2); }
+
+.inn {
+  max-width: var(--mx);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sh {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.sh .eyebrow {
+  margin-bottom: 1.2rem;
+}
+
+.st {
+  font-family: var(--cx);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #1C1512 30%, #9A7B1E 70%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ss {
+  color: var(--crd);
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  font-weight: 300;
+}
+
+/* ── ANIMATED REVEAL ──────────────────────────────────────────────────────── */
+.rv { opacity: 0; transform: translateY(35px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.rvl { opacity: 0; transform: translateX(-35px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.rvr { opacity: 0; transform: translateX(35px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+
+.rv.in, .rvl.in, .rvr.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── ABOUT SECTION ────────────────────────────────────────────────────────── */
+.ab-g {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.ab-txt p {
+  color: var(--crd);
+  margin-bottom: 1.4rem;
+  font-size: 1.02rem;
+  font-weight: 300;
+}
+
+.ph-container {
+  position: relative;
+  border-radius: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent);
+  box-shadow: 0 15px 40px rgba(28, 21, 18, 0.15);
+}
+
+.ph-frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: #E8E0D0;
+}
+
+.ph-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ph-container:hover .ph-image {
+  transform: scale(1.06);
+}
+
+.ph-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  background: linear-gradient(180deg, transparent 0%, rgba(20, 14, 10, 0.88) 80%);
+  font-family: var(--cx);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  pointer-events: none;
+}
+
+.ph-border-decor {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--gold);
+  pointer-events: none;
+}
+.ph-decor-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.ph-decor-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.ph-decor-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.ph-decor-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+.st-g {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  margin-top: 2.8rem;
+}
+
+.stt {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stt:hover {
+  transform: translateY(-4px);
+  border-color: rgba(154, 123, 30, 0.5);
+  box-shadow: 0 12px 25px rgba(28, 21, 18, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.stn {
+  font-family: var(--cx);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--gb);
+  line-height: 1;
+}
+
+.stl {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--crd);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* ── SERVICES SECTION ─────────────────────────────────────────────────────── */
+.sv-g {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.sv-c {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 12px;
+  padding: 2.2rem 2rem;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.sv-c::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.sv-c:hover {
+  border-color: rgba(154, 123, 30, 0.5);
+  box-shadow: 0 12px 35px rgba(28, 21, 18, 0.1), 0 0 20px rgba(154, 123, 30, 0.08);
+}
+
+.sv-c:hover::before {
+  opacity: 1;
+}
+
+.sv-ic {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.sv-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--saf);
+  margin-bottom: 0.5rem;
+}
+
+.sv-nm {
+  font-family: var(--cx);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cr);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.sv-ds {
+  font-size: 0.9rem;
+  color: var(--crd);
+  line-height: 1.7;
+  margin-bottom: 1.6rem;
+  font-weight: 300;
+}
+
+.sv-ct {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding-bottom: 2px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.sv-c:hover .sv-ct {
+  color: var(--gb);
+  border-color: var(--gb);
+  padding-right: 5px;
+}
+
+/* ── SACRED TRAVEL SECTION ─────────────────────────────────────────────────── */
+.tr-g {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.dest-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.8rem 0 2.4rem;
+}
+
+.dt {
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+  color: var(--crd);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.dt:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.tr-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 15px 40px rgba(28, 21, 18, 0.15);
+}
+
+.tr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tr-frame:hover .tr-image {
+  transform: scale(1.06);
+}
+
+.tr-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(245, 238, 224, 0.92) 85%);
+  font-family: var(--cx);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  pointer-events: none;
+}
+
+/* ── TESTIMONIALS SECTION ─────────────────────────────────────────────────── */
+.ts-g {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.ts-c {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 12px;
+  padding: 2.2rem 2rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.ts-c:hover {
+  border-color: rgba(154, 123, 30, 0.4);
+  transform: translateY(-4px);
+}
+
+.ts-c::before {
+  content: '”';
+  font-family: var(--cx);
+  font-size: 5rem;
+  color: rgba(154, 123, 30, 0.12);
+  position: absolute;
+  top: 0.2rem;
+  left: 1.5rem;
+  line-height: 1;
+}
+
+.ts-stars {
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+
+.ts-txt {
+  color: var(--crd);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  position: relative;
+  z-index: 1;
+  font-size: 0.94rem;
+  font-weight: 300;
+}
+
+.ts-nm {
+  font-family: var(--cx);
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--gb);
+}
+
+.ts-lc {
+  font-size: 0.78rem;
+  color: rgba(28, 21, 18, 0.45);
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── CONTACT SECTION ──────────────────────────────────────────────────────── */
+.ct-g {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 5rem;
+}
+
+.ct-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ct-cd {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 1.8rem;
+  backdrop-filter: blur(8px);
+}
+
+.ct-tl {
+  font-family: var(--cx);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gb);
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.ct-ln {
+  font-size: 0.9rem;
+  color: var(--crd);
+  margin-bottom: 0.6rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ct-bs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.cf {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem 2.2rem;
+  backdrop-filter: blur(10px);
+}
+
+.cf input, .cf select, .cf textarea {
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  background: rgba(250, 248, 244, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  color: var(--cr);
+  font-family: var(--lt);
+  font-size: 0.92rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.cf input:focus, .cf select:focus, .cf textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(154, 123, 30, 0.18);
+  background: #FFFFFF;
+}
+
+.cf select option {
+  background: #FAF8F4;
+  color: var(--cr);
+}
+
+.cf textarea {
+  height: 125px;
+  resize: vertical;
+}
+
+.cf input::placeholder, .cf textarea::placeholder {
+  color: rgba(28, 21, 18, 0.35);
+}
+
+/* ── FOOTER ───────────────────────────────────────────────────────────────── */
+footer {
+  background: #140E0A;
+  padding: 5rem var(--pd) 2.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+footer .ft-tg { color: rgba(245, 230, 200, 0.7); }
+footer .ftlk { color: rgba(245, 230, 200, 0.65); }
+footer .ftlk:hover { color: #ffd700; }
+footer .ft-b { color: rgba(245, 230, 200, 0.4); }
+
+.ft-in {
+  max-width: var(--mx);
+  margin: 0 auto;
+}
+
+.ft-div {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  margin-bottom: 3.5rem;
+}
+
+.ft-t {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3.5rem;
+}
+
+.ft-lg {
+  font-family: var(--cx);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gb);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.ft-tg {
+  font-size: 0.9rem;
+  color: var(--crd);
+  line-height: 1.7;
+  max-width: 280px;
+  font-weight: 300;
+}
+
+.ftct {
+  font-family: var(--cx);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+.ftlk {
+  display: block;
+  color: var(--crd);
+  font-size: 0.88rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.ftlk:hover {
+  color: var(--gb);
+  padding-left: 3px;
+}
+
+.ft-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(245, 230, 200, 0.04);
+  font-size: 0.8rem;
+  color: rgba(245, 230, 200, 0.35);
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-weight: 300;
+}
+
+/* ── FLOATING CONTROLS ─────────────────────────────────────────────────────── */
+.float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.float a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.float a::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.float a:hover {
+  transform: scale(1.12) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.float a svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.fw { background: #25d366; }
+.fw:hover::after { border-color: #25d366; opacity: 1; }
+
+.ftg { background: #229ed9; }
+.ftg:hover::after { border-color: #229ed9; opacity: 1; }
+
+/* ── GOLD VECTOR DIVIDER ──────────────────────────────────────────────────── */
+.gd {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.22), transparent);
+  max-width: var(--mx);
+  margin: 0 auto;
+}
+
+/* ── RESPONSIVE DESIGN ─────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sv-g { grid-template-columns: repeat(2, 1fr); }
+  .ab-g { grid-template-columns: 1fr; gap: 3.5rem; }
+  .ph-container { max-width: 450px; margin: 0 auto; }
+  .tr-g { grid-template-columns: 1fr; gap: 3.5rem; }
+  .tr-frame { max-width: 550px; margin: 0 auto; }
+  .ct-g { grid-template-columns: 1fr; gap: 3.5rem; }
+  .ft-t { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .ham { display: flex; }
+  .ts-g { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ft-t { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-title { font-size: clamp(2.2rem, 8vw, 3.8rem); }
+  .sec { padding: 5rem var(--pd); }
+}
+
+@media (max-width: 550px) {
+  .sv-g { grid-template-columns: 1fr; gap: 1.5rem; }
+  .st-g { grid-template-columns: 1fr; gap: 1rem; }
+  .book-btn { display: none; }
+  .cf { padding: 2rem 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #pc, .om { display: none; }
+  .rv, .rvl, .rvr { opacity: 1; transform: none; transition: none; }
+  .hero-title .ln, .hero-sub, .hero-ctas { animation: none; opacity: 1; transform: none; }
+  .mandala-svg { animation: none; }
+}
+
+/* ── FLEX CARD WITH IMAGES ────────────────────────────────────────────────── */
+.flex-card {
+  display: grid !important;
+  grid-template-columns: 320px 1fr;
+  gap: 2.2rem;
+  align-items: center;
+  text-align: left;
+}
+.card-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.news-card:hover .card-img {
+  transform: scale(1.06);
+}
+.page-banner {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 3.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 25px rgba(28, 21, 18, 0.12);
+}
+.page-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .flex-card {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+  .page-banner {
+    height: 180px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ── SPA ROUTING ──────────────────────────────────────────────────────────── */
+.page-container {
+  display: none;
+}
+.page-container.active {
+  display: block;
+  animation: fadeInPage 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.nav-links a.nav-active, .mmenu a.nav-active {
+  color: var(--gb) !important;
+}
+.nav-links a.nav-active::after, .mmenu a.nav-active::after {
+  width: 100%;
+}
+
+
+/* ── GALLERY PAGE ─────────────────────────────────────────────────────────── */
+.gal-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.gal-btn {
+  background: transparent;
+  border: 1px solid rgba(154, 123, 30, 0.3);
+  color: var(--crd);
+  padding: 0.55rem 1.4rem;
+  border-radius: 4px;
+  font-family: var(--lt);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.gal-btn:hover, .gal-btn.active {
+  background: var(--gold-light);
+  border-color: var(--gold);
+  color: var(--gb);
+  box-shadow: 0 0 12px rgba(154, 123, 30, 0.18);
+}
+.gal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+.gal-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  cursor: pointer;
+}
+.gal-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(154, 123, 30, 0.5);
+  box-shadow: 0 10px 30px rgba(28, 21, 18, 0.12);
+}
+.gal-img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #E8E0D0;
+}
+.gal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gal-card:hover .gal-img {
+  transform: scale(1.08);
+}
+.gal-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(250,248,244,0) 40%, rgba(20, 14, 10, 0.82) 95%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+.gal-card:hover .gal-overlay {
+  opacity: 1;
+}
+.gal-cat {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--saf);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.gal-title {
+  font-family: var(--cx);
+  font-size: 1.05rem;
+  color: #FAF8F4;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 4, 3, 0.95);
+  backdrop-filter: blur(12px);
+  z-index: 10005;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+.lightbox-caption {
+  font-family: var(--cx);
+  color: #FAF8F4;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.lightbox-desc {
+  color: rgba(245, 230, 200, 0.75);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  max-width: 600px;
+  font-weight: 300;
+}
+.lightbox-close {
+  position: absolute;
+  top: -3.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: #FAF8F4;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.lightbox-close:hover {
+  color: var(--gb);
+}
+
+/* ── COMMUNITY & NEWS PAGE ────────────────────────────────────────────────── */
+.comm-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.5rem;
+}
+.news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.news-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: all 0.3s ease;
+}
+.news-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(28, 21, 18, 0.1);
+}
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--crd);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.news-date {
+  background: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--gold);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+.news-card h3 {
+  font-family: var(--cx);
+  font-size: 1.5rem;
+  color: var(--cr);
+  line-height: 1.3;
+}
+.news-card p {
+  color: var(--crd);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.news-read {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.3s;
+  width: fit-content;
+  cursor: pointer;
+}
+.news-read:hover {
+  color: var(--gb);
+  gap: 0.6rem;
+}
+.cal-sidebar {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 2.2rem 1.8rem;
+  align-self: start;
+  box-shadow: 0 8px 25px rgba(28, 21, 18, 0.1);
+}
+.cal-title {
+  font-family: var(--cx);
+  font-size: 1.25rem;
+  color: var(--cr);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.cal-item {
+  border-left: 3px solid var(--saf);
+  padding-left: 1rem;
+}
+.cal-item.fest {
+  border-left-color: var(--gold);
+}
+.cal-item.astro {
+  border-left-color: #229ed9;
+}
+.cal-item-date {
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cal-item-name {
+  font-size: 0.92rem;
+  color: var(--cr);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+.cal-item-desc {
+  font-size: 0.8rem;
+  color: var(--crd);
+  margin-top: 0.15rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .comm-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ── THANDRIK SCHOOL PAGE ─────────────────────────────────────────────────── */
+.sch-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+.sch-hero p {
+  font-size: 1.1rem;
+  color: var(--crd);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-top: 1.5rem;
+}
+.count-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4.5rem;
+  flex-wrap: wrap;
+}
+.count-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  min-width: 110px;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(28, 21, 18, 0.1);
+}
+.count-num {
+  font-family: var(--cx);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gb);
+  line-height: 1;
+}
+.count-lbl {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--crd);
+  margin-top: 0.65rem;
+  font-weight: 600;
+}
+.sch-form-wrap {
+  max-width: 580px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 3rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 35px rgba(28, 21, 18, 0.1);
+}
+.sch-form-wrap h3 {
+  font-family: var(--cx);
+  font-size: 1.4rem;
+  color: var(--cr);
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+.sch-form-wrap p {
+  font-size: 0.88rem;
+  color: var(--crd);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+.sch-group {
+  display: flex;
+  gap: 0.8rem;
+}
+.sch-group input {
+  flex: 1;
+}
+.success-msg {
+  text-align: center;
+  color: var(--gb);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px dashed var(--gold);
+  background: var(--gold-light);
+  border-radius: 8px;
+  animation: fadeInPage 0.4s ease forwards;
+}
+
+/* ── PAYPAL BOOKING MODAL ─────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 21, 18, 0.65);
+  backdrop-filter: blur(12px);
+  z-index: 10001;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+.modal-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 20px 60px rgba(28, 21, 18, 0.18);
+  border-radius: 16px;
+  padding: 2.8rem 2.5rem;
+  max-width: 520px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: popCard 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--crd);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1;
+}
+.modal-close:hover {
+  color: var(--gold);
+}
+.modal-card h3 {
+  font-family: var(--cx);
+  font-size: 1.6rem;
+  color: var(--cr);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.05em;
+}
+.modal-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(250, 248, 244, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 0.85rem 1.1rem;
+  border-radius: 6px;
+  margin-bottom: 1.4rem;
+}
+.modal-info-lbl {
+  font-size: 0.85rem;
+  color: var(--crd);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.modal-info-val {
+  font-family: var(--cx);
+  font-size: 1.2rem;
+  color: var(--gb);
+  font-weight: 700;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.paypal-btn-wrap {
+  margin-top: 1rem;
+  min-height: 45px;
+}
+.checkout-success {
+  text-align: center;
+  animation: fadeInPage 0.5s ease forwards;
+  padding: 1.5rem 0;
+}
+.success-icon {
+  font-size: 4rem;
+  color: #25d366;
+  margin-bottom: 1.2rem;
+  filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.3));
+}
+.checkout-success h4 {
+  font-family: var(--cx);
+  font-size: 1.4rem;
+  color: var(--cr);
+  margin-bottom: 0.8rem;
+}
+.checkout-success p {
+  color: var(--crd);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+.success-tx-info {
+  background: rgba(250, 248, 244, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  word-break: break-all;
+  text-align: left;
+}
+
+/* ── HERO VIDEO BACKGROUND — hidden on light theme ─────────────────────── */
+.hero-vid {
+  display: none;
+}
+.hero-ovl {
+  display: none;
+}
+
+/* ── SECTION AMBIENT BACKGROUND IMAGE ─────────────────────────────────────── */
+.s-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.s-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.06;
+  filter: sepia(0.35) saturate(0.45) brightness(0.95);
+  transition: transform 12s ease;
+}
+
+/* ── RICHER SECTION GRADIENTS (no flat white) ──────────────────────────────── */
+.dk-s {
+  background: linear-gradient(150deg, #EEE8DC 0%, #E6DCCB 100%) !important;
+}
+.dk2-s {
+  background: linear-gradient(150deg, #E4D9C9 0%, #D9CCB8 100%) !important;
+}
+#services {
+  background: linear-gradient(170deg, #FAF8F4 0%, #F4EDE0 100%);
+}
+#testimonials {
+  background: linear-gradient(140deg, #F6F0E7 0%, #EFE5D5 100%);
+}
+#home .gd {
+  background: linear-gradient(90deg, transparent, rgba(154,123,30,0.2), transparent);
+}
+
+/* Fix hero layer order so particles & text float above video */
+#pc  { z-index: 2 !important; }
+.hero-c { z-index: 3 !important; }
+.hscroll { z-index: 3 !important; }
+.om { z-index: 1 !important; }
+
+/* ── HERO TEXT — dark on light background, natural colour palette ─────── */
+.hero .hero-sub {
+  color: var(--crd);
+}
+.hero .hscroll {
+  color: rgba(28, 21, 18, 0.4);
+}
+
+/* ── SECTION DECORATIVE ACCENT ─────────────────────────────────────────────── */
+.sec::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(154,123,30,0.15), transparent);
+  pointer-events: none;
+}
+
+/* ── ULTRA-RESPONSIVE MEDIA QUERIES (ALL SCREEN SIZES) ────────────────────── */
+@media (max-width: 1200px) {
+  :root {
+    --pd: clamp(1.2rem, 4vw, 3rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 0.85rem var(--pd);
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .ham {
+    display: flex !important;
+  }
+  .comm-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.05rem;
+  }
+  .logo span {
+    display: none;
+  }
+
+  .hero-c {
+    padding: 0 1.2rem;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .hero-ctas {
+    gap: 0.8rem;
+  }
+
+  .sec {
+    padding: 4.5rem var(--pd);
+  }
+  .sh {
+    margin-bottom: 2.5rem;
+  }
+
+  .ab-g {
+    gap: 2rem;
+  }
+
+  .st-g {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .tr-g, .ct-g {
+    gap: 2rem;
+  }
+
+  footer {
+    padding: 3.5rem var(--pd) 2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .audio-btn #audio-btn-txt {
+    display: none;
+  }
+  .audio-btn {
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 0.95rem;
+  }
+  .nav-r {
+    gap: 0.4rem;
+  }
+  .book-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.72rem;
+  }
+
+  .hero {
+    padding: 95px 0 50px;
+  }
+  .hero-c {
+    padding: 0 1rem;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 8.5vw, 2.5rem);
+    margin-bottom: 1.2rem;
+  }
+  .hero-sub {
+    font-size: 0.88rem;
+    margin-bottom: 1.8rem;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .sec {
+    padding: 3.5rem var(--pd);
+  }
+
+  .st-g {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .sv-c, .ts-c, .news-card, .ct-cd, .cf {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .modal-card {
+    padding: 1.8rem 1.2rem;
+    width: 95%;
+    border-radius: 12px;
+  }
+
+  .sch-group {
+    flex-direction: column;
+  }
+
+  .page-banner {
+    height: 140px;
+    margin-bottom: 2rem;
+  }
+
+  /* Floating controls: Telegram/WhatsApp on bottom-right, Back-to-Top on bottom-left */
+  .float {
+    bottom: 1.2rem;
+    right: 1.2rem;
+  }
+
+  #back-to-top {
+    bottom: 1.2rem;
+    left: 1.2rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ── LANDSCAPE PHONE (short viewport) ───────────────────────────────────── */
+@media (max-height: 480px) and (max-width: 900px) {
+  .hero {
+    min-height: 100vh;
+    padding: 65px var(--pd) 35px;
+  }
+  .hero-title {
+    font-size: clamp(1.5rem, 5.5vw, 2.2rem);
+    margin-bottom: 0.9rem;
+  }
+  .hero-sub {
+    font-size: 0.85rem;
+    margin-bottom: 1.4rem;
+  }
+  .hero-ctas {
+    gap: 0.7rem;
+  }
+  .hscroll {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- CUSTOM MAGNETIC CURSOR AURA -->
+<div id="cursor-dot"></div>
+<div id="cursor-aura"></div>
+
+<!-- SCROLL PROGRESS INDICATOR -->
+<div id="scroll-progress"></div>
+
+<!-- ULTRA-PREMIUM PRELOADER -->
+<div id="preloader">
+  <div class="preloader-curtain left"></div>
+  <div class="preloader-curtain right"></div>
+  <div class="loader-container">
+    <div class="mandala-wrapper">
+      <div class="mandala-glow-ring"></div>
+      <svg class="mandala-svg-outer" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" stroke-dasharray="3 1.5" />
+        <circle cx="50" cy="50" r="42" fill="none" stroke="url(#goldGrad)" stroke-width="0.75" />
+        <circle cx="50" cy="50" r="35" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" stroke-dasharray="1.5 1.5" />
+        <path d="M50 6 L55 24 L74 18 L61 34 L79 42 L61 50 L79 58 L61 66 L74 82 L55 76 L50 94 L45 76 L26 82 L39 66 L21 58 L39 50 L21 42 L39 34 L26 18 L45 24 Z" fill="none" stroke="url(#goldGrad)" stroke-width="0.75" />
+        <defs>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffd700" />
+            <stop offset="50%" stop-color="#d4af37" />
+            <stop offset="100%" stop-color="#aa7c11" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <svg class="mandala-svg-inner" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="url(#saffronGrad)" stroke-width="0.6" fill="none">
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(30 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(60 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(90 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(120 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(150 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(180 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(210 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(240 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(270 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(300 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(330 50 50)"/>
+          <path d="M50 18 C53 28 47 28 50 18 Z" transform="rotate(360 50 50)"/>
+        </g>
+        <circle cx="50" cy="50" r="22" fill="none" stroke="url(#saffronGrad)" stroke-width="0.8" />
+        <circle cx="50" cy="50" r="14" fill="none" stroke="url(#saffronGrad)" stroke-width="0.5" stroke-dasharray="1 1" />
+        <defs>
+          <linearGradient id="saffronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#C9A227" />
+            <stop offset="50%" stop-color="#C45B1A" />
+            <stop offset="100%" stop-color="#7B1E2E" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="om-symbol">ॐ</div>
+    </div>
+    <div class="loader-percentage" id="loader-percentage">0%</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar-fill" id="loader-bar-fill"></div>
+    </div>
+    <div class="loader-status" id="loader-status">Aligning with the Cosmos...</div>
+  </div>
+</div>
+
+<!-- HEADER / NAV -->
+<nav id="nav">
+  <a class="logo" onclick="go('home')">
+    <span id="logo-sub">Kerala Rituals · Vedic Jyotish</span>
+    Gourishankaram
+  </a>
+  <div class="nav-links">
+    <a onclick="go('home')" id="nl-home">Home</a>
+    <a onclick="go('about')" id="nl-about">About</a>
+    <a onclick="go('services')" id="nl-services">Services</a>
+    <a onclick="go('travel')" id="nl-travel">Travels</a>
+    <a onclick="go('gallery')" id="nl-gallery">Gallery</a>
+    <a onclick="go('community')" id="nl-community">Community</a>
+    <a onclick="go('school')" id="nl-school">School</a>
+    <a onclick="go('contact')" id="nl-contact">Contact</a>
+  </div>
+  <div class="nav-r">
+    <button class="audio-btn" id="audio-toggle-btn" onclick="toggleAmbientAudio()" title="Toggle ambient sacred sound">
+      <span class="audio-pulse-dot"></span>
+      <span id="audio-btn-txt">Sound Off</span>
+    </button>
+    <button class="lang-btn" id="lang-btn" onclick="toggleLang()">RU</button>
+    <button class="book-btn" onclick="openPaypalModal('Pooja & Homam', 108)" id="book-btn">Book Now</button>
+    <button class="ham" id="ham" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mmenu">
+  <a onclick="go('home');closeMenu()" id="ml-home">Home</a>
+  <a onclick="go('about');closeMenu()" id="ml-about">About</a>
+  <a onclick="go('services');closeMenu()" id="ml-services">Services</a>
+  <a onclick="go('travel');closeMenu()" id="ml-travel">Travels</a>
+  <a onclick="go('gallery');closeMenu()" id="ml-gallery">Gallery</a>
+  <a onclick="go('community');closeMenu()" id="ml-community">Community</a>
+  <a onclick="go('school');closeMenu()" id="ml-school">School</a>
+  <a onclick="go('contact');closeMenu()" id="ml-contact">Contact</a>
+  <button class="btn b-pri" onclick="openPaypalModal('Pooja & Homam', 108);closeMenu()" id="ml-book">Book Now</button>
+</div>
+
+<div class="page-container active" id="page-home">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <!-- Pooja Hall Ambient Backdrop with Mouse Parallax -->
+  <div class="pooja-hall-bg" id="pooja-hall-bg"></div>
+
+  <!-- Video background — multiple sources for coverage; poster shows if all fail -->
+  <div class="hero-vid">
+    <!--
+      Fire-altar / Homam video sources in priority order.
+      Browser stops at the first URL that returns a valid MP4.
+      Poster (static image) is shown immediately while video loads.
+    -->
+    <video
+      autoplay muted loop playsinline
+      poster="https://images.unsplash.com/photo-1598898700688-ef3b11c4c00c?w=1920&q=85&auto=format&fit=crop">
+      <!-- Sacred fire / havan kund / fire altar — Pexels free HD -->
+      <source src="https://videos.pexels.com/video-files/856751/856751-hd_1920_1080_25fps.mp4"  type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/1386454/1386454-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/2310977/2310977-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/4799304/4799304-hd_1920_1080_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/5390744/5390744-hd_1280_720_25fps.mp4"  type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/4778698/4778698-hd_1920_1080_24fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <!-- Overlay: consistent dark scrim so ALL text is readable over any fire video -->
+  <div class="hero-ovl"></div>
+  <canvas id="pc"></canvas>
+  <div class="om">ॐ</div>
+
+  <div class="hero-c">
+    <div style="display:inline-flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem;">
+      <div class="diya-lamp" onclick="playTempleBellSound()" title="Click Diya for Temple Bell"><span class="diya-base"></span><span class="diya-flame"></span></div>
+      <span class="eyebrow" id="h-ey" style="margin-bottom:0;">Traditional Kerala Rituals &amp; Vedic Astrology</span>
+      <div class="diya-lamp" onclick="playTempleBellSound()" title="Click Diya for Temple Bell"><span class="diya-base"></span><span class="diya-flame"></span></div>
+    </div>
+    <h1 class="hero-title">
+      <span class="ln" id="ht1">Sacred Wisdom.</span>
+      <span class="ln" id="ht2">Ancient Rituals.</span>
+      <span class="ln" id="ht3">Lasting Peace.</span>
+    </h1>
+    <p class="hero-sub" id="h-sub">Guruji Maneesh Madhusudanan Potti brings 20+ years of Kerala temple tradition to families across India and Russia — in person and online.</p>
+    <div class="hero-ctas">
+      <button class="btn b-pri" onclick="go('contact')" id="h-ct1">Book a Consultation</button>
+      <button class="btn b-out" onclick="go('services')" id="h-ct2">View Services</button>
+    </div>
+  </div>
+  <div class="hscroll" id="h-sc">Scroll to explore ↓</div>
+</section>
+
+<div class="gd"></div>
+
+<!-- ABOUT GURUJI -->
+<section class="sec dk-s" id="about">
+  <div class="s-bg"><img src="https://images.unsplash.com/photo-1675597056623-74d1e05dc3f0?w=1920&h=1080&fit=crop&q=85" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="inn">
+    <div class="ab-g">
+      <div class="rvl" id="ab-txt">
+        <span class="eyebrow" id="ab-ey">About Guruji</span>
+        <h2 class="st" style="text-align:left;margin-bottom:1.4rem" id="ab-tl">Rooted in Kerala's Ancient Temple Tradition</h2>
+        <p id="ab-p1">Guruji Maneesh Madhusudanan Potti was born into a family of Kerala Namboothiri Brahmins in Thrissur — the cultural capital of Kerala. Trained from childhood under his father and grandfather, he mastered the sacred recitation of Rigveda and Atharvaveda, and the precise performance of Tantric rituals according to Kerala's Tanthrasamuchaya tradition.</p>
+        <p id="ab-p2">Over two decades, Guruji has performed hundreds of Homas, Sevas, and Dosha Parihara rituals for families across India, and has extended his practice to serve the large Hindu community in Russia, traveling regularly to Moscow.</p>
+        
+        <div class="st-g">
+          <div class="stt">
+            <div class="stn" id="s1">0+</div>
+            <div class="stl" id="sl1">Years of Experience</div>
+          </div>
+          <div class="stt">
+            <div class="stn" id="s2">0+</div>
+            <div class="stl" id="sl2">Rituals Performed</div>
+          </div>
+          <div class="stt">
+            <div class="stn" id="s3">0</div>
+            <div class="stl" id="sl3">Countries Served</div>
+          </div>
+          <div class="stt">
+            <div class="stn" id="s4">0%</div>
+            <div class="stl" id="sl4">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="rvr" id="ab-ph" style="transition-delay:.2s">
+        <div class="ph-container">
+          <div class="ph-frame">
+            <img class="ph-image" src="./pranavam_images/guruji.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617875216004-78f15839c578?w=480&h=640&fit=crop&q=85'" alt="Guruji Maneesh Madhusudanan Potti">
+            <div class="ph-glow"></div>
+            <div class="ph-label" id="ab-lbl">Guruji Maneesh Madhusudanan Potti</div>
+          </div>
+          <div class="ph-border-decor ph-decor-tl"></div>
+          <div class="ph-border-decor ph-decor-tr"></div>
+          <div class="ph-border-decor ph-decor-bl"></div>
+          <div class="ph-border-decor ph-decor-br"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gd"></div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="s-bg"><img src="https://images.unsplash.com/photo-1697729444936-8c6a6f643312?w=1920&h=1080&fit=crop&q=85" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="inn">
+    <div class="sh rv" id="sv-head">
+      <span class="eyebrow" id="sv-ey">What We Offer</span>
+      <h2 class="st" id="sv-tl">Sacred Rituals &amp; Spiritual Services</h2>
+      <p class="ss" id="sv-sub">Each service follows Kerala's Tantric tradition, tailored to your family's unique need.</p>
+    </div>
+    <div class="sv-g" id="sv-grid"></div>
+  </div>
+</section>
+
+<div class="gd"></div>
+
+<!-- SACRED TRAVEL -->
+<section class="sec dk2-s" id="travel">
+  <div class="s-bg"><img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1920&h=1080&fit=crop&q=85" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="inn">
+    <div class="tr-g">
+      <div class="rvl" id="tr-l">
+        <span class="eyebrow" id="tr-ey">Sacred Travel</span>
+        <h2 class="st" style="text-align:left" id="tr-tl">Guided Pilgrimages Through Kerala</h2>
+        <p style="color:var(--crd);font-size:1.02rem;margin-bottom:0.8rem;font-weight:300" id="tr-sub">Join our private group pilgrimages to Kerala's most sacred temples. Ritual participation, spiritual guidance, and accommodation included.</p>
+        <div class="dest-wrap" id="dest-wrap"></div>
+        <button class="btn b-go" onclick="go('contact')" id="tr-cta">Enquire About Tours</button>
+      </div>
+      <div class="rvr" id="tr-r" style="transition-delay:.2s">
+        <div class="tr-frame">
+          <img class="tr-image" src="./pranavam_images/kerala_travel.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1625807161536-27903f2200fa?w=800&h=600&fit=crop&q=85'" alt="Sacred Temples of Kerala">
+          <div class="tr-overlay" id="tr-lbl">Kerala · Sacred Temples</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gd"></div>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="testimonials">
+  <div class="s-bg"><img src="https://images.unsplash.com/photo-1605292356183-a77d0a9c9d1d?w=1920&h=1080&fit=crop&q=85" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="inn">
+    <div class="sh rv" id="ts-head">
+      <span class="eyebrow" id="ts-ey">Testimonials</span>
+      <h2 class="st" id="ts-tl">Families We Have Served</h2>
+    </div>
+    <div class="ts-g" id="ts-grid"></div>
+  </div>
+</section>
+
+<div class="gd"></div>
+
+<!-- CONTACT -->
+<section class="sec dk-s" id="contact">
+  <div class="s-bg"><img src="https://images.unsplash.com/photo-1601220840366-d29aedc7e987?w=1920&h=1080&fit=crop&q=85" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="inn">
+    <div class="sh rv" id="ct-head">
+      <span class="eyebrow" id="ct-ey">Contact Us</span>
+      <h2 class="st" id="ct-tl">Reach Guruji</h2>
+      <p class="ss" id="ct-sub">We serve clients in India and Russia. Book a consultation or reach us with any question — we respond within 24 hours.</p>
+    </div>
+    <div class="ct-g">
+      <div class="ct-cards rvl" id="ct-cards">
+        <div class="ct-cd">
+          <div class="ct-tl" id="ct-in-tl">India — Kerala</div>
+          <div class="ct-ln">📍 Thrissur, Kerala, India 680001</div>
+          <div class="ct-ln">📱 WhatsApp: +91 98765 43210</div>
+          <div class="ct-ln">📧 info@pranavaastrology.com</div>
+          <div class="ct-ln">🕐 9:00 AM – 7:00 PM IST</div>
+        </div>
+        <div class="ct-cd">
+          <div class="ct-tl" id="ct-ru-tl">Russia — Moscow</div>
+          <div class="ct-ln">📍 Moscow, Russia</div>
+          <div class="ct-ln">✈️ Telegram: @pranavam_astro</div>
+          <div class="ct-ln">📱 WhatsApp: +7 999 123 4567</div>
+          <div class="ct-ln">🕐 10:00 AM – 6:00 PM MSK</div>
+        </div>
+        <div class="ct-bs">
+          <a href="https://wa.me/919876543210" target="_blank" class="btn b-pri" id="ct-wa">WhatsApp Us</a>
+          <a href="https://t.me/pranavam_astro" target="_blank" class="btn b-go" id="ct-tg">Book via Telegram</a>
+        </div>
+      </div>
+      <div class="rvr" id="ct-form" style="transition-delay:.2s">
+        <div class="cf">
+          <input type="text" id="cf-nm" placeholder="Your Name"/>
+          <input type="email" id="cf-em" placeholder="Email Address"/>
+          <select id="cf-sv">
+            <option value="">Select a Service</option>
+            <option>Pooja &amp; Homam</option>
+            <option>Tantram</option>
+            <option>Dosha Pariharam</option>
+            <option>Jyotish Consultation</option>
+            <option>Vastu Shastram</option>
+            <option>Raksha &amp; Elass</option>
+            <option>Kerala Sacred Travel</option>
+          </select>
+          <textarea id="cf-mg" placeholder="Your Message"></textarea>
+          <button class="btn b-pri" style="width:100%" id="cf-sd">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div> <!-- Close page-home -->
+
+<!-- ── DETAIL PAGE: ABOUT ──────────────────────────────────────────────────── -->
+<div class="page-container" id="page-about">
+  <section class="sec dk-s">
+    <div class="inn">
+      <div class="sh rv">
+        <span class="eyebrow" id="det-ab-ey">About Guruji</span>
+        <h2 class="st" id="det-ab-tl">Detailed Biography & Sacred Lineage</h2>
+      </div>
+      <div style="max-width:800px;margin:0 auto;color:var(--crd);font-size:1.05rem;line-height:1.8;font-weight:300">
+        <p style="margin-bottom:1.5rem" id="det-ab-p1">Guruji Maneesh Madhusudanan Potti represents the ancient temple priest lineage of Kerala. Born in Thrissur, the cultural capital of Kerala, he was trained from childhood in the traditional Gurukula style under his father and grandfather, mastering Rigveda and Atharvaveda recitation and Kerala's Tanthrasamuchaya ritual rules.</p>
+        <p style="margin-bottom:1.5rem" id="det-ab-p2">For over 20 years, Guruji has performed complex Vedic rituals (Homas, Sevas, and Consecrations) and analyzed birth charts (Jyotisham) to guide seekers towards peace and prosperity. His family lineage belongs to the respected temple priests (Thanthris) of central Kerala.</p>
+        <p style="margin-bottom:1.5rem" id="det-ab-p3">Since 2012, Guruji has visited Russia regularly, establishing a large community of spiritual seekers in Moscow and Saint Petersburg. He conducts physical pujas and online consultations, bridging Eastern Vedic wisdom with Western seekers.</p>
+        <div style="background:rgba(22,12,9,0.5);border:1px solid rgba(212,175,55,0.2);border-radius:12px;padding:2.5rem;margin-top:3rem;backdrop-filter:blur(8px)">
+          <h4 style="font-family:var(--cx);color:var(--gb);font-size:1.3rem;margin-bottom:1rem;letter-spacing:0.05em;" id="det-ab-h4">Credentials & Accomplishments</h4>
+          <ul style="list-style:none;padding:0" id="det-ab-ul">
+            <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> <strong>Rigveda & Yajurveda Adhyayana</strong>: Certified recitation and ritual mastery under Brahmaswom Madhom, Thrissur.</li>
+            <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> <strong>Tantric Consecrations</strong>: Conducted and assisted in over 15 temple Pratishtas (consecrations) across Kerala.</li>
+            <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> <strong>Astrology Consultations</strong>: 10,000+ personal horoscopes matched and analyzed globally.</li>
+            <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> <strong>Cultural Bridges</strong>: Recognized by spiritual societies in India and Russia for his work in spreading Vedic knowledge.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── DETAIL PAGE: SERVICES ───────────────────────────────────────────────── -->
+<div class="page-container" id="page-services">
+  <section class="sec">
+    <div class="inn">
+      <div class="sh rv">
+        <span class="eyebrow" id="det-sv-ey">Detailed Offerings</span>
+        <h2 class="st" id="det-sv-tl">Vedic Consultations & Sacred Pujas</h2>
+        <p class="ss" id="det-sv-sub">Explore our comprehensive spiritual services. Book a ritual or consultation with Guruji today.</p>
+      </div>
+      <div class="sv-g" id="det-sv-grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ── DETAIL PAGE: TRAVELS ────────────────────────────────────────────────── -->
+<div class="page-container" id="page-travel">
+  <section class="sec dk2-s">
+    <div class="inn">
+      <div class="sh rv">
+        <span class="eyebrow" id="det-tr-ey">Temple Pilgrimages</span>
+        <h2 class="st" id="det-tr-tl">Kerala Sacred Travels</h2>
+        <p class="ss" id="det-tr-sub">Experience Kerala's spiritual heart. Guruji offers fully guided private pilgrimage packages to historical temples, handling all accommodation, darshan entries, and sacred ceremonies.</p>
+      </div>
+      <div class="page-banner rv">
+        <img src="./pranavam_images/travel_banner.png" onerror="this.src='https://images.unsplash.com/photo-1641666017842-f94246ef2961?w=1200&h=400&fit=crop&q=85'" alt="Kerala Pilgrimage Banner" />
+      </div>
+      <div class="news-grid" style="max-width:900px;margin:0 auto 4rem;" id="det-tr-list"></div>
+      <div class="sch-form-wrap" style="max-width:680px;text-align:center;">
+        <h3 id="det-tr-form-tl">Custom Tour Inquiry</h3>
+        <p id="det-tr-form-sub">Looking for a custom family pilgrimage or specific dates? Submit your inquiry, and Guruji's team will contact you.</p>
+        <button class="btn b-pri" onclick="go('contact')" id="det-tr-form-btn">Inquire Now</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── DETAIL PAGE: GALLERY ────────────────────────────────────────────────── -->
+<div class="page-container" id="page-gallery">
+  <section class="sec">
+    <div class="inn">
+      <div class="sh rv">
+        <span class="eyebrow" id="gal-ey">Spiritual Moments</span>
+        <h2 class="st" id="gal-tl">Sacred Gallery</h2>
+        <p class="ss" id="gal-sub">Moments captured during temple rituals, pilgrimages, and spiritual gatherings.</p>
+      </div>
+      <div class="gal-filters" id="gal-filters">
+        <button class="gal-btn active" onclick="filterGallery('all')" id="gfb-all">All</button>
+        <button class="gal-btn" onclick="filterGallery('temple')" id="gfb-temple">Temples</button>
+        <button class="gal-btn" onclick="filterGallery('ritual')" id="gfb-ritual">Rituals</button>
+        <button class="gal-btn" onclick="filterGallery('guruji')" id="gfb-guruji">Guruji</button>
+      </div>
+      <div class="gal-grid" id="gal-grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ── DETAIL PAGE: COMMUNITY ──────────────────────────────────────────────── -->
+<div class="page-container" id="page-community">
+  <section class="sec dk-s">
+    <div class="inn">
+      <div class="sh rv">
+        <span class="eyebrow" id="com-ey">Spiritual updates</span>
+        <h2 class="st" id="com-tl">Community & News</h2>
+        <p class="ss" id="com-sub">Stay updated with upcoming planetary transits, festival dates, and articles from Guruji.</p>
+      </div>
+      <div class="page-banner rv">
+        <img src="./pranavam_images/community_banner.png" onerror="this.src='https://images.unsplash.com/photo-1605378624981-f9c7d3bd8c23?w=1200&h=400&fit=crop&q=85'" alt="Community Banner" />
+      </div>
+      <div class="comm-layout">
+        <div class="news-grid" id="news-grid-target"></div>
+        <div class="cal-sidebar">
+          <div class="cal-title">
+            <span>📅</span>
+            <span id="cal-side-tl">Panchangam & Festivals</span>
+          </div>
+          <div class="cal-list" id="cal-list-target"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── DETAIL PAGE: THANDRIK SCHOOL ────────────────────────────────────────── -->
+<div class="page-container" id="page-school">
+  <section class="sec">
+    <div class="inn">
+      <div class="sch-hero rv">
+        <span class="eyebrow" id="sch-ey">Coming Soon</span>
+        <h2 class="st" id="sch-tl">Thandrik School of Kerala</h2>
+        <p id="sch-sub">Guruji Maneesh Madhusudanan Potti is establishing a school to teach the precise practice of Kerala temple rituals, Rigveda recitation, and traditional Vedic astrology. Training will be offered to international seekers with English and Russian translations.</p>
+      </div>
+      <div class="count-wrap">
+        <div class="count-box">
+          <div class="count-num" id="cd-d">00</div>
+          <div class="count-lbl" id="cd-dl">Days</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-h">00</div>
+          <div class="count-lbl" id="cd-hl">Hours</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-m">00</div>
+          <div class="count-lbl" id="cd-ml">Minutes</div>
+        </div>
+        <div class="count-box">
+          <div class="count-num" id="cd-s">00</div>
+          <div class="count-lbl" id="cd-sl">Seconds</div>
+        </div>
+      </div>
+      <div class="sch-form-wrap rv">
+        <h3 id="sch-form-tl">Get Notified Upon Launch</h3>
+        <p id="sch-form-ds">Join the waiting list to receive curriculum details, schedules, and enrollment options.</p>
+        <div id="sch-form-container">
+          <form class="sch-group" onsubmit="submitSchool(event)">
+            <input type="email" id="sch-email" placeholder="Your Email Address" required/>
+            <button class="btn b-pri" type="submit" id="sch-btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── DETAIL PAGE: CONTACT ────────────────────────────────────────────────── -->
+<div class="page-container" id="page-contact">
+  <section class="sec dk-s">
+    <div class="inn">
+      <div class="sh rv" id="det-ct-head">
+        <span class="eyebrow" id="det-ct-ey">Get in Touch</span>
+        <h2 class="st" id="det-ct-tl">Contact Guruji Maneesh</h2>
+        <p class="ss" id="det-ct-sub">Reach our offices in India or Russia. Book personal consultations or temple rituals.</p>
+      </div>
+      <div class="ct-g" id="det-ct-grid-target"></div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ── PAYPAL CHECKOUT MODAL ───────────────────────────────────────────────── -->
+<div id="paypal-modal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closePaypalModal()">×</button>
+    <div id="paypal-modal-content">
+      <h3 id="ppm-tl">Book Spiritual Service</h3>
+      <div class="modal-info-row">
+        <span class="modal-info-lbl" id="ppm-lbl-srv">Selected Service</span>
+        <span class="modal-info-val" id="ppm-val-srv">Astrology Consultation</span>
+      </div>
+      <div class="modal-info-row">
+        <span class="modal-info-lbl" id="ppm-lbl-amt">Amount Due</span>
+        <span class="modal-info-val" id="ppm-val-amt">$51.00</span>
+      </div>
+      <form class="modal-form" onsubmit="event.preventDefault();">
+        <input type="text" id="ppm-name" placeholder="Your Full Name" required />
+        <input type="email" id="ppm-email" placeholder="Your Email Address" required />
+        <input type="text" id="ppm-phone" placeholder="WhatsApp / Phone Number" required />
+        <input type="date" id="ppm-date" required />
+        <div class="paypal-btn-wrap" id="paypal-button-container"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ── GALLERY LIGHTBOX MODAL ──────────────────────────────────────────────── -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+    <div id="lightbox-desc" class="lightbox-desc"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-div"></div>
+    <div class="ft-t">
+      <div>
+        <div class="ft-lg">Gourishankaram</div>
+        <p class="ft-tg" id="ft-tag">Bringing the light of Kerala's temple tradition to your home.</p>
+      </div>
+      <div>
+        <div class="ftct" id="ft-sv-t">Services</div>
+        <a class="ftlk" onclick="go('services')">Pooja &amp; Homam</a>
+        <a class="ftlk" onclick="go('services')">Tantram</a>
+        <a class="ftlk" onclick="go('services')">Dosha Pariharam</a>
+        <a class="ftlk" onclick="go('services')">Jyotish Consultation</a>
+        <a class="ftlk" onclick="go('services')">Vastu Shastram</a>
+        <a class="ftlk" onclick="go('services')">Raksha &amp; Elass</a>
+      </div>
+      <div>
+        <div class="ftct" id="ft-cn-t">Connect</div>
+        <a href="https://wa.me/919876543210" target="_blank" class="ftlk">WhatsApp India</a>
+        <a href="https://t.me/pranavam_astro" target="_blank" class="ftlk">Telegram Bot</a>
+        <a href="https://wa.me/79991234567" target="_blank" class="ftlk">WhatsApp Russia</a>
+      </div>
+    </div>
+    <div class="ft-b">
+      <span id="ft-copy">© 2025 Gourishankaram. All rights reserved.</span>
+      <span id="ft-srv">Serving families in India &amp; Russia.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float">
+<a href="https://wa.me/919876543210" target="_blank" class="fw" title="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.83.496 3.62 1.437 5.2l-1.42 5.187 5.32-1.396c1.513.824 3.208 1.258 4.937 1.258 5.525 0 10.005-4.48 10.005-10.004S17.528 2 12.004 2zm5.727 14.12c-.25.706-1.442 1.298-2.004 1.378-.49.07-1.12.126-3.26-.757-2.73-1.13-4.49-3.92-4.622-4.103-.137-.183-1.077-1.43-1.077-2.73 0-1.296.677-1.935.952-2.214.23-.23.61-.345.89-.345.09 0 .178.005.258.01.242.012.366.027.528.41.2.474.685 1.666.745 1.787.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.253.313-.36.42-.12.12-.245.25-.104.492.14.24.624 1.03 1.34 1.665.92.818 1.696 1.07 1.94 1.19.244.12.385.1.527-.06.142-.16.613-.71.776-.954.164-.244.33-.2.553-.12.224.08 1.417.67 1.66 1.01.245.34.245.513.122.86z"/>
+    </svg>
+  </a>
+  <a href="https://t.me/pranavam_astro" target="_blank" class="ftg" title="Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.6.15-.15 2.7-2.48 2.75-2.7.005-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.78 1.13-5.03 3.33-.47.32-.9.48-1.28.47-.42-.01-1.23-.24-1.83-.44-.74-.24-1.33-.37-1.28-.79.02-.22.33-.45.92-.69 3.6-1.57 6-2.6 7.2-3.1 3.42-1.42 4.13-1.66 4.6-.17.1.04.22.11.23.23.01.12.01.25-.01.37z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+// ── DATA & LOCALIZATION ──────────────────────────────────────────────────────
+const T = {
+en: {
+  lang: 'RU',
+  nav: { home: 'Home', about: 'About', services: 'Services', travel: 'Travels', gallery: 'Gallery', community: 'Community', school: 'School', contact: 'Contact', book: 'Book Now' },
+  hero: {
+    ey: 'Traditional Kerala Rituals & Vedic Astrology',
+    t: ['Sacred Wisdom.', 'Ancient Rituals.', 'Lasting Peace.'],
+    sub: 'Guruji Maneesh Madhusudanan Potti brings 20+ years of Kerala temple tradition to families across India and Russia — in person and online.',
+    ct1: 'Book a Consultation',
+    ct2: 'View Services',
+    sc: 'Scroll to explore ↓'
+  },
+  about: {
+    ey: 'About Guruji',
+    tl: "Rooted in Kerala's Ancient Temple Tradition",
+    p1: 'Guruji Maneesh Madhusudanan Potti was born into a family of Kerala Namboothiri Brahmins in Thrissur — the cultural capital of Kerala. Trained from childhood under his father and grandfather, he mastered the sacred recitation of Rigveda and Atharvaveda, and the precise performance of Tantric rituals according to Kerala\'s Tanthrasamuchaya tradition.',
+    p2: 'Over two decades, Guruji has performed hundreds of Homas, Sevas, and Dosha Parihara rituals for families across India, and has extended his practice to serve the large Hindu community in Russia, traveling regularly to Moscow.',
+    lbl: 'Guruji Maneesh Madhusudanan Potti',
+    sl: ['Years of Experience', 'Rituals Performed', 'Countries Served', 'Client Satisfaction']
+  },
+  services: {
+    ey: 'What We Offer',
+    tl: 'Sacred Rituals & Spiritual Services',
+    sub: "Each service follows Kerala's Tantric tradition, tailored to your family's unique need.",
+    cta: 'Book This Service',
+    items: [
+      { ic: '🔥', nm: 'Pooja & Homam', tg: 'Most Popular', ds: 'Traditional fire rituals (Ganapathi Homam, Navagraha Homam, Mrityunjaya Homam) for prosperity, health, and the removal of life\'s obstacles.', price: 108 },
+      { ic: '🕉️', nm: 'Tantram', tg: 'Traditional', ds: "Kerala Tantric rituals for the protection of home and family — Bhagavathi Seva, Ashtamangalya Prasnam, and Devaprasnam.", price: 151 },
+      { ic: '🌙', nm: 'Dosha Pariharam', tg: 'Remedy', ds: 'Rituals to neutralize Kala Sarpa Dosha, Pitru Dosha, Mangalya Dosha, and all nine Navagraha planetary afflictions.', price: 108 },
+      { ic: '⭐', nm: 'Jyotish Consultation', tg: 'Astrology', ds: 'Vedic birth chart reading, Dasha analysis, horoscope matching (jothisham), and muhurta selection for new ventures.', price: 51 },
+      { ic: '🏠', nm: 'Vastu Shastram', tg: 'Space', ds: 'Home and office energy analysis and remedies. Align your environment with positive Vastu forces for health and prosperity.', price: 151 },
+      { ic: '🧿', nm: 'Raksha & Elass', tg: 'Protection', ds: 'Handcrafted sacred protection talismans (Elass) energized through Vedic ritual. Guards against negative energies and evil eye (Drishti).', price: 75 }
+    ]
+  },
+  travel: {
+    ey: 'Sacred Travel',
+    tl: 'Guided Pilgrimages Through Kerala',
+    sub: "Join our private group pilgrimages to Kerala's most sacred temples. Ritual participation, spiritual guidance, and accommodation included.",
+    cta: 'Enquire About Tours',
+    lbl: 'Kerala · Sacred Temples',
+    dest: ['Guruvayur Sree Krishna Temple', 'Sabarimala Sree Ayyappa', 'Padmanabhaswamy Temple — Thiruvananthapuram', 'Thrissur Pooram — The Temple Festival', 'Ettumanoor Mahadeva Temple', 'Vaikom Mahadeva Temple']
+  },
+  testimonials: {
+    ey: 'Testimonials',
+    tl: 'Families We Have Served',
+    items: [
+      { nm: 'Natalia Ivanova', lc: 'Moscow, Russia', tx: 'I came to Guruji during a very difficult time. After the Dosha Pariharam ritual, things began to change. My husband\'s business recovered and peace returned to our home. I am forever grateful.' },
+      { nm: 'Rajesh Menon', lc: 'Thrissur, Kerala', tx: 'Guruji performed the Ganapathi Homam before we moved into our new home. His deep knowledge and calm presence made the experience deeply meaningful for our entire family.' },
+      { nm: 'Svetlana Petrova', lc: 'Saint Petersburg, Russia', tx: 'The astrology consultation was incredibly accurate. Guruji identified issues I had not mentioned and gave practical remedies. I have since recommended him to many friends in our community.' }
+    ]
+  },
+  contact: {
+    ey: 'Contact Us',
+    tl: 'Reach Guruji',
+    sub: 'We serve clients in India and Russia. Book a consultation or reach us with any question — we respond within 24 hours.',
+    intl: 'India — Kerala',
+    rutl: 'Russia — Moscow',
+    wa: 'WhatsApp Us',
+    tg: 'Book via Telegram',
+    nm: 'Your Name',
+    em: 'Email Address',
+    sv: 'Select a Service',
+    mg: 'Your Message',
+    sd: 'Send Message'
+  },
+  footer: {
+    tag: "Bringing the light of Kerala's temple tradition to your home.",
+    sv: 'Services',
+    cn: 'Connect',
+    cp: '© 2025 Gourishankaram. All rights reserved.',
+    sr: 'Serving families in India & Russia.'
+  },
+  preloader: [
+    "Aligning with the Cosmos...",
+    "Decoding Planetary Positions...",
+    "Consulting the Sacred Vedas...",
+    "Chanting Sacred Mantras...",
+    "Ready to Explore..."
+  ],
+  paypal: {
+    tl: 'Book Spiritual Service',
+    srv: 'Selected Service',
+    amt: 'Amount Due',
+    name: 'Your Full Name',
+    email: 'Your Email Address',
+    phone: 'WhatsApp / Phone Number',
+    date: 'Preferred Date',
+    pay: 'Pay & Confirm Booking',
+    successTl: 'Booking Confirmed!',
+    successDs: 'Thank you, {name}. Your booking for "{service}" has been processed successfully. Guruji\'s team will reach out to you via WhatsApp/Email within 24 hours.',
+    txId: 'Transaction ID:'
+  },
+  detAbout: {
+    ey: 'About Guruji',
+    tl: 'Detailed Biography & Sacred Lineage',
+    p1: 'Guruji Maneesh Madhusudanan Potti represents the ancient temple priest lineage of Kerala. Born in Thrissur, the cultural capital of Kerala, he was trained from childhood in the traditional Gurukula style under his father and grandfather, mastering Rigveda and Atharvaveda recitation and Kerala\'s Tanthrasamuchaya ritual rules.',
+    p2: 'For over 20 years, Guruji has performed complex Vedic rituals (Homas, Sevas, and Consecrations) and analyzed birth charts (Jyotisham) to guide seekers towards peace and prosperity. His family lineage belongs to the respected temple priests (Thanthris) of central Kerala.',
+    p3: 'Since 2012, Guruji has visited Russia regularly, establishing a large community of spiritual seekers in Moscow and Saint Petersburg. He conducts physical pujas and online consultations, bridging Eastern Vedic wisdom with Western seekers.',
+    h4: 'Credentials & Accomplishments',
+    li1: 'Rigveda & Yajurveda Adhyayana: Certified recitation and ritual mastery under Brahmaswom Madhom, Thrissur.',
+    li2: 'Tantric Consecrations: Conducted and assisted in over 15 temple Pratishtas (consecrations) across Kerala.',
+    li3: 'Astrology Consultations: 10,000+ personal horoscopes matched and analyzed globally.',
+    li4: 'Cultural Bridges: Recognized by spiritual societies in India and Russia for his work in spreading Vedic knowledge.'
+  },
+  detServices: {
+    ey: 'Detailed Offerings',
+    tl: 'Vedic Consultations & Sacred Pujas',
+    sub: 'Explore our comprehensive spiritual services. Book a ritual or consultation with Guruji today.',
+    book: 'Book Service'
+  },
+  detTravel: {
+    ey: 'Temple Pilgrimages',
+    tl: 'Kerala Sacred Travels',
+    sub: 'Experience Kerala\'s spiritual heart. Guruji offers fully guided private pilgrimage packages to historical temples, handling all accommodation, darshan entries, and sacred ceremonies.',
+    formTl: 'Custom Tour Inquiry',
+    formSub: 'Looking for a custom family pilgrimage or specific dates? Submit your inquiry, and Guruji\'s team will contact you.',
+    formBtn: 'Inquire Now',
+    items: [
+      {
+        nm: 'South Kerala Temple Tour',
+        ds: 'A sacred pilgrimage to the majestic Sree Padmanabhaswamy Temple, the ancient rock-cut cave temples, and Vaikom Mahadeva Temple. Includes guided meditation, temple entry permits, and luxury stay.',
+        duration: '5 Days / 4 Nights',
+        price: 'Price: $650 per person (Deposit: $150)',
+        amt: 150
+      },
+      {
+        nm: 'North Kerala & Sabarimala Tour',
+        ds: 'Venture into central-north Kerala. Visit the famous Sree Krishna Temple of Guruvayur, Vadakkunnathan Temple, and Sabarimala. Complete with special Pujas conducted by Guruji, traditional stays, and vegetarian feast.',
+        duration: '7 Days / 6 Nights',
+        price: 'Price: $850 per person (Deposit: $250)',
+        amt: 250
+      }
+    ]
+  },
+  gallery: {
+    ey: 'Spiritual Moments',
+    tl: 'Sacred Gallery',
+    sub: 'Moments captured during temple rituals, pilgrimages, and spiritual gatherings.',
+    cats: { all: 'All', temple: 'Temples', ritual: 'Rituals', guruji: 'Guruji' },
+    items: [
+      { title: 'Guruvayur Temple Elephant', cat: 'temple', desc: 'Sacred temple elephants lining up for the daily seeveli procession at Guruvayur Sree Krishna Temple.' },
+      { title: 'Vedic Fire Ritual (Homam)', cat: 'ritual', desc: 'Guruji Maneesh performing Ganapathi Homam at sunrise for health and positive energy.' },
+      { title: 'Guruji in Moscow', cat: 'guruji', desc: 'Guruji giving a lecture on Vedic Astrology (Jyotisham) to spiritual practitioners in Moscow.' },
+      { title: 'Padmanabhaswamy Temple Pond', cat: 'temple', desc: 'The holy Padmatheertham pond in front of the grand gopuram of Sree Padmanabhaswamy Temple.' },
+      { title: 'Bhagavathi Seva Pooja', cat: 'ritual', desc: 'A traditional Kerala puja dedicated to Goddess Bhagavathi for protection and prosperity.' },
+      { title: 'Guruji Performing Abhishekam', cat: 'guruji', desc: 'Guruji performing ritual bath (abhishekam) to the deity at a Thrissur temple.' }
+    ]
+  },
+  community: {
+    ey: 'Spiritual Updates',
+    tl: 'Community & News',
+    sub: 'Stay updated with upcoming planetary transits, festival dates, and articles from Guruji.',
+    readMore: 'Read Full Post',
+    calendarTitle: 'Panchangam & Festivals',
+    news: [
+      {
+        date: 'July 15, 2026',
+        title: 'Guru Purnima Celebrations 2026',
+        desc: 'Join us in offering gratitude to our gurus. Guruji will conduct a special Guru Pooja and Rigveda chanting in Thrissur. Online broadcast will be available for Russian community members.'
+      },
+      {
+        date: 'June 28, 2026',
+        title: 'Saturn Retrograde in Pisces: Remedies',
+        desc: 'Saturn turns retrograde in Pisces today. Guruji advises performing Shani Dosha Parihara pujas (such as sesame oil lamp offerings) to mitigate sudden blockages and align with internal growth.'
+      },
+      {
+        date: 'June 10, 2026',
+        title: 'Karkidaka Vavu Bali Ancestral Rituals',
+        desc: 'The annual ancestral rites of Kerala, Karkidaka Vavu Bali, are approaching. Guruji will perform Pitru Tarpanam rites on the banks of Nila River for families wishing to appease departed ancestors.'
+      }
+    ],
+    calendar: [
+      { date: 'Jul 3, 2026', name: 'Ashadha Ekadashi', cat: 'fest', desc: 'Sacred day for fasting and prayer dedicated to Lord Vishnu.' },
+      { date: 'Jul 15, 2026', name: 'Guru Purnima', cat: 'fest', desc: 'Full moon day celebrating the spiritual master and Vedavyasa.' },
+      { date: 'Jul 17, 2026', name: 'Sun Enters Cancer', cat: 'astro', desc: 'Karkidaka Sankranti. Start of Karkidaka month in Kerala calendar.' },
+      { date: 'Aug 11, 2026', name: 'Karkidaka Vavu Bali', cat: 'fest', desc: 'Ancestral ritual day. Special offerings for departed souls.' }
+    ]
+  },
+  school: {
+    ey: 'Coming Soon',
+    tl: 'Thandrik School of Kerala',
+    sub: 'Guruji Maneesh Madhusudanan Potti is establishing a school to teach the precise practice of Kerala temple rituals, Rigveda recitation, and traditional Vedic astrology. Training will be offered to international seekers with English and Russian translations.',
+    formTl: 'Get Notified Upon Launch',
+    formDs: 'Join the waiting list to receive curriculum details, schedules, and enrollment options.',
+    btn: 'Register',
+    emailPl: 'Your Email Address',
+    success: 'Thank you! You have been successfully registered on the waiting list. We will email you once registrations open.'
+  }
+},
+ru: {
+  lang: 'EN',
+  nav: { home: 'Главная', about: 'О нас', services: 'Услуги', travel: 'Паломничество', gallery: 'Галерея', community: 'Сообщество', school: 'Школа', contact: 'Контакты', book: 'Записаться' },
+  hero: {
+    ey: 'Традиционные ритуалы Кералы и Ведическая Астрология',
+    t: ['Священная Мудрость.', 'Древние Ритуалы.', 'Вечный Покой.'],
+    sub: 'Гуруджи Прасад Намбудири несёт более 20 лет традиций керальских храмов семьям по всей Индии и России — очно и онлайн.',
+    ct1: 'Записаться на консультацию',
+    ct2: 'Посмотреть услуги',
+    sc: 'Прокрутите вниз ↓'
+  },
+  about: {
+    ey: 'О Гуруджи',
+    tl: 'Уходящий корнями в древние традиции храмов Кералы',
+    p1: 'Гуруджи Прасад Намбудири родился в семье брахминов-намбудири в Тришуре — культурной столице Кералы. С детства обученный отцом и дедом, он освоил священное чтение Ригведы и Атхарваведы и точное проведение тантрических ритуалов согласно традиции Тантрасамуччая.',
+    p2: 'За два десятилетия Гуруджи провёл сотни Хом, Сев и ритуалов Доша Парихарам для семей по всей Индии, а также распространил свою практику на индуистскую общину в России, регулярно посещая Москву.',
+    lbl: 'Гуруджи Прасад Намбудири',
+    sl: ['Лет опыта', 'Ритуалов проведено', 'Стран обслуживания', 'Довольных клиентов']
+  },
+  services: {
+    ey: 'Наши услуги',
+    tl: 'Священные ритуалы и духовные услуги',
+    sub: 'Каждая услуга выполняется в строгом соответствии с тантрическими традициями Кералы.',
+    cta: 'Записаться',
+    items: [
+      { ic: '🔥', nm: 'Пуджа и Хомам', tg: 'Популярное', ds: 'Традиционные огненные ритуалы (Ганапати Хомам, Навагра Хомам, Мритьюнджая Хомам) для процветания, здоровья и устранения препятствий.', price: 108 },
+      { ic: '🕉️', nm: 'Тандрам', tg: 'Традиционное', ds: 'Керальские тантрические ритуалы для защиты дома и семьи — Бхагавати Сева, Аштамангалья Прашнам и Девапрашнам.', price: 151 },
+      { ic: '🌙', nm: 'Доша Pariharam', tg: 'Исцеление', ds: 'Ритуалы для нейтрализации Кала Сарпа Доша, Питру Доша, Мангалья Доша и неблагоприятных планетных влияний.', price: 108 },
+      { ic: '⭐', nm: 'Консультация Джйотиш', tg: 'Астрология', ds: 'Ведическая астрология — чтение натальной карты, анализ периодов Даши, совместимость гороскопов (джотишам) и выбор мухурты.', price: 51 },
+      { ic: '🏠', nm: 'Васту Шастрам', tg: 'Пространство', ds: 'Анализ и гармонизация энергии жилых и коммерческих помещений. Корректировка пространства по законам Васту.', price: 151 },
+      { ic: '🧿', nm: 'Ракша и Элас', tg: 'Защита', ds: 'Защитные талисманы (Элас) ручной работы, заряженные ведическими мантрами. Защита от сглаза (Дришти) и негативных энергий.', price: 75 }
+    ]
+  },
+  travel: {
+    ey: 'Паломничество',
+    tl: 'Духовные путешествия через Кералу',
+    sub: 'Присоединитесь к нашим частным паломничествам к священным храмам Кералы. Духовное руководство и участие в ритуалах включены.',
+    cta: 'Узнать о турах',
+    lbl: 'Керала · Священные Храмы',
+    dest: ['Храм Гуруваюр Шри Кришна', 'Шабаримала Шри Айяппа', 'Храм Падманабхасвами — Тируванантапурам', 'Тришур Пурам — Праздник храмов', 'Храм Эттуманур Махадева', 'Храм Вайком Махадева']
+  },
+  testimonials: {
+    ey: 'Отзывы',
+    tl: 'Семьи, которым мы помогли',
+    items: [
+      { nm: 'Наталья Иванова', lc: 'Москва, Россия', tx: 'Я обратилась к Гуруджи в очень трудный период для нашей семьи. После ритуала Доша Парихарам всё начало меняться. Бизнес мужа восстановился, и мир вернулся в наш дом.' },
+      { nm: 'Раджеш Менон', lc: 'Тришур, Керала', tx: 'Гуруджи провёл Ганапати Хомам и консультацию по Васту перед нашим переездом. Его глубокие знания и спокойное присутствие сделали весь опыт глубоко значимым.' },
+      { nm: 'Светлана Петрова', lc: 'Санкт-Петербург, Россия', tx: 'Консультация по астрологии была невероятно точной. Гуруджи выявил проблемы, о которых я не упоминала, и дал практические рекомендации. Рекомендую всем друзьям.' }
+    ]
+  },
+  contact: {
+    ey: 'Связаться с нами',
+    tl: 'Связаться с Гуруджи',
+    sub: 'Мы обслуживаем клиентов в Индии и России. Запишитесь на консультацию — отвечаем в течение 24 часов.',
+    intl: 'Индия — Керала',
+    rutl: 'Россия — Москва',
+    wa: 'Написать в WhatsApp',
+    tg: 'Записаться через Telegram',
+    nm: 'Ваше имя',
+    em: 'Email',
+    sv: 'Выберите услугу',
+    mg: 'Ваше сообщение',
+    sd: 'Отправить'
+  },
+  footer: {
+    tag: 'Привносим свет традиций керальских храмов в ваш дом.',
+    sv: 'Услуги',
+    cn: 'Связь',
+    cp: '© 2025 Gourishankaram. Все права защищены.',
+    sr: 'Обслуживаем семьи в Индии и России.'
+  },
+  preloader: [
+    "Настройка связи с Космосом...",
+    "Расчет движения планет...",
+    "Обращение к Священным Ведам...",
+    "Чтение священных мантр...",
+    "Готово к просмотру..."
+  ],
+  paypal: {
+    tl: 'Запись на консультацию / ритуал',
+    srv: 'Выбранная услуга',
+    amt: 'Сумма к оплате',
+    name: 'Ваше полное имя',
+    email: 'Ваш адрес электронной почты',
+    phone: 'Номер WhatsApp / Телефон',
+    date: 'Предпочтительная дата',
+    pay: 'Оплатить и подтвердить запись',
+    successTl: 'Оплата успешно произведена!',
+    successDs: 'Спасибо, {name}. Ваша запись на услугу "{service}" успешно оформлена. Команда Гуруджи свяжется с вами в WhatsApp или по электронной почте в течение 24 часов.',
+    txId: 'ID Транзакции:'
+  },
+  detAbout: {
+    ey: 'О Гуруджи',
+    tl: 'Подробная биография и священная линия преемственности',
+    p1: 'Гуруджи Прасад Намбудири представляет древнюю династию храмовых священников Кералы. Родился в Тришуре, культурной столице Кералы. С раннего детства обучался в традиционной системе Гурукулы под руководством отца и деда. Он в совершенстве овладел чтением Ригведы и Атхарваведы, а также правилами проведения тантрических ритуалов согласно священным текстам Кералы (Тантрасамуччая).',
+    p2: 'Более 20 лет Гуруджи проводит сложные ведические огненные ритуалы (Хомы, Севы и освящения) и анализирует натальные карты (Джйотиш), помогая людям обрести мир и гармонию.',
+    p3: 'С 2012 года Гуруджи регулярно посещает Россию, где сформировал большое сообщество духовных искателей в Москве и Санкт-Петербурге. Он проводит личные ритуалы и онлайн-консультации, соединяя ведическую мудрость с запросами современных людей.',
+    h4: 'Достижения и Квалификация',
+    li1: 'Чтение Ригведы и Яджурведы: Сертифицированное владение текстами в Брахмасвом Мадхом, Тришур.',
+    li2: 'Тантрические освящения: Проведение и участие в более чем 15 Пратиштхах (освящениях храмов) по всей Керале.',
+    li3: 'Астрологические консультации: Более 10 000 проанализированных гороскопов по всему миру.',
+    li4: 'Культурный мост: Благодарственные грамоты от духовных обществ Индии и России за распространение Ведических знаний.'
+  },
+  detServices: {
+    ey: 'Подробные услуги',
+    tl: 'Ведические консультации и священные пуджи',
+    sub: 'Ознакомьтесь с подробным списком услуг. Запишитесь на пуджу или консультацию к Гуруджи.',
+    book: 'Записаться'
+  },
+  detTravel: {
+    ey: 'Паломничество',
+    tl: 'Путешествия по храмам Кералы',
+    sub: 'Погрузитесь в духовное сердце Кералы. Гуруджи организует индивидуальные паломничества к древнейшим храмам, включая проживание, входные билеты и проведение священных церемоний.',
+    formTl: 'Запрос на индивидуальный тур',
+    formSub: 'Хотите составить индивидуальный маршрут или выбрать другие даты? Оставьте заявку, и мы свяжемся с вами.',
+    formBtn: 'Отправить запрос',
+    items: [
+      {
+        nm: 'Паломничество по Южной Керале',
+        ds: 'Священное путешествие в величественный Храм Шри Падманабхасвами, древние скальные храмы и Храм Вайком Махадева. Включает медитации, участие в пуджах и проживание премиум-класса.',
+        duration: '5 дней / 4 ночи',
+        price: 'Цена: $650 с человека (Депозит: $150)',
+        amt: 150
+      },
+      {
+        nm: 'Тур в Северную Кералу и Сабарималу',
+        ds: 'Путешествие в Центральную и Северную Кералу. Посещение знаменитого храма Шри Кришны в Гуруваюре, храма Вадаккуннатхан и Шабарималы. Специальные пуджи от Гуруджи, традиционное жилье и праздничный обед.',
+        duration: '7 дней / 6 ночей',
+        price: 'Цена: $850 с человека (Депозит: $250)',
+        amt: 250
+      }
+    ]
+  },
+  gallery: {
+    ey: 'Духовные мгновения',
+    tl: 'Священная Галерея',
+    sub: 'Кадры, снятые во время храмовых ритуалов, паломничеств и духовных встреч.',
+    cats: { all: 'Все', temple: 'Храмы', ritual: 'Ритуалы', guruji: 'Гуруджи' },
+    items: [
+      { title: 'Храмовый слон в Гуруваюре', cat: 'temple', desc: 'Священные слоны выстраиваются для ежедневной процессии в Храме Шри Кришны в Гуруваюре.' },
+      { title: 'Ведический огненный ритуал (Хомам)', cat: 'ritual', desc: 'Гуруджи Прасад проводит Ганапати Хомам на рассвете для здоровья и благополучия.' },
+      { title: 'Гуруджи в Москве', cat: 'guruji', desc: 'Гуруджи читает лекцию по ведической астрологии (Джйотиш) для слушателей в Москве.' },
+      { title: 'Пруд храма Падманабхасвами', cat: 'temple', desc: 'Священный пруд Падматиртхам на фоне величественного гопурама Храма Шри Падманабхасвами.' },
+      { title: 'Ритуал Бхагавати Сева', cat: 'ritual', desc: 'Традиционный керальский ритуал, посвященный Богине Бхагавати, для защиты и благосостояния.' },
+      { title: 'Омовение божества (Абхишекам)', cat: 'guruji', desc: 'Гуруджи совершает ритуальное омовение в одном из храмов Тришура.' }
+    ]
+  },
+  community: {
+    ey: 'Духовные обновления',
+    tl: 'Сообщество и новости',
+    sub: 'Следите за транзитами планет, датами ведических праздников и статьями Гуруджи.',
+    readMore: 'Читать полностью',
+    calendarTitle: 'Панчангам и Праздники',
+    news: [
+      {
+        date: '15 июля 2026',
+        title: 'Празднование Гуру Пурнимы 2026',
+        desc: 'Приглашаем выразить благодарность духовным наставникам. Гуруджи проведет специальную Гуру Пуджу и чтение Ригведы в Тришуре. Будет доступна онлайн-трансляция для русскоязычной общины.'
+      },
+      {
+        date: '28 июня 2026',
+        title: 'Ретроградный Сатурн в Рыбах: Упайи',
+        desc: 'Сегодня Сатурн становится ретроградным в знаке Рыб. Гуруджи рекомендует проводить Шани Доша Парихара пуджи (зажжение ламп с кунжутным маслом) для преодоления препятствий и внутреннего роста.'
+      },
+      {
+        date: '10 июня 2026',
+        title: 'Поминальные обряды Каркидака Ваву Бали',
+        desc: 'Приближаются важные ритуалы почитания предков. Гуруджи проведет обряды Пиру Тарпанам на берегах реки Нила для семей, желающих выразить почтение ушедшим близким.'
+      }
+    ],
+    calendar: [
+      { date: '3 июля 2026', name: 'Ашадха Экадаши', cat: 'fest', desc: 'Священный день поста и молитвы, посвященный Господу Вишну.' },
+      { date: '15 июля 2026', name: 'Гуру Пурнима', cat: 'fest', desc: 'День полнолуния, прославляющий духовного учителя и мудреца Вьясу.' },
+      { date: '17 июля 2026', name: 'Солнце в знаке Рака', cat: 'astro', desc: 'Каркидака Санкранти. Начало священного месяца Каркидакам.' },
+      { date: '11 авг 2026', name: 'Каркидака Ваву Бали', cat: 'fest', desc: 'День поминовения предков. Специальные обряды для душ ушедших.' }
+    ]
+  },
+  school: {
+    ey: 'Скоро открытие',
+    tl: 'Школа Тантры Кералы',
+    sub: 'Гуруджи Прасад Намбудири открывает школу для обучения керальским храмовым ритуалам, чтению Ригведы и традиционной ведической астрологии. Обучение будет проводиться на английском и русском языках.',
+    formTl: 'Узнать об открытии',
+    formDs: 'Запишитесь в лист ожидания, чтобы получить информацию о программе обучения, расписании и приеме документов.',
+    btn: 'Записаться',
+    emailPl: 'Ваш Email',
+    success: 'Спасибо! Вы успешно добавлены в лист ожидания. Мы сообщим вам на электронную почту, когда откроется прием заявок.'
+  }
+}
+};
+
+// ── STATE ────────────────────────────────────────────────────────────────────
+let lang = 'en', menuOpen = false, countersRun = false;
+let currentPage = 'home';
+let activeGalleryFilter = 'all';
+
+// ── SPA ROUTING SYSTEM ────────────────────────────────────────────────────────
+function navigateTo(pageId) {
+  if (pageId === 'home' || pageId === '') {
+    pageId = 'home';
+  }
+  
+  closeMenu();
+  
+  // Hide current page container
+  const prevPageEl = document.getElementById('page-' + currentPage);
+  if (prevPageEl) {
+    prevPageEl.classList.remove('active');
+  }
+  
+  // Show target page container
+  const nextPageEl = document.getElementById('page-' + pageId);
+  if (nextPageEl) {
+    currentPage = pageId;
+    nextPageEl.classList.add('active');
+  } else {
+    currentPage = 'home';
+    document.getElementById('page-home').classList.add('active');
+  }
+  
+  // Update nav bar active class indicators
+  const allLinks = document.querySelectorAll('.nav-links a, .mmenu a');
+  allLinks.forEach(a => a.classList.remove('nav-active'));
+  
+  const activeLnk = document.getElementById('nl-' + currentPage);
+  if (activeLnk) activeLnk.classList.add('nav-active');
+  const activeMobLnk = document.getElementById('ml-' + currentPage);
+  if (activeMobLnk) activeMobLnk.classList.add('nav-active');
+  
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function go(pageId) {
+  window.location.hash = pageId;
+}
+
+// Bind hash change listener
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.substring(1) || 'home';
+  navigateTo(hash);
+});
+
+
+// ── PAYPAL PAYMENT INTEGRATION ───────────────────────────────────────────────
+let activeBooking = null;
+
+function openPaypalModal(serviceName, amountDollars) {
+  activeBooking = { service: serviceName, amount: amountDollars };
+  
+  const modal = document.getElementById('paypal-modal');
+  modal.style.display = 'flex';
+  setTimeout(() => modal.classList.add('active'), 20);
+  
+  // Render checkout modal structure dynamically with active language labels
+  const t = T[lang].paypal;
+  document.getElementById('paypal-modal-content').innerHTML = `
+    <h3 id="ppm-tl">${t.tl}</h3>
+    <div class="modal-info-row">
+      <span class="modal-info-lbl" id="ppm-lbl-srv">${t.srv}</span>
+      <span class="modal-info-val" id="ppm-val-srv">${serviceName}</span>
+    </div>
+    <div class="modal-info-row">
+      <span class="modal-info-lbl" id="ppm-lbl-amt">${t.amt}</span>
+      <span class="modal-info-val" id="ppm-val-amt">$${amountDollars.toFixed(2)}</span>
+    </div>
+    <form class="modal-form" onsubmit="event.preventDefault();">
+      <input type="text" id="ppm-name" placeholder="${t.name}" required />
+      <input type="email" id="ppm-email" placeholder="${t.email}" required />
+      <input type="text" id="ppm-phone" placeholder="${t.phone}" required />
+      <input type="date" id="ppm-date" required />
+      <div class="paypal-btn-wrap" id="paypal-button-container"></div>
+    </form>
+  `;
+  
+  // Render Smart Buttons
+  renderPaypalButtons();
+}
+
+function closePaypalModal() {
+  const modal = document.getElementById('paypal-modal');
+  modal.classList.remove('active');
+  setTimeout(() => modal.style.display = 'none', 300);
+}
+
+function renderPaypalButtons() {
+  const container = document.getElementById('paypal-button-container');
+  if (!container) return;
+  container.innerHTML = '';
+  
+  if (typeof paypal === 'undefined') {
+    container.innerHTML = '<p style="color:var(--red);font-size:0.9rem;text-align:center;">PayPal SDK loading failed. Please check network connection.</p>';
+    return;
+  }
+  
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: activeBooking.amount.toString(),
+            currency_code: 'USD'
+          },
+          description: activeBooking.service
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        const nameVal = document.getElementById('ppm-name').value || details.payer.name.given_name;
+        showPaymentSuccess(nameVal, details.id);
+      });
+    },
+    onError: function(err) {
+      console.error(err);
+      alert('An error occurred during payment processing.');
+    }
+  }).render('#paypal-button-container');
+}
+
+function showPaymentSuccess(name, transactionId) {
+  const t = T[lang].paypal;
+  const content = document.getElementById('paypal-modal-content');
+  
+  let msg = t.successDs
+    .replace('{name}', `<strong>${name}</strong>`)
+    .replace('{service}', `<strong>${activeBooking.service}</strong>`);
+    
+  content.innerHTML = `
+    <div class="checkout-success">
+      <div class="success-icon">✓</div>
+      <h4 id="success-tl">${t.successTl}</h4>
+      <p id="success-ds">${msg}</p>
+      <div class="success-tx-info">
+        <span>${t.txId}</span> <strong>${transactionId}</strong>
+      </div>
+      <button class="btn b-pri" onclick="closePaypalModal()">Close</button>
+    </div>
+  `;
+}
+
+// ── GALLERY ENGINE ───────────────────────────────────────────────────────────
+function renderGallery() {
+  const g = document.getElementById('gal-grid');
+  if (!g) return;
+  const items = T[lang].gallery.items;
+  
+  g.innerHTML = items.map((item, idx) => {
+    const isVisible = activeGalleryFilter === 'all' || item.cat === activeGalleryFilter;
+    return `
+      <div class="gal-card rv in" style="display: ${isVisible ? 'block' : 'none'}" onclick="openLightbox(${idx})">
+        <div class="gal-img-wrap">
+          <img class="gal-img" src="./pranavam_images/gallery_${idx + 1}.png" onerror="this.src=(['1675597056623-74d1e05dc3f0','1697729444936-8c6a6f643312','1582510003544-4d00b7f74220','1617875216004-78f15839c578','1625807161536-27903f2200fa','1666694051761-cd972857da30','1619239632374-9e6651c2b7bb','1605292356183-a77d0a9c9d1d','1633368516165-f7b04d6428d1','1697730420879-dc2a8dbaa31f','1605302977545-3a09913be1dd','1578326526526-fd998049d297'].map(id=>'https://images.unsplash.com/photo-'+id+'?w=400&h=300&fit=crop&q=85'))[idx % 12]" alt="${item.title}" />
+          <div class="gal-overlay">
+            <span class="gal-cat">${T[lang].gallery.cats[item.cat]}</span>
+            <div class="gal-title">${item.title}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function filterGallery(category) {
+  activeGalleryFilter = category;
+  
+  document.querySelectorAll('.gal-btn').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = document.getElementById('gfb-' + category);
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  renderGallery();
+}
+
+function openLightbox(index) {
+  const item = T[lang].gallery.items[index];
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  
+  img.src = `./pranavam_images/gallery_${index + 1}.png`;
+  const _lb=['1675597056623-74d1e05dc3f0','1697729444936-8c6a6f643312','1582510003544-4d00b7f74220','1617875216004-78f15839c578','1625807161536-27903f2200fa','1666694051761-cd972857da30','1619239632374-9e6651c2b7bb','1605292356183-a77d0a9c9d1d','1633368516165-f7b04d6428d1','1697730420879-dc2a8dbaa31f','1605302977545-3a09913be1dd','1578326526526-fd998049d297'];
+  img.onerror = function() { this.src = `https://images.unsplash.com/photo-${_lb[index % _lb.length]}?w=800&h=600&fit=crop&q=85`; };
+  
+  document.getElementById('lightbox-caption').textContent = item.title;
+  document.getElementById('lightbox-desc').textContent = item.desc;
+  
+  lightbox.style.display = 'flex';
+  setTimeout(() => lightbox.classList.add('active'), 20);
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  setTimeout(() => lightbox.style.display = 'none', 300);
+}
+
+// ── NEWS/COMMUNITY & CALENDAR ────────────────────────────────────────────────
+function renderNews() {
+  const n = document.getElementById('news-grid-target');
+  if (!n) return;
+  const items = T[lang].community.news;
+  
+  n.innerHTML = items.map((post, idx) => `
+    <div class="news-card rv in flex-card">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./pranavam_images/news_${idx + 1}.png" onerror="this.src=(['1633368516165-f7b04d6428d1','1666694051761-cd972857da30','1697729444936-8c6a6f643312','1605302977545-3a09913be1dd','1601220840366-d29aedc7e987'].map(id=>'https://images.unsplash.com/photo-'+id+'?w=400&h=250&fit=crop&q=85'))[idx % 5]" alt="${post.title}" />
+      </div>
+      <div class="card-body-content">
+        <div class="news-meta">
+          <span class="news-date">${post.date}</span>
+          <span>•</span>
+          <span>Guruji Maneesh</span>
+        </div>
+        <h3 style="margin:0.5rem 0">${post.title}</h3>
+        <p style="margin-bottom:1rem">${post.desc}</p>
+        <a class="news-read" href="https://t.me/pranavam_astro" target="_blank">${T[lang].community.readMore} →</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderCalendar() {
+  const c = document.getElementById('cal-list-target');
+  if (!c) return;
+  const list = T[lang].community.calendar;
+  
+  c.innerHTML = list.map(item => `
+    <div class="cal-item ${item.cat}">
+      <div class="cal-item-date">${item.date}</div>
+      <div class="cal-item-name">${item.name}</div>
+      <div class="cal-item-desc">${item.desc}</div>
+    </div>
+  `).join('');
+}
+
+// ── THANDRIK SCHOOL COUNTDOWN & WAITING LIST ─────────────────────────────────
+let countdownInterval = null;
+
+function initCountdown() {
+  const targetDate = new Date('December 31, 2026 00:00:00').getTime();
+  
+  const updateTimer = () => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+    
+    if (diff <= 0) {
+      clearInterval(countdownInterval);
+      return;
+    }
+    
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    const pad = n => n.toString().padStart(2, '0');
+    
+    const dEl = document.getElementById('cd-d'); if (dEl) dEl.textContent = pad(days);
+    const hEl = document.getElementById('cd-h'); if (hEl) hEl.textContent = pad(hours);
+    const mEl = document.getElementById('cd-m'); if (mEl) mEl.textContent = pad(minutes);
+    const sEl = document.getElementById('cd-s'); if (sEl) sEl.textContent = pad(seconds);
+  };
+  
+  updateTimer();
+  countdownInterval = setInterval(updateTimer, 1000);
+}
+
+function submitSchool(event) {
+  event.preventDefault();
+  const form = document.getElementById('sch-form-container');
+  if (form) {
+    form.innerHTML = `<div class="success-msg">${T[lang].school.success}</div>`;
+  }
+}
+
+// ── DETAILED TRAVELS PAGE ────────────────────────────────────────────────────
+function renderTravelsDetailed() {
+  const tList = document.getElementById('det-tr-list');
+  if (!tList) return;
+  const items = T[lang].detTravel.items;
+  
+  tList.innerHTML = items.map((tour, idx) => `
+    <div class="news-card rv in flex-card">
+      <div class="card-img-wrap">
+        <img class="card-img" src="./pranavam_images/tour_${idx + 1}.png" onerror="this.src=(['1625807161536-27903f2200fa','1582510003544-4d00b7f74220','1619239632374-9e6651c2b7bb','1697730420879-dc2a8dbaa31f','1578326526526-fd998049d297'].map(id=>'https://images.unsplash.com/photo-'+id+'?w=400&h=250&fit=crop&q=85'))[idx % 5]" alt="${tour.nm}" />
+      </div>
+      <div class="card-body-content">
+        <div class="news-meta">
+          <span class="news-date">${tour.duration}</span>
+        </div>
+        <h3 style="margin:0.5rem 0">${tour.nm}</h3>
+        <p style="margin-bottom:1rem">${tour.ds}</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:0.5rem;">
+          <span style="font-family:var(--cx); color:var(--gb); font-weight:700;">${tour.price}</span>
+          <button class="btn b-pri" onclick="openPaypalModal('${tour.nm} Booking Deposit', ${tour.amt})">${T[lang].services.cta}</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── PRELOADER COUNTER & CURTAIN UNVEIL ────────────────────────────────────────
+const runPreloader = () => {
+  const progressText = document.getElementById('loader-percentage');
+  const progressBarFill = document.getElementById('loader-bar-fill');
+  const loaderStatus = document.getElementById('loader-status');
+  const preloader = document.getElementById('preloader');
+  
+  const textArray = T[lang].preloader;
+  let count = 0;
+  
+  const updateProgressUI = (val) => {
+    if (progressText) progressText.textContent = val + '%';
+    if (progressBarFill) progressBarFill.style.width = val + '%';
+    if (loaderStatus && textArray) {
+      const statusIdx = Math.min(Math.floor((val / 100) * textArray.length), textArray.length - 1);
+      loaderStatus.textContent = textArray[statusIdx];
+    }
+  };
+
+  const timer = setInterval(() => {
+    if (count < 88) {
+      count += Math.floor(Math.random() * 4) + 1;
+      if (count > 88) count = 88;
+      updateProgressUI(count);
+    }
+  }, 70);
+
+  window.addEventListener('load', () => {
+    clearInterval(timer);
+    let finishCount = count;
+    const finishTimer = setInterval(() => {
+      if (finishCount < 100) {
+        finishCount += 5;
+        if (finishCount > 100) finishCount = 100;
+        updateProgressUI(finishCount);
+      } else {
+        clearInterval(finishTimer);
+        setTimeout(() => {
+          if (preloader) {
+            preloader.classList.add('fade-out');
+            playTempleBellSound();
+          }
+        }, 300);
+      }
+    }, 20);
+  });
+};
+runPreloader();
+
+// ── NAV SCROLL EFFECT ─────────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('solid', window.scrollY > 50);
+}, { passive: true });
+
+// ── MOBILE MENU TOGGLES ──────────────────────────────────────────────────────
+function toggleMenu() { 
+  menuOpen = !menuOpen; 
+  document.getElementById('mmenu').classList.toggle('open', menuOpen); 
+  document.getElementById('ham').classList.toggle('open', menuOpen); 
+}
+function closeMenu() { 
+  menuOpen = false; 
+  document.getElementById('mmenu').classList.remove('open'); 
+  document.getElementById('ham').classList.remove('open'); 
+}
+
+// ── TRANSLATION & RENDER ──────────────────────────────────────────────────────
+function applyLang() {
+  const t = T[lang];
+  document.getElementById('lang-btn').textContent = t.lang;
+  ['home', 'about', 'services', 'travel', 'gallery', 'community', 'school', 'contact'].forEach(k => {
+    const el = document.getElementById('nl-' + k); if (el) el.textContent = t.nav[k];
+    const ml = document.getElementById('ml-' + k); if (ml) ml.textContent = t.nav[k];
+  });
+  const mb = document.getElementById('ml-book'); if (mb) mb.textContent = t.nav.book;
+  document.getElementById('book-btn').textContent = t.nav.book;
+  document.getElementById('h-ey').textContent = t.hero.ey;
+  ['ht1', 'ht2', 'ht3'].forEach((id, i) => { const el = document.getElementById(id); if (el) el.textContent = t.hero.t[i]; });
+  document.getElementById('h-sub').textContent = t.hero.sub;
+  document.getElementById('h-ct1').textContent = t.hero.ct1;
+  document.getElementById('h-ct2').textContent = t.hero.ct2;
+  document.getElementById('h-sc').textContent = t.hero.sc;
+  
+  document.getElementById('ab-ey').textContent = t.about.ey;
+  document.getElementById('ab-tl').textContent = t.about.tl;
+  document.getElementById('ab-p1').textContent = t.about.p1;
+  document.getElementById('ab-p2').textContent = t.about.p2;
+  document.getElementById('ab-lbl').textContent = t.about.lbl;
+  t.about.sl.forEach((l, i) => { const el = document.getElementById('sl' + (i + 1)); if (el) el.textContent = l; });
+  
+  document.getElementById('sv-ey').textContent = t.services.ey;
+  document.getElementById('sv-tl').textContent = t.services.tl;
+  document.getElementById('sv-sub').textContent = t.services.sub;
+  renderServices(t);
+  
+  document.getElementById('tr-ey').textContent = t.travel.ey;
+  document.getElementById('tr-tl').textContent = t.travel.tl;
+  document.getElementById('tr-sub').textContent = t.travel.sub;
+  document.getElementById('tr-cta').textContent = t.travel.cta;
+  document.getElementById('tr-lbl').textContent = t.travel.lbl;
+  renderDest(t);
+  
+  document.getElementById('ts-ey').textContent = t.testimonials.ey;
+  document.getElementById('ts-tl').textContent = t.testimonials.tl;
+  renderTesti(t);
+  
+  document.getElementById('ct-ey').textContent = t.contact.ey;
+  document.getElementById('ct-tl').textContent = t.contact.tl;
+  document.getElementById('ct-sub').textContent = t.contact.sub;
+  document.getElementById('ct-in-tl').textContent = t.contact.intl;
+  document.getElementById('ct-ru-tl').textContent = t.contact.rutl;
+  document.getElementById('cf-nm').placeholder = t.contact.nm;
+  document.getElementById('cf-em').placeholder = t.contact.em;
+  document.getElementById('cf-sv').options[0].text = t.contact.sv;
+  document.getElementById('cf-mg').placeholder = t.contact.mg;
+  document.getElementById('cf-sd').textContent = t.contact.sd;
+  
+  document.getElementById('ft-tag').textContent = t.footer.tag;
+  document.getElementById('ft-sv-t').textContent = t.footer.sv;
+  document.getElementById('ft-cn-t').textContent = t.footer.cn;
+  document.getElementById('ft-copy').textContent = t.footer.cp;
+  document.getElementById('ft-srv').textContent = t.footer.sr;
+
+  // Detailed views translations
+  document.getElementById('det-ab-ey').textContent = t.detAbout.ey;
+  document.getElementById('det-ab-tl').textContent = t.detAbout.tl;
+  document.getElementById('det-ab-p1').textContent = t.detAbout.p1;
+  document.getElementById('det-ab-p2').textContent = t.detAbout.p2;
+  document.getElementById('det-ab-p3').textContent = t.detAbout.p3;
+  document.getElementById('det-ab-h4').textContent = t.detAbout.h4;
+  
+  const abUl = document.getElementById('det-ab-ul');
+  if (abUl) {
+    abUl.innerHTML = `
+      <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> ${t.detAbout.li1}</li>
+      <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> ${t.detAbout.li2}</li>
+      <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> ${t.detAbout.li3}</li>
+      <li style="margin-bottom:0.8rem;padding-left:1.5rem;position:relative"><span style="color:var(--gold);position:absolute;left:0">✦</span> ${t.detAbout.li4}</li>
+    `;
+  }
+  
+  document.getElementById('det-sv-ey').textContent = t.detServices.ey;
+  document.getElementById('det-sv-tl').textContent = t.detServices.tl;
+  document.getElementById('det-sv-sub').textContent = t.detServices.sub;
+  renderServicesDetailed(t);
+  
+  document.getElementById('det-tr-ey').textContent = t.detTravel.ey;
+  document.getElementById('det-tr-tl').textContent = t.detTravel.tl;
+  document.getElementById('det-tr-sub').textContent = t.detTravel.sub;
+  document.getElementById('det-tr-form-tl').textContent = t.detTravel.formTl;
+  document.getElementById('det-tr-form-sub').textContent = t.detTravel.formSub;
+  document.getElementById('det-tr-form-btn').textContent = t.detTravel.formBtn;
+  renderTravelsDetailed();
+  
+  document.getElementById('gal-ey').textContent = t.gallery.ey;
+  document.getElementById('gal-tl').textContent = t.gallery.tl;
+  document.getElementById('gal-sub').textContent = t.gallery.sub;
+  document.getElementById('gfb-all').textContent = t.gallery.cats.all;
+  document.getElementById('gfb-temple').textContent = t.gallery.cats.temple;
+  document.getElementById('gfb-ritual').textContent = t.gallery.cats.ritual;
+  document.getElementById('gfb-guruji').textContent = t.gallery.cats.guruji;
+  renderGallery();
+  
+  document.getElementById('com-ey').textContent = t.community.ey;
+  document.getElementById('com-tl').textContent = t.community.tl;
+  document.getElementById('com-sub').textContent = t.community.sub;
+  document.getElementById('cal-side-tl').textContent = t.community.calendarTitle;
+  renderNews();
+  renderCalendar();
+  
+  document.getElementById('sch-ey').textContent = t.school.ey;
+  document.getElementById('sch-tl').textContent = t.school.tl;
+  document.getElementById('sch-sub').textContent = t.school.sub;
+  document.getElementById('sch-form-tl').textContent = t.school.formTl;
+  document.getElementById('sch-form-ds').textContent = t.school.formDs;
+  document.getElementById('sch-btn').textContent = t.school.btn;
+  document.getElementById('sch-email').placeholder = t.school.emailPl;
+  
+  document.getElementById('cd-dl').textContent = lang === 'en' ? 'Days' : 'Дней';
+  document.getElementById('cd-hl').textContent = lang === 'en' ? 'Hours' : 'Часов';
+  document.getElementById('cd-ml').textContent = lang === 'en' ? 'Minutes' : 'Минут';
+  document.getElementById('cd-sl').textContent = lang === 'en' ? 'Seconds' : 'Секунд';
+  
+  document.getElementById('det-ct-ey').textContent = t.contact.ey;
+  document.getElementById('det-ct-tl').textContent = t.contact.tl;
+  document.getElementById('det-ct-sub').textContent = t.contact.sub;
+  renderContactDetailed();
+  
+  // PayPal Modal Translations
+  if (document.getElementById('ppm-tl') && activeBooking) {
+    document.getElementById('ppm-tl').textContent = t.paypal.tl;
+    document.getElementById('ppm-lbl-srv').textContent = t.paypal.srv;
+    document.getElementById('ppm-lbl-amt').textContent = t.paypal.amt;
+    document.getElementById('ppm-name').placeholder = t.paypal.name;
+    document.getElementById('ppm-email').placeholder = t.paypal.email;
+    document.getElementById('ppm-phone').placeholder = t.paypal.phone;
+  }
+}
+
+function toggleLang() {
+  lang = lang === 'en' ? 'ru' : 'en';
+  applyLang();
+}
+
+function renderServicesDetailed(t) {
+  const g = document.getElementById('det-sv-grid');
+  if (!g) return;
+  
+  g.innerHTML = t.services.items.map(s => `
+    <div class="sv-c rv in">
+      <span class="sv-ic">${s.ic}</span>
+      <div class="sv-tag">${s.tg}</div>
+      <div class="sv-nm">${s.nm}</div>
+      <div class="sv-ds">${s.ds}</div>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-top:0.5rem;">
+        <span style="font-family:var(--cx); color:var(--gb); font-weight:700;">$${s.price}.00</span>
+        <button class="btn b-pri" style="padding:0.4rem 1.1rem; font-size:0.75rem;" onclick="openPaypalModal('${s.nm}', ${s.price})">${t.detServices.book}</button>
+      </div>
+    </div>`).join('');
+}
+
+function renderContactDetailed() {
+  const ctGrid = document.getElementById('det-ct-grid-target');
+  if (!ctGrid) return;
+  
+  const IndiaCard = document.querySelector('#contact .ct-cards .ct-cd:nth-child(1)').outerHTML;
+  const RussiaCard = document.querySelector('#contact .ct-cards .ct-cd:nth-child(2)').outerHTML;
+  const btnRow = document.querySelector('#contact .ct-cards .ct-bs').outerHTML;
+  const formBox = document.querySelector('#contact .cf').outerHTML;
+  
+  ctGrid.innerHTML = `
+    <div class="ct-cards rv in">
+      ${IndiaCard}
+      ${RussiaCard}
+      ${btnRow}
+    </div>
+    <div class="rv in">
+      ${formBox}
+    </div>
+  `;
+}
+
+function renderServices(t) {
+  const g = document.getElementById('sv-grid');
+  if (!g) return;
+  g.innerHTML = t.services.items.map(s => `
+    <div class="sv-c rv in" onclick="go('services')">
+      <span class="sv-ic">${s.ic}</span>
+      <div class="sv-tag">${s.tg}</div>
+      <div class="sv-nm">${s.nm}</div>
+      <div class="sv-ds">${s.ds}</div>
+      <span class="sv-ct" onclick="event.stopPropagation(); go('services')">${t.services.cta} →</span>
+    </div>`).join('');
+}
+
+function renderDest(t) {
+  const destWrap = document.getElementById('dest-wrap');
+  if (destWrap) destWrap.innerHTML = t.travel.dest.map(d => `<span class="dt">${d}</span>`).join('');
+}
+
+function renderTesti(t) {
+  const tsGrid = document.getElementById('ts-grid');
+  if (tsGrid) {
+    tsGrid.innerHTML = t.testimonials.items.map(i => `
+      <div class="ts-c rv in">
+        <div class="ts-stars">★★★★★</div>
+        <p class="ts-txt">"${i.tx}"</p>
+        <div class="ts-nm">${i.nm}</div>
+        <div class="ts-lc">${i.lc}</div>
+      </div>`).join('');
+  }
+}
+
+// ── CANVAS GOLD EMBERS & CONSTELLATION ENGINE ─────────────────────────────────
+(() => {
+  const canvas = document.getElementById('pc');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const resize = () => { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; };
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+  
+  const mouse = { x: null, y: null, radius: 140 };
+  window.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  const cols = ['#ffd700', '#d4af37', '#ff8c42', '#ff6b35', '#f5e6c8'];
+  const pts = Array.from({ length: 120 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2.2 + 0.6,
+    vy: -(Math.random() * 0.45 + 0.15),
+    vx: (Math.random() - 0.5) * 0.22,
+    a: Math.random() * 0.8 + 0.2,
+    ad: Math.random() > 0.5 ? 1 : -1,
+    as: Math.random() * 0.005 + 0.002,
+    c: cols[Math.floor(Math.random() * cols.length)]
+  }));
+
+  const sparks = [];
+
+  const draw = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw constellation lines between nearby particles
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const dx = pts[i].x - pts[j].x;
+        const dy = pts[i].y - pts[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 75) {
+          ctx.save();
+          ctx.globalAlpha = (1 - dist / 75) * 0.15;
+          ctx.strokeStyle = '#d4af37';
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x, pts[i].y);
+          ctx.lineTo(pts[j].x, pts[j].y);
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+    }
+
+    // Draw main embers
+    pts.forEach(p => {
+      p.y += p.vy;
+      p.x += p.vx;
+      p.a += p.ad * p.as;
+      
+      if (p.a >= 1 || p.a <= 0.1) p.ad *= -1;
+      
+      if (p.y < -10) {
+        p.y = canvas.height + 10;
+        p.x = Math.random() * canvas.width;
+      }
+      if (p.x < -10) p.x = canvas.width + 10;
+      if (p.x > canvas.width + 10) p.x = -10;
+
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          const angle = Math.atan2(dy, dx);
+          p.x += Math.cos(angle) * force * 2.2;
+          p.y += Math.sin(angle) * force * 2.2;
+        }
+      }
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.a) * 0.85;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = p.c;
+      ctx.fillStyle = p.c;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // Draw spark burst effects on click
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const s = sparks[i];
+      s.x += s.vx;
+      s.y += s.vy;
+      s.life -= 0.025;
+      if (s.life <= 0) {
+        sparks.splice(i, 1);
+        continue;
+      }
+      ctx.save();
+      ctx.globalAlpha = s.life;
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = s.c;
+      ctx.fillStyle = s.c;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    requestAnimationFrame(draw);
+  };
+  draw();
+  
+  // Custom spark burst on click
+  canvas.addEventListener('click', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const cx = e.clientX - rect.left;
+    const cy = e.clientY - rect.top;
+    
+    // Spark particles
+    for (let i = 0; i < 20; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 4 + 1.5;
+      sparks.push({
+        x: cx,
+        y: cy,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        r: Math.random() * 2.5 + 1,
+        life: 1.0,
+        c: cols[Math.floor(Math.random() * cols.length)]
+      });
+    }
+
+    // Repulsion for background embers
+    pts.forEach(p => {
+      const dx = p.x - cx;
+      const dy = p.y - cy;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < 220) {
+        const force = (220 - dist) / 220;
+        const angle = Math.atan2(dy, dx);
+        p.x += Math.cos(angle) * force * 40;
+        p.y += Math.sin(angle) * force * 40;
+      }
+    });
+  });
+})();
+
+// ── AMBIENT AUDIO TOGGLE BUTTON (CLEAN STATE TOGGLE) ─────────────────────────
+let isAudioPlaying = false;
+
+function playTempleBellSound() {
+  // Silent placeholder - user can manually attach sound effect here
+}
+
+function toggleAmbientAudio() {
+  const btn = document.getElementById('audio-toggle-btn');
+  const txt = document.getElementById('audio-btn-txt');
+  
+  isAudioPlaying = !isAudioPlaying;
+  if (isAudioPlaying) {
+    if (btn) btn.classList.add('playing');
+    if (txt) txt.textContent = 'Sound On';
+  } else {
+    if (btn) btn.classList.remove('playing');
+    if (txt) txt.textContent = 'Sound Off';
+  }
+}
+
+function startAmbientAudio() {}
+function stopAmbientAudio() {}
+
+// ── SCROLL PROGRESS & BACK TO TOP ─────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progressPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  
+  const progEl = document.getElementById('scroll-progress');
+  if (progEl) progEl.style.width = progressPercent + '%';
+  
+  const btt = document.getElementById('back-to-top');
+  if (btt) {
+    if (scrollTop > 400) btt.classList.add('show');
+    else btt.classList.remove('show');
+  }
+}, { passive: true });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── MAGNETIC BUTTON MICRO-INTERACTIONS ────────────────────────────────────────
+function initMagneticButtons() {
+  document.querySelectorAll('.book-btn, .btn.b-pri, .lang-btn, .audio-btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0px, 0px)';
+    });
+  });
+}
+
+// ── COUNTER ANIMATIONS ────────────────────────────────────────────────────────
+function runCounters() {
+  if (countersRun) return; 
+  countersRun = true;
+  const cfg = [
+    { id: 's1', t: 20, sf: '+' },
+    { id: 's2', t: 500, sf: '+' },
+    { id: 's3', t: 12, sf: '' },
+    { id: 's4', t: 98, sf: '%' }
+  ];
+  cfg.forEach(({ id, t, sf }) => {
+    let v = 0; 
+    const el = document.getElementById(id);
+    if (!el) return;
+    const step = t / 50;
+    const tmr = setInterval(() => {
+      v += step;
+      if (v >= t) {
+        v = t;
+        clearInterval(tmr);
+      }
+      el.textContent = Math.floor(v) + sf;
+    }, 25);
+  });
+}
+
+// ── INTERSECTION OBSERVER FOR FADE IN REVEALS ─────────────────────────────────
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      if (e.target.id === 'ab-txt') {
+        setTimeout(runCounters, 300);
+      }
+    }
+  });
+}, { threshold: 0.1 });
+
+// ── 3D TILT EFFECT FOR SERVICES & CARDS ───────────────────────────────────────
+function initTilt() {
+  document.querySelectorAll('.sv-g, .news-grid, .gal-grid, .comm-layout').forEach(grid => {
+    grid.addEventListener('mousemove', (e) => {
+      const card = e.target.closest('.sv-c, .gal-card, .news-card');
+      if (!card) return;
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const w = rect.width;
+      const h = rect.height;
+      const rx = ((y - h/2) / (h/2)) * -5;
+      const ry = ((x - w/2) / (w/2)) * 5;
+      card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+    });
+    
+    grid.addEventListener('mouseleave', (e) => {
+      const card = e.target.closest('.sv-c, .gal-card, .news-card');
+      if (!card) return;
+      card.style.transform = '';
+    }, true);
+  });
+}
+
+// ── SILKY-SMOOTH LERP HERO MOUSE PARALLAX ─────────────────────────────────────
+function initHeroParallax() {
+  const heroSection = document.getElementById('home');
+  const bg = document.getElementById('pooja-hall-bg');
+  const heroC = document.querySelector('.hero-c');
+  if (!heroSection || !bg) return;
+
+  let targetX = 0, targetY = 0;
+  let currentX = 0, currentY = 0;
+  let heroCX = 0, heroCY = 0;
+
+  heroSection.addEventListener('mousemove', (e) => {
+    const rect = heroSection.getBoundingClientRect();
+    const normX = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+    const normY = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+    targetX = -normX * 26;
+    targetY = -normY * 26;
+  }, { passive: true });
+
+  heroSection.addEventListener('mouseleave', () => {
+    targetX = 0;
+    targetY = 0;
+  });
+
+  const renderParallax = () => {
+    // 0.05 LERP factor = ultra-silky smooth dampening, zero jumping!
+    currentX += (targetX - currentX) * 0.05;
+    currentY += (targetY - currentY) * 0.05;
+    
+    bg.style.transform = `translate3d(${currentX.toFixed(2)}px, ${currentY.toFixed(2)}px, 0) scale(1.06)`;
+
+    if (heroC) {
+      heroCX += (-targetX * 0.22 - heroCX) * 0.05;
+      heroCY += (-targetY * 0.22 - heroCY) * 0.05;
+      heroC.style.transform = `translate3d(${heroCX.toFixed(2)}px, ${heroCY.toFixed(2)}px, 0)`;
+    }
+
+    requestAnimationFrame(renderParallax);
+  };
+  renderParallax();
+}
+
+// ── INTERACTIVE CUSTOM MAGNETIC CURSOR AURA ──────────────────────────────────
+function initCustomCursor() {
+  const dot = document.getElementById('cursor-dot');
+  const aura = document.getElementById('cursor-aura');
+  if (!dot || !aura || window.matchMedia('(pointer: coarse)').matches) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let auraX = mouseX;
+  let auraY = mouseY;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+  }, { passive: true });
+
+  const renderAura = () => {
+    auraX += (mouseX - auraX) * 0.16; // Smooth spring interpolation
+    auraY += (mouseY - auraY) * 0.16;
+    aura.style.left = auraX + 'px';
+    aura.style.top = auraY + 'px';
+    requestAnimationFrame(renderAura);
+  };
+  renderAura();
+
+  // Add hover state triggers for interactive elements
+  document.querySelectorAll('a, button, .sv-c, .gal-card, .news-card, .ts-c, .diya-lamp, input, select, textarea').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+}
+
+// ── SPECULAR LIGHT REFLECTION SHIMMER FOR CARDS ────────────────────────────
+function initSpecularReflection() {
+  document.querySelectorAll('.sv-c, .gal-card, .news-card, .ts-c').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', `${x}%`);
+      card.style.setProperty('--my', `${y}%`);
+    });
+  });
+}
+
+// ── INITIALIZATION ───────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  applyLang();
+  document.querySelectorAll('.rv, .rvl, .rvr').forEach(el => obs.observe(el));
+  initTilt();
+  initMagneticButtons();
+  initHeroParallax();
+  initCustomCursor();
+  initSpecularReflection();
+  initCountdown();
+  navigateTo(window.location.hash.substring(1) || 'home');
+});
+</script>
+
+<!-- BACK TO TOP FLOATING BUTTON -->
+<button id="back-to-top" onclick="scrollToTop()" title="Back to top">↑</button>
+
+</body>
+</html>
