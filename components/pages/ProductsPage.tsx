@@ -94,7 +94,7 @@ export default function ProductsPage() {
 
   {/* Filters */}
 
-  <div className="sticky top-24 z-20 bg-white border border-gray-200 rounded-2xl shadow-sm p-5 mb-10">
+  <div className=" top-24 z-20 bg-white border border-gray-200 rounded-2xl shadow-sm p-5 mb-10">
 
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
 

@@ -1,7 +1,16 @@
 'use client'
 import { T, Lang } from '@/lib/data'
 
-type Page = 'home' | 'about' | 'services' | 'travel' | 'gallery' | 'community' | 'school' | 'contact'
+type Page =
+  | 'home'
+  | 'about'
+  | 'services'
+  | 'products'
+  | 'travel'
+  | 'gallery'
+  | 'community'
+  | 'school'
+  | 'contact'
 
 interface MobileMenuProps {
   lang: Lang
@@ -13,7 +22,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ lang, go, menuOpen, setMenuOpen, openPaypalModal }: MobileMenuProps) {
   const t = T[lang]
-  const pages: Page[] = ['home', 'about', 'services', 'travel', 'gallery', 'community', 'school', 'contact']
+  const pages: Page[] = ['home', 'about', 'services','products', 'travel', 'gallery', 'community', 'school', 'contact']
 
   const handleNav = (page: Page) => {
     go(page)
