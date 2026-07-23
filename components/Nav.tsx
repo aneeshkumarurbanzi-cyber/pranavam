@@ -2,7 +2,16 @@
 import { useEffect, useState } from 'react'
 import { T, Lang } from '@/lib/data'
 
-type Page = 'home' | 'about' | 'services' | 'travel' | 'gallery' | 'community' | 'school' | 'contact'
+type Page =
+  | 'home'
+  | 'about'
+  | 'services'
+  | 'products'
+  | 'travel'
+  | 'gallery'
+  | 'community'
+  | 'school'
+  | 'contact'
 
 interface NavProps {
   lang: Lang
@@ -29,7 +38,17 @@ export default function Nav({ lang, currentPage, go, toggleLang, menuOpen, setMe
 
   const toggleAudio = () => setAudioPlaying(p => !p)
 
-  const pages: Page[] = ['home', 'about', 'services', 'travel', 'gallery', 'community', 'school', 'contact']
+  const pages: Page[] = [
+  'home',
+  'about',
+  'services',
+  'products',
+  'travel',
+  'gallery',
+  'community',
+  'school',
+  'contact'
+]
 
   return (
     <nav id="nav" className={solid ? 'solid' : ''}>

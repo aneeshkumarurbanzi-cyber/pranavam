@@ -1,7 +1,18 @@
 export const T = {
 en: {
   lang: 'RU',
-  nav: { home: 'Home', about: 'About', services: 'Services', travel: 'Travels', gallery: 'Gallery', community: 'Community', school: 'School', contact: 'Contact', book: 'Book Now' },
+ nav: {
+  home: 'Home',
+  about: 'About',
+  services: 'Services',
+  products: 'Products',
+  travel: 'Travel',
+  gallery: 'Gallery',
+  community: 'Community',
+  school: 'School',
+  contact: 'Contact',
+  book: 'Book Now'
+},
   hero: {
     ey: 'Traditional Kerala Rituals & Vedic Astrology',
     t: ['Sacred Wisdom.', 'Ancient Rituals.', 'Lasting Peace.'],

@@ -9,6 +9,7 @@ import MobileMenu from '@/components/MobileMenu'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Services from '@/components/Services'
+import ProductsPage from '@/components/pages/ProductsPage'
 import Travel from '@/components/Travel'
 import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/Contact'
@@ -25,7 +26,16 @@ import CommunityPage from '@/components/pages/CommunityPage'
 import SchoolPage from '@/components/pages/SchoolPage'
 import ContactPage from '@/components/pages/ContactPage'
 
-type Page = 'home' | 'about' | 'services' | 'travel' | 'gallery' | 'community' | 'school' | 'contact'
+type Page =
+  | 'home'
+  | 'about'
+  | 'services'
+  | 'products'
+  | 'travel'
+  | 'gallery'
+  | 'community'
+  | 'school'
+  | 'contact'
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>('en')
@@ -182,6 +192,7 @@ export default function Home() {
         <Testimonials lang={lang} />
         <div className="gd" />
         <Contact lang={lang} />
+        
       </div>
 
       {/* Detail pages */}
@@ -191,6 +202,12 @@ export default function Home() {
       <div className={`page-container${currentPage === 'services' ? ' active' : ''}`} id="page-services">
         <ServicesPage lang={lang} openPaypalModal={(s, a) => setPaypalModal({ service: s, amount: a })} />
       </div>
+      <div
+  className={`page-container${currentPage === 'products' ? ' active' : ''}`}
+  id="page-products"
+>
+  <ProductsPage />
+</div>
       <div className={`page-container${currentPage === 'travel' ? ' active' : ''}`} id="page-travel">
         <TravelPage lang={lang} go={go} openPaypalModal={(s, a) => setPaypalModal({ service: s, amount: a })} />
       </div>
