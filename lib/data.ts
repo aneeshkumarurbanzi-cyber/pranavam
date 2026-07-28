@@ -59,7 +59,7 @@ en: {
     sub: "Join our private group pilgrimages to Kerala's most sacred temples. Ritual participation, spiritual guidance, and accommodation included.",
     cta: 'Enquire About Tours',
     lbl: 'Kerala · Sacred Temples',
-    dest: ['Guruvayur Sree Krishna Temple', 'Sabarimala Sree Ayyappa', 'Padmanabhaswamy Temple — Thiruvananthapuram', 'Thrissur Pooram — The Temple Festival', 'Ettumanoor Mahadeva Temple', 'Vaikom Mahadeva Temple']
+    dest: ['Guruvayur Sree Krishna Temple', 'Sabarimala Sree Ayyappa', 'Padmanabhaswamy Temple — Thiruvananthapuram','Sree Parasurama Temple in Thiruvallam', 'Thrissur Pooram — The Temple Festival', 'Ettumanoor Mahadeva Temple', 'Vaikom Mahadeva Temple']
   },
   testimonials: {
     ey: 'Testimonials',
@@ -177,13 +177,28 @@ en: {
         price: 'Price: $650 per person (Deposit: $150)',
         amt: 150
       },
+       {
+      nm: " Thiruvallam Sree Parasurama Swami Temple Tour",
+      ds: "Thiruvallam is a sacred riverbank suburb in Thiruvananthapuram, Kerala, famous for the ancient Thiruvallam Sree Parasurama Swami Temple, peaceful backwaters, and traditional ancestral rites.",
+      duration: "2 Days / 1 Night",
+      price: 'Price:$850 per person (Deposit: $250)',
+      amt: 200,
+    },
       {
         nm: 'North Kerala & Sabarimala Tour',
         ds: 'Venture into central-north Kerala. Visit the famous Sree Krishna Temple of Guruvayur, Vadakkunnathan Temple, and Sabarimala. Complete with special Pujas conducted by Guruji, traditional stays, and vegetarian feast.',
         duration: '7 Days / 6 Nights',
         price: 'Price: $850 per person (Deposit: $250)',
         amt: 250
-      }
+      },
+        {
+  nm: "Holy & Religious Places Tour",
+  ds: "Discover Kerala's most sacred temples and spiritual destinations including Guruvayur Temple, Sabarimala, Chottanikkara Bhagavathy Temple, Vaikom Mahadeva Temple, Ettumanoor Mahadeva Temple, Padmanabhaswamy Temple, and many more. Experience divine rituals, peaceful surroundings, and Kerala's rich spiritual heritage.",
+  duration: "5 Days / 4 Nights",
+  price:'Price:$399 per person (Deposit: $250)',
+  amt: 150,
+},
+    
     ]
   },
   gallery: {
