@@ -47,7 +47,7 @@ export default function CommunityPage({ lang }: CommunityPageProps) {
                   <div className="news-meta">
                     <span className="news-date">{post.date}</span>
                     <span>•</span>
-                    <span>Guruji Maneesh</span>
+                    <span>Guruji Manish</span>
                   </div>
                   <h3 style={{ margin: '0.5rem 0' }}>{post.title}</h3>
                   <p style={{ marginBottom: '1rem' }}>{post.desc}</p>

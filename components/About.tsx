@@ -15,7 +15,7 @@ export default function About({ lang }: AboutProps) {
     countersRun.current = true
     const cfg = [
       { id: 's1', target: 20, suffix: '+' },
-      { id: 's2', target: 500, suffix: '+' },
+      { id: 's2', target: 1000, suffix: '+' },
       { id: 's3', target: 12, suffix: '' },
       { id: 's4', target: 98, suffix: '%' }
     ]
@@ -86,7 +86,7 @@ export default function About({ lang }: AboutProps) {
                   className="ph-image"
                   src="/pranavam_images/guruji.png"
                   onError={(e) => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1617875216004-78f15839c578?w=480&h=640&fit=crop&q=85' }}
-                  alt="Guruji Maneesh Madhusudanan Potti"
+                  alt="Guruji Manish Madhusoodanan Potti"
                 />
                 <div className="ph-label">{t.about.lbl}</div>
               </div>

@@ -1,9 +1,16 @@
+
 export const products = [
   {
     id: 1,
     slug: "ganapathy-idol",
-    name: "Ganapathy Idol",
-    category: "Pooja Items",
+    name: {
+      en: "Ganapathy Idol",
+      ru: "Идол Господа Ганеши"
+    },
+    category: {
+      en: "Pooja Items",
+      ru: "Предметы для пуджи"
+    },
     image: "/products/ganapathy.jpg",
     images: [
       "/products/ganapathy.jpg",
@@ -14,15 +21,23 @@ export const products = [
     mrp: 1299,
     price: 899,
     rating: 4.9,
-    description:
-      "Beautiful handcrafted Ganapathy Idol suitable for home temples, poojas, festivals and gifting. Made with premium quality craftsmanship."
+    description: {
+      en: "Beautiful handcrafted Ganapathy Idol suitable for home temples, poojas, festivals and gifting. Made with premium quality craftsmanship.",
+      ru: "Красиво изготовленный вручную идол Господа Ганеши, идеально подходящий для домашнего алтаря, пуджи, праздников и подарков. Выполнен с высоким качеством."
+    }
   },
 
   {
     id: 2,
     slug: "brass-vilakku",
-    name: "Brass Vilakku",
-    category: "Lamps",
+    name: {
+      en: "Brass Vilakku",
+      ru: "Латунная Вилакку"
+    },
+    category: {
+      en: "Lamps",
+      ru: "Лампы"
+    },
     image: "/products/lamp.jpg",
     images: [
       "/products/lamp.jpg",
@@ -33,15 +48,23 @@ export const products = [
     mrp: 1599,
     price: 1199,
     rating: 4.8,
-    description:
-      "Traditional brass vilakku crafted for daily pooja, temples and festive occasions. Elegant antique finish with premium quality."
+    description: {
+      en: "Traditional brass vilakku crafted for daily pooja, temples and festive occasions. Elegant antique finish with premium quality.",
+      ru: "Традиционная латунная лампа Вилакку для ежедневной пуджи, храмов и праздничных церемоний. Элегантная отделка и высокое качество."
+    }
   },
 
   {
     id: 3,
     slug: "pooja-kit",
-    name: "Pooja Kit",
-    category: "Pooja Items",
+    name: {
+      en: "Pooja Kit",
+      ru: "Набор для Пуджи"
+    },
+    category: {
+      en: "Pooja Items",
+      ru: "Предметы для пуджи"
+    },
     image: "/products/pooja-kit.jpg",
     images: [
       "/products/pooja-kit.jpg",
@@ -52,15 +75,23 @@ export const products = [
     mrp: 999,
     price: 749,
     rating: 4.7,
-    description:
-      "Complete pooja kit containing all the essential items required for daily pooja, festivals and religious ceremonies."
+    description: {
+      en: "Complete pooja kit containing all the essential items required for daily pooja, festivals and religious ceremonies.",
+      ru: "Полный набор для пуджи, содержащий все необходимые предметы для ежедневной пуджи, праздников и религиозных церемоний."
+    }
   },
 
   {
     id: 4,
     slug: "rudraksha-mala",
-    name: "Rudraksha Mala",
-    category: "Rudraksha",
+    name: {
+      en: "Rudraksha Mala",
+      ru: "Мала из Рудракши"
+    },
+    category: {
+      en: "Rudraksha",
+      ru: "Рудракша"
+    },
     image: "/products/rudraksha.jpg",
     images: [
       "/products/rudraksha.jpg",
@@ -71,7 +102,11 @@ export const products = [
     mrp: 899,
     price: 699,
     rating: 4.9,
-    description:
-      "Original Rudraksha Mala perfect for meditation, chanting and spiritual practices. Comfortable to wear and ideal for daily use."
+    description: {
+      en: "Original Rudraksha Mala perfect for meditation, chanting and spiritual practices. Comfortable to wear and ideal for daily use.",
+      ru: "Оригинальная мала из рудракши, идеально подходящая для медитации, мантр и духовных практик. Удобна в ношении и подходит для ежедневного использования."
+    }
+
   }
-]
+
+];

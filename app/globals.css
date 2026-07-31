@@ -486,10 +486,15 @@ nav.solid {
   background: rgba(250, 248, 244, 0.99);
   backdrop-filter: blur(20px);
   z-index: 999;
+
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2.2rem;
+
+  justify-content: flex-start;   /* ✅ */
+  padding-top: 110px;            /* ✅ Leaves space for navbar */
+
+  gap: 2rem;
+
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease;

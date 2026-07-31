@@ -202,11 +202,11 @@ export default function Home() {
       <div className={`page-container${currentPage === 'services' ? ' active' : ''}`} id="page-services">
         <ServicesPage lang={lang} openPaypalModal={(s, a) => setPaypalModal({ service: s, amount: a })} />
       </div>
-      <div
+     <div
   className={`page-container${currentPage === 'products' ? ' active' : ''}`}
   id="page-products"
 >
-  <ProductsPage />
+  <ProductsPage lang={lang} />
 </div>
       <div className={`page-container${currentPage === 'travel' ? ' active' : ''}`} id="page-travel">
         <TravelPage lang={lang} go={go} openPaypalModal={(s, a) => setPaypalModal({ service: s, amount: a })} />

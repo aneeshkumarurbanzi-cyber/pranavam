@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Gourishankaram - Sacred Wisdom & Vedic Rituals',
-  description: 'Traditional Kerala Rituals & Vedic Astrology by Guruji Maneesh Madhusudanan Potti',
+  description: 'Traditional Kerala Rituals & Vedic Astrology by Guruji Manish Madhusoodanan Potti',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

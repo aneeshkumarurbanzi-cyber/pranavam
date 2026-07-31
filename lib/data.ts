@@ -1,7 +1,7 @@
 export const T = {
 en: {
   lang: 'RU',
- nav: {
+nav: {
   home: 'Home',
   about: 'About',
   services: 'Services',
@@ -11,12 +11,15 @@ en: {
   community: 'Community',
   school: 'School',
   contact: 'Contact',
-  book: 'Book Now'
+  book: 'Book Now',
+
+  title: 'Kerala Rituals · Vedic Jyotish',
+  brand: 'Gourishankaram'
 },
   hero: {
-    ey: 'Traditional Kerala Rituals & Vedic Astrology',
+    ey: 'Traditional Kerala Tantrik Rituals & Vedic Rituals',
     t: ['Sacred Wisdom.', 'Ancient Rituals.', 'Lasting Peace.'],
-    sub: 'Guruji Maneesh Madhusudanan Potti brings 20+ years of Kerala temple tradition to families across India and Russia — in person and online.',
+    sub: 'Guruji Manish Madhusoodanan Potti brings 20+ years of Kerala temple tradition to families across India and Russia — in person and online.',
     ct1: 'Book a Consultation',
     ct2: 'View Services',
     sc: 'Scroll to explore ↓'
@@ -24,9 +27,8 @@ en: {
   about: {
     ey: 'About Guruji',
     tl: "Born into Kerala's Ancient Shaktheya Tradition",
-    p1: "Guruji Maneesh Madhusoodanan Potti was born into a Potti Vasishtha family — a lineage with deep Shaktheya Tantric roots in Kerala, centered around the worship of the Divine Mother, Adi Parashakti. Raised hearing sacred mantras and witnessing his father and grandfather perform Tantric rituals, his calling was awakened early. His grandfather, the revered Chandrasekhara, became his very first Guru — teaching him foundational mantras and guiding his first steps in the family temple.",
-    p2: "At nine, Guruji completed his Upanayanam and began formal study under Gurunathan Pradeep Namboothiripadu at Aalaikkavil illam, Chengannoor, and Vaidikam under Gurunathan Gopalakrishnan Vaidik. After completing his studies in two years, he served four years as faculty at the same institute, then advanced into Vedic Astrology and pendulum science under the late Dr. Ramaswamy and Satheesh.",
-    lbl: 'Guruji Maneesh Madhusoodanan Potti',
+    p1: "Guruji Manish Madhusoodanan Potti was born into a Potti Vasishtha family — a lineage with deep Shaktheya Tantric roots in Kerala, centered around the worship of the Divine Mother, Adi Parashakti. Raised hearing sacred mantras and witnessing his father and grandfather perform Tantric rituals, his calling was awakened early. His grandfather, the revered Chandrasekhara, became his very first Guru — teaching him foundational mantras and guiding his first steps in the family temple.",
+    lbl: 'Guruji Manish Madhusoodanan Potti',
     sl: ['Years of Experience', 'Rituals Performed', 'Countries Served', 'Client Satisfaction']
   },
   services: {
@@ -36,20 +38,20 @@ en: {
     cta: 'Learn More',
     items: [
       { ic: '🐘', nm: 'Ganapathi Homam', tg: 'New Beginnings', cat: 'homam', ds: 'Performed before any new venture, business, or moving into a new home — invoking Lord Ganesha\'s blessings to remove obstacles and ensure prosperity.', bts: ['Removes obstacles in work, business & plans', 'Brings happiness, health & prosperity', 'Ideal for birthdays, new homes & fresh starts'], price: 108 },
-      { ic: '🌿', nm: 'Dhanvantari Pooja', tg: 'Health & Healing', cat: 'pooja', ds: 'Invokes Lord Dhanvantari, the divine celestial healer, to attain health, wealth, and cure illnesses by making the mind and body strong.', bts: ['Cures illnesses and restores full health', 'Brings wealth and contentment', 'Strengthens mind and body through sacred mantras'], price: 108 },
-      { ic: '🔱', nm: 'Maha Mrityunjaya Homam', tg: 'Longevity & Peace', cat: 'homam', ds: 'A powerful Vedic ritual seeking Lord Shiva\'s blessings for protection against untimely death, longevity, healing, and spiritual liberation.', bts: ['Protection against untimely death & accidents', 'Attain longevity, peace & prosperity', 'Overcome negative planetary influences'], price: 151 },
-      { ic: '⚡', nm: 'Sudarshana Homam', tg: 'Protection & Success', cat: 'homam', ds: 'Invokes the divine energy of Lord Sudarshana to destroy negativity, remove life\'s troubles, and bring health, wealth, peace, and prosperity.', bts: ['Destroys negativity and evil eye', 'Promotes success and deep purification', 'Prevents accidents and removes poverty'], price: 151 },
+      { ic: '⚕️', nm: 'Dhanvantari Pooja', tg: 'Health & Healing', cat: 'pooja', ds: 'Invokes Lord Dhanvantari, the divine celestial healer, to attain health, wealth, and cure illnesses by making the mind and body strong.', bts: ['Cures illnesses and restores full health', 'Brings wealth and contentment', 'Strengthens mind and body through sacred mantras'], price: 108 },
+      { ic: '🕉️', nm: 'Maha Mrityunjaya Homam', tg: 'Longevity & Peace', cat: 'homam', ds: 'A powerful Vedic ritual seeking Lord Shiva\'s blessings for protection against untimely death, longevity, healing, and spiritual liberation.', bts: ['Protection against untimely death & accidents', 'Attain longevity, peace & prosperity', 'Overcome negative planetary influences'], price: 151 },
+      { ic: '☀️', nm: 'Sudarshana Homam', tg: 'Protection & Success', cat: 'homam', ds: 'Invokes the divine energy of Lord Sudarshana to destroy negativity, remove life\'s troubles, and bring health, wealth, peace, and prosperity.', bts: ['Destroys negativity and evil eye', 'Promotes success and deep purification', 'Prevents accidents and removes poverty'], price: 151 },
       { ic: '🌸', nm: 'Bhagavathi Seva Pooja', tg: 'Divine Feminine', cat: 'pooja', ds: 'A sacred Vedic ceremony honoring the divine feminine to remove obstacles, negative energies, and planetary ill effects, restoring cosmic harmony.', bts: ['Spiritual upliftment and inner balance', 'Eliminates black magic & planetary ill effects', 'Financial stability and business protection'], price: 151 },
-      { ic: '🗡️', nm: 'Kali Pooja', tg: 'Shakti Worship', cat: 'pooja', ds: 'Performed on Amavasya to appease Goddess Kali, relieving tensions, curing diseases, removing negative energies, and bringing peace to the home.', bts: ['Cures diseases and boosts mental health', 'Removes negative energy and brings peace', 'Clears debts and achieves stable, prosperous life'], price: 108 },
-      { ic: '🛡️', nm: 'Aghora Homam', tg: 'Spiritual Protection', cat: 'homam', ds: 'Seeks Lord Shiva\'s blessings in his Aghora Rudra form to ward off evil spirits, break negative spells, and shield from black magic.', bts: ['Wards off evil spirits and black magic', 'Breaks curses, spells, and evil eye', 'Protects home and individual from all negativity'], price: 201 },
-      { ic: '💫', nm: 'Swayamvara Parvathi Pooja', tg: 'Marriage & Love', cat: 'pooja', ds: 'Worship of Goddess Parvati to remove obstacles in marriage, find a suitable life partner, and strengthen the marital bond with divine grace.', bts: ['Removes obstacles delaying marriage', 'Helps find an ideal life partner', 'Strengthens and heals relationships between spouses'], price: 108 },
-      { ic: '🍃', nm: 'Santana Gopala Pooja', tg: 'Blessings for Children', cat: 'pooja', ds: 'Worship of Gopala Krishna with Tulasi leaves using the sacred Santhana Gopala Mantra to seek blessings for a child and family wealth.', bts: ['Blesses families seeking to conceive a child', 'Brings wealth and prosperity', 'Performed with the sacred Santhana Gopala Mantra'], price: 108 },
-      { ic: '✨', nm: 'Durga Pooja', tg: 'Divine Power', cat: 'pooja', ds: 'Celebrates the triumph of good over evil, invoking Goddess Durga\'s power for protection, happiness, health, and overcoming all obstacles.', bts: ['Protection from enemies and evil eye', 'Brings happiness, wealth, and prosperity', 'Relief from prolonged illness and life obstacles'], price: 108 },
-      { ic: '🌺', nm: 'Guruthi Pooja', tg: 'Supreme Worship', cat: 'pooja', ds: 'The most powerful pooja worshiping Goddess Rajarajeswari Devi — the combined powers of Lakshmi, Saraswati, and Bhadrakali — to remove all obstacles.', bts: ['Removes evil forces and all life obstacles', 'Relief from health, marriage & fertility issues', 'Financial stability and career improvements'], price: 151 },
-      { ic: '💛', nm: 'Lakshmi Ganesha Homam', tg: 'Wealth & Victory', cat: 'homam', ds: 'A sacred fire ritual invoking the combined blessings of Goddess Lakshmi and Lord Ganesha for wealth, success, and lasting family harmony.', bts: ['Attracts wealth, prosperity, and success', 'Removes all obstacles and negative energies', 'Brings harmony in family and business life'], price: 151 },
-      { ic: '🌀', nm: 'Maha Vishnu Pooja', tg: 'Divine Grace', cat: 'pooja', ds: 'Ceremonial worship of Lord Vishnu for longevity, prosperity, peace, and freedom from fear, stress, anxiety, and diseases.', bts: ['Relief from fear of death and spiritual liberation', 'Reduces stress, anxiety, and protects from diseases', 'Blessings of longevity, peace, and prosperity'], price: 108 },
-      { ic: '🙏', nm: 'Sayujya Pooja', tg: 'Ancestral Peace', cat: 'pooja', ds: 'Removes obstacles in attaining eternal peace and salvation, offering blessings for the souls of departed ancestors at Lord Mahavishnu\'s feet.', bts: ['Eternal peace & salvation for departed ancestors', 'Attains salokyam, saroopyam & sameepyam', 'Spiritual liberation at Lord Mahavishnu\'s feet'], price: 108 },
-      { ic: '⭐', nm: 'Navagraha Pooja', tg: 'Planetary Remedies', cat: 'pooja', ds: 'A time-tested Vedic ritual combining worship of all nine planets (Navagrahas) to nullify doshas in your horoscope and enable prosperity in life.', bts: ['Relief from Navagraha doshas and horoscope flaws', 'Improved health and financial conditions', 'Protection from fatal situations shown in birth chart'], price: 108 },
+      { ic: '⚔️', nm: 'Kali Pooja', tg: 'Shakti Worship', cat: 'pooja', ds: 'Performed on Amavasya to appease Goddess Kali, relieving tensions, curing diseases, removing negative energies, and bringing peace to the home.', bts: ['Cures diseases and boosts mental health', 'Removes negative energy and brings peace', 'Clears debts and achieves stable, prosperous life'], price: 108 },
+      { ic: '🔥', nm: 'Aghora Homam', tg: 'Spiritual Protection', cat: 'homam', ds: 'Seeks Lord Shiva\'s blessings in his Aghora Rudra form to ward off evil spirits, break negative spells, and shield from black magic.', bts: ['Wards off evil spirits and black magic', 'Breaks curses, spells, and evil eye', 'Protects home and individual from all negativity'], price: 201 },
+      { ic: '💍', nm: 'Swayamvara Parvathi Pooja', tg: 'Marriage & Love', cat: 'pooja', ds: 'Worship of Goddess Parvati to remove obstacles in marriage, find a suitable life partner, and strengthen the marital bond with divine grace.', bts: ['Removes obstacles delaying marriage', 'Helps find an ideal life partner', 'Strengthens and heals relationships between spouses'], price: 108 },
+      { ic: '👶', nm: 'Santana Gopala Pooja', tg: 'Blessings for Children', cat: 'pooja', ds: 'Worship of Gopala Krishna with Tulasi leaves using the sacred Santhana Gopala Mantra to seek blessings for a child and family wealth.', bts: ['Blesses families seeking to conceive a child', 'Brings wealth and prosperity', 'Performed with the sacred Santhana Gopala Mantra'], price: 108 },
+      { ic: '🦁', nm: 'Durga Pooja', tg: 'Divine Power', cat: 'pooja', ds: 'Celebrates the triumph of good over evil, invoking Goddess Durga\'s power for protection, happiness, health, and overcoming all obstacles.', bts: ['Protection from enemies and evil eye', 'Brings happiness, wealth, and prosperity', 'Relief from prolonged illness and life obstacles'], price: 108 },
+      { ic: '👑', nm: 'Guruthi Pooja', tg: 'Supreme Worship', cat: 'pooja', ds: 'The most powerful pooja worshiping Goddess Rajarajeswari Devi — the combined powers of Lakshmi, Saraswati, and Bhadrakali — to remove all obstacles.', bts: ['Removes evil forces and all life obstacles', 'Relief from health, marriage & fertility issues', 'Financial stability and career improvements'], price: 151 },
+      { ic: '💰', nm: 'Lakshmi Ganesha Homam', tg: 'Wealth & Victory', cat: 'homam', ds: 'A sacred fire ritual invoking the combined blessings of Goddess Lakshmi and Lord Ganesha for wealth, success, and lasting family harmony.', bts: ['Attracts wealth, prosperity, and success', 'Removes all obstacles and negative energies', 'Brings harmony in family and business life'], price: 151 },
+      { ic: '🐚', nm: 'Maha Vishnu Pooja', tg: 'Divine Grace', cat: 'pooja', ds: 'Ceremonial worship of Lord Vishnu for longevity, prosperity, peace, and freedom from fear, stress, anxiety, and diseases.', bts: ['Relief from fear of death and spiritual liberation', 'Reduces stress, anxiety, and protects from diseases', 'Blessings of longevity, peace, and prosperity'], price: 108 },
+      { ic: '🕊️', nm: 'Sayujya Pooja', tg: 'Ancestral Peace', cat: 'pooja', ds: 'Removes obstacles in attaining eternal peace and salvation, offering blessings for the souls of departed ancestors at Lord Mahavishnu\'s feet.', bts: ['Eternal peace & salvation for departed ancestors', 'Attains salokyam, saroopyam & sameepyam', 'Spiritual liberation at Lord Mahavishnu\'s feet'], price: 108 },
+      { ic: '🪐', nm: 'Navagraha Pooja', tg: 'Planetary Remedies', cat: 'pooja', ds: 'A time-tested Vedic ritual combining worship of all nine planets (Navagrahas) to nullify doshas in your horoscope and enable prosperity in life.', bts: ['Relief from Navagraha doshas and horoscope flaws', 'Improved health and financial conditions', 'Protection from fatal situations shown in birth chart'], price: 108 },
       { ic: '🌙', nm: 'Navchandika Pooja', tg: 'Wish Fulfillment', cat: 'pooja', ds: 'A powerful Durga puja to make heartfelt wishes come true and free the worshipper from sufferings. Goddess Chandi responds immediately to sincere prayers.', bts: ['Makes sincere wishes and desires come true', 'Freedom from long-standing sufferings', 'One of the most powerful and responsive rituals'], price: 151 }
     ]
   },
@@ -71,26 +73,62 @@ en: {
     ]
   },
   contact: {
-    ey: 'Contact Us',
-    tl: 'Reach Guruji',
-    sub: 'We serve clients in India and Russia. Book a consultation or reach us with any question — we respond within 24 hours.',
-    intl: 'India — Kerala',
-    rutl: 'Russia — Moscow',
-    wa: 'WhatsApp Us',
-    tg: 'Book via Telegram',
-    nm: 'Your Name',
-    em: 'Email Address',
-    sv: 'Select a Service',
-    mg: 'Your Message',
-    sd: 'Send Message'
-  },
+  ey: 'Contact Us',
+  tl: 'Reach Guruji',
+  sub: 'We serve clients in India and Russia. Book a consultation or contact us anytime.',
+
+  intl: 'India — Kerala',
+  rutl: 'Russia — Moscow',
+
+  indiaAddress: 'Thrissur, Kerala, India 680001',
+  russiaAddress: 'Moscow, Russia',
+
+  whatsapp: 'WhatsApp',
+  telegram: 'Telegram',
+  email: 'Email',
+
+  ist: 'IST',
+  msk: 'MSK',
+
+  wa: 'WhatsApp Us',
+  tg: 'Book via Telegram',
+
+  nm: 'Your Name',
+  em: 'Email Address',
+  sv: 'Select a Service',
+  mg: 'Your Message',
+  sd: 'Send Message',
+
+  service1: 'Pooja & Homam',
+  service2: 'Tantram',
+  service3: 'Dosha Pariharam',
+  service4: 'Jyotish Consultation',
+  service5: 'Vastu Shastram',
+  service6: 'Raksha & Elass',
+  service7: 'Kerala Sacred Travel'
+},
   footer: {
-    tag: "Bringing the light of Kerala's temple tradition to your home.",
-    sv: 'Services',
-    cn: 'Connect',
-    cp: '© 2025 Gourishankaram. All rights reserved.',
-    sr: 'Serving families in India & Russia.'
-  },
+     logo: "Gourishankaram",
+  tag: "Bringing Kerala temple traditions to your home.",
+
+  sv: "Services",
+
+  service1: "Pooja & Homam",
+  service2: "Tantram",
+  service3: "Dosha Pariharam",
+  service4: "Jyotish Consultation",
+  service5: "Vastu Shastram",
+  service6: "Raksha & Elass",
+
+  cn: "Contact",
+
+  india: "WhatsApp India",
+  telegram: "Telegram Bot",
+  russia: "WhatsApp Russia",
+
+  cp: "©2025 Gourishankaram. All rights reserved.",
+  sr: "Serving families in India & Russia."
+},
   preloader: [
     "Aligning with the Cosmos...",
     "Decoding Planetary Positions...",
@@ -116,12 +154,12 @@ en: {
     tl: 'Sacred Biography & Spiritual Lineage',
     sub: "A life woven into the ancient Shaktheya Tantric tradition of Kerala — from the first mantras learned at his grandfather's feet to decades of practice, teaching, and service.",
     bioTitle: 'Roots in the Shaktheya Tantric Tradition',
-    p1: "Guruji Maneesh Madhusoodanan Potti was born into a Potti Vasishtha family with deep Shaktheya Tantric roots in Kerala. The Shaktheya tradition — a form of Tantric devotion centered around the worship of the Divine Mother, Adi Parashakti — has been the sacred inheritance of his family lineage for generations. Families of this tradition carry a strong ancestral heritage centered on specific clan deities (Kuladevata), and this spiritual identity shaped Guruji's life from its very earliest days.",
+    p1: "Guruji Manish Madhusoodanan Potti was born into a Potti Vasishtha family with deep Shaktheya Tantric roots in Kerala. The Shaktheya tradition — a form of Tantric devotion centered around the worship of the Divine Mother, Adi Parashakti — has been the sacred inheritance of his family lineage for generations. Families of this tradition carry a strong ancestral heritage centered on specific clan deities (Kuladevata), and this spiritual identity shaped Guruji's life from its very earliest days.",
     p2: "Growing up surrounded by the sound of Vedic mantras and witnessing his father and grandfather perform Tantric rituals daily, Guruji's spiritual calling was awakened in childhood. It was his grandfather, the revered Chandrasekhara, who became his very first Guru — beginning Guruji's sacred education in the ancient mantras of Kerala. At the age of nine, Guruji underwent his Upanayanam (the sacred thread ceremony), marking his formal entry into Vedic life. From that moment, he began assisting his grandfather in the family temple, absorbing the precise execution of rituals through direct, hands-on transmission.",
     p3: "Driven by a deep desire to understand the higher dimensions of Tantrik science, Guruji sought formal education under Gurunathan Pradeep Namboothiripadu of Aalaikkavil illam, Chengannoor — a revered center of Kerala's Tantric tradition. Alongside this, he studied Vaidikam (Vedic ritual science) under Gurunathan Gopalakrishnan Vaidik. Combining both streams — the Tantrik and the Vaidik — Guruji completed his rigorous studies in just two years, demonstrating exceptional dedication and depth of understanding.",
     p4: "Recognizing his mastery, the institute invited Guruji to remain as a teacher. For four years, he delivered lectures to incoming students pursuing the same sacred studies — passing on the living tradition to the next generation of Kerala's ritual practitioners. This period of teaching deepened his own knowledge and sharpened his ability to explain complex Tantric principles with clarity and compassion.",
     p5: "To enrich his understanding of the cosmic sciences, Guruji then pursued advanced studies in Vedic Astrology (Jyotisham) and the esoteric science of pendulum divination under the late Dr. Ramaswamy and the late Satheesh. These studies opened new dimensions of his practice — allowing him to offer comprehensive spiritual guidance that combines Tantric ritual precision with deep astrological insight.",
-    p6: "Today, Guruji Maneesh Madhusoodanan Potti serves families across India and internationally. His practice spans traditional Kerala Homams and Poojas, Tantric protection rituals, Dosha Pariharam, Vedic birth chart analysis, Vastu consultations, and sacred talismans. He carries forward an unbroken lineage of sacred knowledge — rooted in his family's Shaktheya heritage, refined through years of study and teaching, and offered with genuine devotion to all who seek his guidance.",
+    p6: "Today, Guruji Manish Madhusoodanan Potti serves families across India and internationally. His practice spans traditional Kerala Homams and Poojas, Tantric protection rituals, Dosha Pariharam, Vedic birth chart analysis, Vastu consultations, and sacred talismans. He carries forward an unbroken lineage of sacred knowledge — rooted in his family's Shaktheya heritage, refined through years of study and teaching, and offered with genuine devotion to all who seek his guidance.",
     timelineTitle: 'Sacred Journey — Key Milestones',
     timeline: [
       { period: 'Early Childhood', title: 'Born into Shaktheya Heritage', desc: 'Born in Kerala into the Potti Vasishtha family — a lineage with deep Shaktheya Tantric roots, Kuladevata worship traditions, and an unbroken inheritance of sacred knowledge.' },
@@ -135,7 +173,7 @@ en: {
     guruSub: "Each teacher passed an unbroken stream of living knowledge that forms the foundation of Guruji's practice. He honors their memory with every ritual performed.",
     gurus: [
       { nm: 'Chandrasekhara Potti', role: 'Grandfather & First Guru', desc: "Guruji's grandfather and the origin of his spiritual path. Chandrasekhara Potti initiated him into sacred mantras from early childhood and guided his first years of temple service — planting the seed of a lifelong devotion." },
-      { nm: 'Gurunathan Pradeep Namboothiripadu', role: 'Tantrik Master — Aalaikkavil illam, Chengannoor', desc: "The revered Tantrik teacher under whom Guruji completed his formal education in the ritual sciences of Kerala's Tanthrasamuchaya tradition." },
+      { nm: 'Gurunathan Pradeep Namboothiripadu', role: 'Tantrik Master — Aalaikkavil illam, Chengannoor', desc: "More than 5 years of practical experience in Kerala Tantrik traditions, performing authentic Vedic rituals, homams, and temple ceremonies." },
       { nm: 'Gurunathan Gopalakrishnan Vaidik', role: 'Vaidik Sciences', desc: "Guruji's teacher in Vaidikam — the precise science of Vedic recitation and ritual procedure — grounding his practice in authentic scriptural tradition." },
       { nm: 'Dr. Ramaswamy (Late)', role: 'Advanced Jyotish & Divination', desc: "Under the late Dr. Ramaswamy, Guruji mastered higher-level Vedic Astrology, deepening his ability to read birth charts, identify planetary influences, and prescribe accurate remedies." },
       { nm: 'Satheesh (Late)', role: 'Pendulum & Subtle Sciences', desc: "The late Satheesh guided Guruji in pendulum divination — a subtle tool for accessing deeper spiritual perception that enriches his consultations and readings." },
@@ -178,7 +216,7 @@ en: {
         amt: 150
       },
        {
-      nm: " Thiruvallam Sree Parasurama Swami Temple Tour",
+      nm: " Thiruvallam Sree Parasurama Swami Temple For Belitharpanam",
       ds: "Thiruvallam is a sacred riverbank suburb in Thiruvananthapuram, Kerala, famous for the ancient Thiruvallam Sree Parasurama Swami Temple, peaceful backwaters, and traditional ancestral rites.",
       duration: "2 Days / 1 Night",
       price: 'Price:$850 per person (Deposit: $250)',
@@ -248,7 +286,7 @@ en: {
   school: {
     ey: 'Coming Soon',
     tl: 'Thandrik School of Kerala',
-    sub: 'Guruji Maneesh Madhusudanan Potti is establishing a school to teach the precise practice of Kerala temple rituals, Rigveda recitation, and traditional Vedic astrology. Training will be offered to international seekers with English and Russian translations.',
+    sub: 'Guruji Manish Madhusoodanan Potti is establishing a school to teach the precise practice of Kerala temple rituals, Rigveda recitation, and traditional Vedic astrology. Training will be offered to international seekers with English and Russian translations.',
     formTl: 'Get Notified Upon Launch',
     formDs: 'Join the waiting list to receive curriculum details, schedules, and enrollment options.',
     btn: 'Register',
@@ -258,7 +296,22 @@ en: {
 },
 ru: {
   lang: 'EN',
-  nav: { home: 'Главная', about: 'О нас', services: 'Услуги', travel: 'Паломничество', gallery: 'Галерея', community: 'Сообщество', school: 'Школа', contact: 'Контакты', book: 'Записаться' },
+  nav: {
+  home: 'Главная',
+  about: 'О нас',
+  services: 'Услуги',
+  products: 'Товары',
+  travel: 'Паломничество',
+  gallery: 'Галерея',
+  community: 'Сообщество',
+  school: 'Школа',
+  contact: 'Контакты',
+  book: 'Записаться',
+
+  title: 'Ритуалы Кералы · Ведическая Джйотиш',
+  brand: 'Гоуришанкарам'
+},
+
   hero: {
     ey: 'Традиционные ритуалы Кералы и Ведическая Астрология',
     t: ['Священная Мудрость.', 'Древние Ритуалы.', 'Вечный Покой.'],
@@ -282,20 +335,20 @@ ru: {
     cta: 'Подробнее',
     items: [
       { ic: '🐘', nm: 'Ганапати Хомам', tg: 'Новые Начала', cat: 'homam', ds: 'Проводится перед любым новым делом, бизнесом или переездом — призывает благословение Господа Ганеши для устранения препятствий и обеспечения процветания.', bts: ['Устраняет препятствия в работе и бизнесе', 'Приносит счастье, здоровье и процветание', 'Идеально для новых домов и новых начинаний'], price: 108 },
-      { ic: '🌿', nm: 'Дханвантари Пуджа', tg: 'Здоровье и Исцеление', cat: 'pooja', ds: 'Призывает Господа Дханвантари, небесного целителя, для достижения здоровья, богатства и исцеления болезней, укрепления ума и тела.', bts: ['Исцеляет болезни и восстанавливает здоровье', 'Приносит богатство и довольство', 'Укрепляет разум и тело через ведические мантры'], price: 108 },
-      { ic: '🔱', nm: 'Маха Мритьюнджая Хомам', tg: 'Долголетие и Мир', cat: 'homam', ds: 'Мощный ведический ритуал для получения благословения Господа Шивы — защита от безвременной смерти, долголетие и духовное освобождение.', bts: ['Защита от безвременной смерти и несчастных случаев', 'Долголетие, мир и процветание', 'Преодоление негативных планетарных влияний'], price: 151 },
-      { ic: '⚡', nm: 'Сударшана Хомам', tg: 'Защита и Успех', cat: 'homam', ds: 'Призывает божественную энергию Господа Сударшаны для уничтожения негатива, устранения жизненных трудностей и привлечения здоровья и мира.', bts: ['Уничтожает негатив и сглаз', 'Способствует успеху и глубокому очищению', 'Предотвращает несчастные случаи и устраняет бедность'], price: 151 },
+      { ic: '⚕️', nm: 'Дханвантари Пуджа', tg: 'Здоровье и Исцеление', cat: 'pooja', ds: 'Призывает Господа Дханвантари, небесного целителя, для достижения здоровья, богатства и исцеления болезней, укрепления ума и тела.', bts: ['Исцеляет болезни и восстанавливает здоровье', 'Приносит богатство и довольство', 'Укрепляет разум и тело через ведические мантры'], price: 108 },
+      { ic: '🕉️', nm: 'Маха Мритьюнджая Хомам', tg: 'Долголетие и Мир', cat: 'homam', ds: 'Мощный ведический ритуал для получения благословения Господа Шивы — защита от безвременной смерти, долголетие и духовное освобождение.', bts: ['Защита от безвременной смерти и несчастных случаев', 'Долголетие, мир и процветание', 'Преодоление негативных планетарных влияний'], price: 151 },
+      { ic: '☀️', nm: 'Сударшана Хомам', tg: 'Защита и Успех', cat: 'homam', ds: 'Призывает божественную энергию Господа Сударшаны для уничтожения негатива, устранения жизненных трудностей и привлечения здоровья и мира.', bts: ['Уничтожает негатив и сглаз', 'Способствует успеху и глубокому очищению', 'Предотвращает несчастные случаи и устраняет бедность'], price: 151 },
       { ic: '🌸', nm: 'Бхагавати Сева Пуджа', tg: 'Божественное Женское Начало', cat: 'pooja', ds: 'Священная ведическая церемония в честь божественного женского начала для устранения препятствий, негативной энергии и планетарных влияний.', bts: ['Духовный рост и внутренний баланс', 'Устраняет чёрную магию и планетарные влияния', 'Финансовая стабильность и защита бизнеса'], price: 151 },
-      { ic: '🗡️', nm: 'Кали Пуджа', tg: 'Шакти', cat: 'pooja', ds: 'Проводится в Амавасью для умилостивления Богини Кали, снятия напряжения, исцеления болезней и устранения негативной энергии из дома.', bts: ['Исцеляет болезни и укрепляет психическое здоровье', 'Удаляет негативную энергию и восстанавливает мир', 'Помогает расплатиться с долгами и достичь стабильности'], price: 108 },
-      { ic: '🛡️', nm: 'Агхора Хомам', tg: 'Духовная Защита', cat: 'homam', ds: 'Испрашивает благословения Господа Шивы в форме Агхора Рудры для отражения злых духов, разрушения заклятий и защиты от чёрной магии.', bts: ['Отражает злых духов и чёрную магию', 'Разрушает проклятия, заклятия и сглаз', 'Защищает дом и человека от всех негативных сил'], price: 201 },
-      { ic: '💫', nm: 'Сваямвара Парвати Пуджа', tg: 'Брак и Любовь', cat: 'pooja', ds: 'Поклонение Богине Парвати для устранения препятствий в браке, обретения подходящего спутника жизни и укрепления супружеских уз.', bts: ['Устраняет препятствия, задерживающие брак', 'Помогает найти идеального спутника жизни', 'Укрепляет и восстанавливает отношения между супругами'], price: 108 },
-      { ic: '🍃', nm: 'Сантана Гопала Пуджа', tg: 'Благословение Детей', cat: 'pooja', ds: 'Поклонение Гопала Кришне с листьями Туласи по мантре Сантана Гопала для получения благословения на ребёнка и семейное процветание.', bts: ['Благословляет семьи, желающие зачать ребёнка', 'Приносит богатство и процветание', 'Совершается с сакральной мантрой Сантана Гопала'], price: 108 },
-      { ic: '✨', nm: 'Дурга Пуджа', tg: 'Божественная Сила', cat: 'pooja', ds: 'Прославляет победу добра над злом, призывая силу Богини Дурги для защиты, счастья, здоровья и преодоления всех жизненных препятствий.', bts: ['Защита от врагов и сглаза', 'Приносит счастье, богатство и процветание', 'Исцеление затяжных болезней и устранение препятствий'], price: 108 },
-      { ic: '🌺', nm: 'Гурути Пуджа', tg: 'Высшее Поклонение', cat: 'pooja', ds: 'Мощнейшая пуджа Богине Раджараджешвари Дэви — объединённой силе Лакшми, Сарасвати и Бхадракали — для устранения всех жизненных препятствий.', bts: ['Устраняет злые силы и все жизненные препятствия', 'Помогает при болезнях, проблемах в браке и бесплодии', 'Финансовая стабильность и карьерный рост'], price: 151 },
-      { ic: '💛', nm: 'Лакшми Ганеша Хомам', tg: 'Богатство и Победа', cat: 'homam', ds: 'Священный огненный ритуал для получения объединённого благословения Богини Лакшми и Господа Ганеши — богатство, успех и семейная гармония.', bts: ['Привлекает богатство, процветание и успех', 'Устраняет все препятствия и негативную энергию', 'Приносит гармонию в семью и дела'], price: 151 },
-      { ic: '🌀', nm: 'Маха Вишну Пуджа', tg: 'Милость Вишну', cat: 'pooja', ds: 'Торжественное поклонение Господу Вишну для долголетия, процветания, мира и освобождения от страха, стресса и болезней.', bts: ['Освобождение от страха смерти и духовное спасение', 'Снижает стресс, тревогу и защищает от болезней', 'Благословение долголетием, миром и процветанием'], price: 108 },
-      { ic: '🙏', nm: 'Саюджья Пуджа', tg: 'Мир Предков', cat: 'pooja', ds: 'Устраняет препятствия на пути к вечному покою и спасению, даруя благословение душам ушедших предков у стоп Господа Махавишну.', bts: ['Вечный мир и спасение для душ предков', 'Достижение салокьям, сарупьям и самипьям', 'Духовное освобождение у стоп Господа Махавишну'], price: 108 },
-      { ic: '⭐', nm: 'Навагра Пуджа', tg: 'Планетарные Ритуалы', cat: 'pooja', ds: 'Проверенный временем ведический ритуал поклонения всем девяти планетам (Наваграхам) для нейтрализации доша в гороскопе и процветания.', bts: ['Устранение Наваграха доша и дефектов гороскопа', 'Улучшение здоровья и финансового положения', 'Защита от опасных ситуаций, предсказанных в карте рождения'], price: 108 },
+      { ic: '⚔️', nm: 'Кали Пуджа', tg: 'Шакти', cat: 'pooja', ds: 'Проводится в Амавасью для умилостивления Богини Кали, снятия напряжения, исцеления болезней и устранения негативной энергии из дома.', bts: ['Исцеляет болезни и укрепляет психическое здоровье', 'Удаляет негативную энергию и восстанавливает мир', 'Помогает расплатиться с долгами и достичь стабильности'], price: 108 },
+      { ic: '🔥', nm: 'Агхора Хомам', tg: 'Духовная Защита', cat: 'homam', ds: 'Испрашивает благословения Господа Шивы в форме Агхора Рудры для отражения злых духов, разрушения заклятий и защиты от чёрной магии.', bts: ['Отражает злых духов и чёрную магию', 'Разрушает проклятия, заклятия и сглаз', 'Защищает дом и человека от всех негативных сил'], price: 201 },
+      { ic: '💍', nm: 'Сваямвара Парвати Пуджа', tg: 'Брак и Любовь', cat: 'pooja', ds: 'Поклонение Богине Парвати для устранения препятствий в браке, обретения подходящего спутника жизни и укрепления супружеских уз.', bts: ['Устраняет препятствия, задерживающие брак', 'Помогает найти идеального спутника жизни', 'Укрепляет и восстанавливает отношения между супругами'], price: 108 },
+      { ic: '👶', nm: 'Сантана Гопала Пуджа', tg: 'Благословение Детей', cat: 'pooja', ds: 'Поклонение Гопала Кришне с листьями Туласи по мантре Сантана Гопала для получения благословения на ребёнка и семейное процветание.', bts: ['Благословляет семьи, желающие зачать ребёнка', 'Приносит богатство и процветание', 'Совершается с сакральной мантрой Сантана Гопала'], price: 108 },
+      { ic: '🦁', nm: 'Дурга Пуджа', tg: 'Божественная Сила', cat: 'pooja', ds: 'Прославляет победу добра над злом, призывая силу Богини Дурги для защиты, счастья, здоровья и преодоления всех жизненных препятствий.', bts: ['Защита от врагов и сглаза', 'Приносит счастье, богатство и процветание', 'Исцеление затяжных болезней и устранение препятствий'], price: 108 },
+      { ic: '👑', nm: 'Гурути Пуджа', tg: 'Высшее Поклонение', cat: 'pooja', ds: 'Мощнейшая пуджа Богине Раджараджешвари Дэви — объединённой силе Лакшми, Сарасвати и Бхадракали — для устранения всех жизненных препятствий.', bts: ['Устраняет злые силы и все жизненные препятствия', 'Помогает при болезнях, проблемах в браке и бесплодии', 'Финансовая стабильность и карьерный рост'], price: 151 },
+      { ic: '💰', nm: 'Лакшми Ганеша Хомам', tg: 'Богатство и Победа', cat: 'homam', ds: 'Священный огненный ритуал для получения объединённого благословения Богини Лакшми и Господа Ганеши — богатство, успех и семейная гармония.', bts: ['Привлекает богатство, процветание и успех', 'Устраняет все препятствия и негативную энергию', 'Приносит гармонию в семью и дела'], price: 151 },
+      { ic: '🐚', nm: 'Маха Вишну Пуджа', tg: 'Милость Вишну', cat: 'pooja', ds: 'Торжественное поклонение Господу Вишну для долголетия, процветания, мира и освобождения от страха, стресса и болезней.', bts: ['Освобождение от страха смерти и духовное спасение', 'Снижает стресс, тревогу и защищает от болезней', 'Благословение долголетием, миром и процветанием'], price: 108 },
+      { ic: '🕊️', nm: 'Саюджья Пуджа', tg: 'Мир Предков', cat: 'pooja', ds: 'Устраняет препятствия на пути к вечному покою и спасению, даруя благословение душам ушедших предков у стоп Господа Махавишну.', bts: ['Вечный мир и спасение для душ предков', 'Достижение салокьям, сарупьям и самипьям', 'Духовное освобождение у стоп Господа Махавишну'], price: 108 },
+      { ic: '🪐', nm: 'Навагра Пуджа', tg: 'Планетарные Ритуалы', cat: 'pooja', ds: 'Проверенный временем ведический ритуал поклонения всем девяти планетам (Наваграхам) для нейтрализации доша в гороскопе и процветания.', bts: ['Устранение Наваграха доша и дефектов гороскопа', 'Улучшение здоровья и финансового положения', 'Защита от опасных ситуаций, предсказанных в карте рождения'], price: 108 },
       { ic: '🌙', nm: 'Навчандика Пуджа', tg: 'Исполнение Желаний', cat: 'pooja', ds: 'Мощная Дурга-пуджа для исполнения сокровенных желаний и освобождения от страданий. Богиня Чанди немедленно откликается на искренние молитвы.', bts: ['Исполняет искренние желания и мечты', 'Освобождение от многолетних страданий', 'Один из самых мощных и отзывчивых ритуалов'], price: 151 }
     ]
   },
@@ -317,26 +370,62 @@ ru: {
     ]
   },
   contact: {
-    ey: 'Связаться с нами',
-    tl: 'Связаться с Гуруджи',
-    sub: 'Мы обслуживаем клиентов в Индии и России. Запишитесь на консультацию — отвечаем в течение 24 часов.',
-    intl: 'Индия — Керала',
-    rutl: 'Россия — Москва',
-    wa: 'Написать в WhatsApp',
-    tg: 'Записаться через Telegram',
-    nm: 'Ваше имя',
-    em: 'Email',
-    sv: 'Выберите услугу',
-    mg: 'Ваше сообщение',
-    sd: 'Отправить'
-  },
+  ey: 'Свяжитесь с нами',
+  tl: 'Связаться с Гуруджи',
+  sub: 'Мы обслуживаем клиентов в Индии и России. Запишитесь на консультацию или свяжитесь с нами в любое время.',
+
+  intl: 'Индия — Керала',
+  rutl: 'Россия — Москва',
+
+  indiaAddress: 'Триссур, Керала, Индия 680001',
+  russiaAddress: 'Москва, Россия',
+
+  whatsapp: 'ВатсАпп',
+  telegram: 'Телеграм',
+  email: 'Электронная почта',
+
+  ist: 'ИСТ',
+  msk: 'МСК',
+
+  wa: 'Написать в WhatsApp',
+  tg: 'Записаться через Telegram',
+
+  nm: 'Ваше имя',
+  em: 'Электронная почта',
+  sv: 'Выберите услугу',
+  mg: 'Ваше сообщение',
+  sd: 'Отправить сообщение',
+
+  service1: 'Пуджа и Хома',
+  service2: 'Тантра',
+  service3: 'Доша Парихарам',
+  service4: 'Консультация по Джйотиш',
+  service5: 'Васту Шастра',
+  service6: 'Ракша и Эласс',
+  service7: 'Священное паломничество по Керале'
+},
   footer: {
-    tag: 'Привносим свет традиций керальских храмов в ваш дом.',
-    sv: 'Услуги',
-    cn: 'Связь',
-    cp: '© 2025 Gourishankaram. Все права защищены.',
-    sr: 'Обслуживаем семьи в Индии и России.'
-  },
+     logo: "Гуришанкарам",
+  tag: "Приносим традиции керальских храмов в ваш дом.",
+
+  sv: "Услуги",
+
+  service1: "Пуджа и Хома",
+  service2: "Тантра",
+  service3: "Доша Парихарам",
+  service4: "Консультация по Джйотиш",
+  service5: "Васту Шастра",
+  service6: "Ракша и Эласс",
+
+  cn: "Связь",
+
+  india: "ВатсАпп Индия",
+  telegram: "Телеграм",
+  russia: "ВатсАпп Россия",
+
+  cp: "©2025 Гуришанкарам. Все права защищены.",
+  sr: "Обслуживаем семьи в Индии и России."
+},
   preloader: [
     "Настройка связи с Космосом...",
     "Расчет движения планет...",
@@ -350,7 +439,7 @@ ru: {
     amt: 'Сумма к оплате',
     name: 'Ваше полное имя',
     email: 'Ваш адрес электронной почты',
-    phone: 'Номер WhatsApp / Телефон',
+    phone: 'Номер ВатсАпп / Телефон',
     date: 'Предпочтительная дата',
     pay: 'Оплатить и подтвердить запись',
     successTl: 'Оплата успешно произведена!',
@@ -371,7 +460,7 @@ ru: {
     timelineTitle: 'Священный Путь — Ключевые Вехи',
     timeline: [
       { period: 'Раннее детство', title: 'Рождение в Шактейском Роду', desc: 'Родился в Керале в семье Потти Васиштха — роду с глубокими Шактейя-тантрическими корнями, традициями почитания Кулядевата и непрерывным наследием священного знания.' },
-      { period: '9 лет', title: 'Упанаяна и Храмовое Служение', desc: 'Прошёл священный обряд Упанаяны и начал официально помогать деду Чандрашекхаре в храмовых ритуалах — получая прямую передачу ведических мантр.' },
+      { period: '9 лет', title: 'Упанаяна и Храмовое Служение', desc: 'Более 5 лет практического опыта в традициях керальской тантры, проведение подлинных ведических ритуалов, хом, и храмовых церемоний.' },
       { period: '2 года обучения', title: 'Тантрика и Вайдикам — Ченганнур', desc: 'Прошёл интенсивное обучение у Прадипа Намбудирипаду (Алаккавил иллам, Ченганнур) и Вайдикам у Гопалакришнана Вайдика.' },
       { period: '4 года преподавания', title: 'Преподаватель Института', desc: 'Назначен лектором в институте — передавал тантрическую ритуальную науку студентам со всей Кералы. Период глубокого синтеза и совершенствования.' },
       { period: 'Продвинутые занятия', title: 'Джйотиш и Маятниковые Науки', desc: 'Освоил высшие уровни ведической астрологии и маятниковой диагностики у покойного Д-ра Рамасвами и покойного Сатиша.' },
@@ -417,19 +506,33 @@ ru: {
     formBtn: 'Отправить запрос',
     items: [
       {
-        nm: 'Паломничество по Южной Керале',
-        ds: 'Священное путешествие в величественный Храм Шри Падманабхасвами, древние скальные храмы и Храм Вайком Махадева. Включает медитации, участие в пуджах и проживание премиум-класса.',
-        duration: '5 дней / 4 ночи',
-        price: 'Цена: $650 с человека (Депозит: $150)',
-        amt: 150
-      },
-      {
-        nm: 'Тур в Северную Кералу и Сабарималу',
-        ds: 'Путешествие в Центральную и Северную Кералу. Посещение знаменитого храма Шри Кришны в Гуруваюре, храма Вадаккуннатхан и Шабарималы. Специальные пуджи от Гуруджи, традиционное жилье и праздничный обед.',
-        duration: '7 дней / 6 ночей',
-        price: 'Цена: $850 с человека (Депозит: $250)',
-        amt: 250
-      }
+  nm: 'Тур по храмам Южной Кералы',
+  ds: 'Священное паломничество в величественный храм Шри Падманабхасвами, древние высеченные в скалах пещерные храмы и храм Вайком Махадева. Включает сопровождение гида, медитацию, разрешения на посещение храмов и проживание в роскошном отеле.',
+  duration: '5 дней / 4 ночи',
+  price: 'Цена: 650 $ с человека (Депозит: 150 $)',
+  amt: 150
+},
+{
+  nm: 'Храм Шри Парашурама Свами в Тирувалламе (Белитарпанам)',
+  ds: 'Тируваллам — священный прибрежный район Тируванантапурама, штат Керала, известный древним храмом Шри Парашурама Свами, живописными заводями и традиционными обрядами почитания предков.',
+  duration: '2 дня / 1 ночь',
+  price: 'Цена: 850 $ с человека (Депозит: 250 $)',
+  amt: 200
+},
+{
+  nm: 'Тур по Северной Керале и Сабаримале',
+  ds: 'Путешествие по центральной и северной Керале с посещением знаменитого храма Шри Кришны в Гуруваюре, храма Вадаккуннатхан и Сабарималы. В программу входят специальные пуджи, проводимые Гуруджи, традиционное размещение и вегетарианские угощения.',
+  duration: '7 дней / 6 ночей',
+  price: 'Цена: 850 $ с человека (Депозит: 250 $)',
+  amt: 250
+},
+{
+  nm: 'Тур по святым и религиозным местам',
+  ds: 'Откройте для себя самые священные храмы и духовные достопримечательности Кералы, включая храм Гуруваюр, Сабарималу, храм Чоттаниккара Бхагавати, храм Вайком Махадева, храм Эттуманур Махадева, храм Падманабхасвами и многие другие. Почувствуйте атмосферу божественных ритуалов, умиротворения и богатого духовного наследия Кералы.',
+  duration: '5 дней / 4 ночи',
+  price: 'Цена: 399 $ с человека (Депозит: 250 $)',
+  amt: 150
+},
     ]
   },
   gallery: {

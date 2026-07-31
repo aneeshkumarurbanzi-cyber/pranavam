@@ -67,7 +67,7 @@ export default function AboutPage({ lang }: AboutPageProps) {
             }}>
               {[
                 { n: '20+', l: lang === 'en' ? 'Years Practice' : 'Лет практики' },
-                { n: '500+', l: lang === 'en' ? 'Rituals Done' : 'Ритуалов' },
+                { n: '1000+', l: lang === 'en' ? 'Rituals Done' : 'Ритуалов' },
                 { n: '5', l: lang === 'en' ? 'Lineage Gurus' : 'Учителей' },
                 { n: '12+', l: lang === 'en' ? 'Countries' : 'Стран' },
               ].map((s, i) => (

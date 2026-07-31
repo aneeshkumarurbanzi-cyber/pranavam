@@ -1,7 +1,17 @@
 'use client'
+
 import { T, Lang } from '@/lib/data'
 
-type Page = 'home' | 'about' | 'services' | 'travel' | 'gallery' | 'community' | 'school' | 'contact'
+type Page =
+  | 'home'
+  | 'about'
+  | 'services'
+  | 'products'
+  | 'travel'
+  | 'gallery'
+  | 'community'
+  | 'school'
+  | 'contact'
 
 interface FooterProps {
   lang: Lang
@@ -14,32 +24,92 @@ export default function Footer({ lang, go }: FooterProps) {
   return (
     <footer>
       <div className="ft-in">
+
         <div className="ft-div"></div>
+
         <div className="ft-t">
+
+          {/* Logo */}
+
           <div>
-            <div className="ft-lg">Gourishankaram</div>
+            <div className="ft-lg">{t.footer.logo}</div>
             <p className="ft-tg">{t.footer.tag}</p>
           </div>
+
+          {/* Services */}
+
           <div>
+
             <div className="ftct">{t.footer.sv}</div>
-            <a className="ftlk" onClick={() => go('services')}>Pooja &amp; Homam</a>
-            <a className="ftlk" onClick={() => go('services')}>Tantram</a>
-            <a className="ftlk" onClick={() => go('services')}>Dosha Pariharam</a>
-            <a className="ftlk" onClick={() => go('services')}>Jyotish Consultation</a>
-            <a className="ftlk" onClick={() => go('services')}>Vastu Shastram</a>
-            <a className="ftlk" onClick={() => go('services')}>Raksha &amp; Elass</a>
+
+            <a className="ftlk" onClick={() => go('services')}>
+              {t.footer.service1}
+            </a>
+
+            <a className="ftlk" onClick={() => go('services')}>
+              {t.footer.service2}
+            </a>
+
+            <a className="ftlk" onClick={() => go('services')}>
+              {t.footer.service3}
+            </a>
+
+            <a className="ftlk" onClick={() => go('services')}>
+              {t.footer.service4}
+            </a>
+
+            <a className="ftlk" onClick={() => go('services')}>
+              {t.footer.service5}
+            </a>
+
+            <a className="ftlk" onClick={() => go('services')}>
+              {t.footer.service6}
+            </a>
+
           </div>
+
+          {/* Contact */}
+
           <div>
+
             <div className="ftct">{t.footer.cn}</div>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="ftlk">WhatsApp India</a>
-            <a href="https://t.me/pranavam_astro" target="_blank" rel="noopener noreferrer" className="ftlk">Telegram Bot</a>
-            <a href="https://wa.me/79991234567" target="_blank" rel="noopener noreferrer" className="ftlk">WhatsApp Russia</a>
+
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ftlk"
+            >
+              {t.footer.india}
+            </a>
+
+            <a
+              href="https://t.me/pranavam_astro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ftlk"
+            >
+              {t.footer.telegram}
+            </a>
+
+            <a
+              href="https://wa.me/79991234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ftlk"
+            >
+              {t.footer.russia}
+            </a>
+
           </div>
+
         </div>
+
         <div className="ft-b">
           <span>{t.footer.cp}</span>
           <span>{t.footer.sr}</span>
         </div>
+
       </div>
     </footer>
   )

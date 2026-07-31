@@ -5,40 +5,82 @@ import { products } from '@/data/products'
 
 interface Props {
   slug: string
+  lang: 'en' | 'ru'
 }
 
-export default function ProductDetailsPage({ slug }: Props) {
+export default function ProductDetailsPage({
+  slug,
+  lang,
+}: Props) {
   const product = products.find((p) => p.slug === slug)
-
-  const [selectedImage, setSelectedImage] = useState(
-    product?.images[0] || ''
-  )
-
-  const [qty, setQty] = useState(1)
 
   if (!product) {
     return (
       <div className="max-w-7xl mx-auto py-32 text-center">
-        <h2 className="text-3xl font-bold">Product Not Found</h2>
+        <h2 className="text-3xl font-bold">
+          {lang === 'en'
+            ? 'Product Not Found'
+            : 'Товар не найден'}
+        </h2>
       </div>
     )
   }
+
+  const currentLang = lang === 'ru' ? 'ru' : 'en'
+
+  const productName =
+    typeof product.name === 'string'
+      ? product.name
+      : product.name?.[currentLang] ?? product.name?.en ?? ''
+
+  const productCategory =
+    typeof product.category === 'string'
+      ? product.category
+      : product.category?.[currentLang] ??
+        product.category?.en ??
+        ''
+
+  const productDescription =
+    typeof product.description === 'string'
+      ? product.description
+      : product.description?.[currentLang] ??
+        product.description?.en ??
+        ''
+
+  const [selectedImage, setSelectedImage] = useState(
+    product.images[0]
+  )
+
+  const [qty, setQty] = useState(1)
 
   const relatedProducts = products.filter(
     (item) => item.slug !== product.slug
   )
 
-  const whatsappMessage = `Hello,
+  const whatsappMessage =
+    lang === 'en'
+      ? `Hello,
 
 I am interested in this product.
 
-Product : ${product.name}
+Product : ${productName}
 
-Price : $${product.price}
+Price : ₹${product.price}
 
 Quantity : ${qty}
 
 Please share more details.`
+      : `Здравствуйте,
+
+Меня интересует этот товар.
+
+Товар : ${productName}
+
+Цена : ₹${product.price}
+
+Количество : ${qty}
+
+Пожалуйста, пришлите подробности.`
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
@@ -46,7 +88,9 @@ Please share more details.`
       {/* Breadcrumb */}
 
       <p className="text-gray-500 mb-8">
-        Home / Products / {product.name}
+        {lang === 'en'
+          ? `Home / Products / ${productName}`
+          : `Главная / Товары / ${productName}`}
       </p>
 
       <div className="grid lg:grid-cols-2 gap-16">
@@ -59,7 +103,7 @@ Please share more details.`
 
             <img
               src={selectedImage}
-              alt={product.name}
+              alt={productName}
               className="w-full h-[600px] object-cover"
             />
 
@@ -68,7 +112,6 @@ Please share more details.`
           <div className="flex gap-4 mt-5">
 
             {product.images.map((img, index) => (
-
               <button
                 key={index}
                 onClick={() => setSelectedImage(img)}
@@ -84,7 +127,6 @@ Please share more details.`
                   alt=""
                 />
               </button>
-
             ))}
 
           </div>
@@ -94,18 +136,17 @@ Please share more details.`
         {/* Details */}
 
         <div>
-
-          <span
+                    <span
             className="inline-block px-4 py-2 rounded-full text-black font-medium"
             style={{
-              background: 'rgba(201,162,39,.4)'
+              background: 'rgba(201,162,39,.4)',
             }}
           >
-            {product.category}
+            {productCategory}
           </span>
 
           <h1 className="text-5xl font-bold mt-6">
-            {product.name}
+            {productName}
           </h1>
 
           <p className="mt-3 text-yellow-600 font-semibold">
@@ -115,21 +156,23 @@ Please share more details.`
           <div className="flex items-center gap-4 mt-8">
 
             <span className="text-5xl font-bold">
-              ${product.price}
+              ₹{product.price}
             </span>
 
             <span className="text-2xl text-gray-400 line-through">
-              ${product.mrp}
+              ₹{product.mrp}
             </span>
 
           </div>
 
           <p className="mt-3 text-green-600 font-semibold">
-            You Save ${product.mrp - product.price}
+            {lang === 'en'
+              ? `You Save ₹${product.mrp - product.price}`
+              : `Экономия ₹${product.mrp - product.price}`}
           </p>
 
           <p className="mt-8 text-gray-600 leading-8">
-            {product.description}
+            {productDescription}
           </p>
 
           {/* Quantity */}
@@ -158,16 +201,19 @@ Please share more details.`
 
           </div>
 
-          {/* WhatsApp */}
+          {/* WhatsApp Button */}
 
           <a
             href={`https://wa.me/YOURNUMBER?text=${encodeURIComponent(
               whatsappMessage
             )}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 w-full h-14 rounded-xl flex items-center justify-center text-lg font-semibold text-white bg-green-600 hover:bg-green-700 transition"
           >
-            WhatsApp Enquiry
+            {lang === 'en'
+              ? 'WhatsApp Enquiry'
+              : 'Заказать через WhatsApp'}
           </a>
 
         </div>
@@ -179,43 +225,88 @@ Please share more details.`
       <div className="mt-24">
 
         <h2 className="text-3xl font-bold mb-10">
-          You May Also Like
+          {lang === 'en'
+            ? 'You May Also Like'
+            : 'Похожие товары'}
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8"></div>
+                  {relatedProducts.map((item) => {
 
-          {relatedProducts.map((item) => (
+            const itemName =
+              typeof item.name === 'string'
+                ? item.name
+                : item.name?.[currentLang] ?? item.name?.en ?? ''
 
-            <div
-              key={item.id}
-              className="bg-white rounded-3xl shadow overflow-hidden"
-            >
+            const itemCategory =
+              typeof item.category === 'string'
+                ? item.category
+                : item.category?.[currentLang] ??
+                  item.category?.en ??
+                  ''
 
-              <img
-                src={item.image}
-                className="w-full h-72 object-cover"
-                alt={item.name}
-              />
+            return (
 
-              <div className="p-6">
+              <div
+                key={item.id}
+                className="bg-white rounded-3xl shadow overflow-hidden hover:shadow-xl transition"
+              >
 
-                <h3 className="text-xl font-semibold">
-                  {item.name}
-                </h3>
+                <img
+                  src={item.image}
+                  className="w-full h-72 object-cover"
+                  alt={itemName}
+                />
 
-                <p className="mt-3 text-2xl font-bold">
-                  ${item.price}
-                </p>
+                <div className="p-6">
+
+                  <span
+                    className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-3"
+                    style={{
+                      background: 'rgba(201,162,39,.25)',
+                    }}
+                  >
+                    {itemCategory}
+                  </span>
+
+                  <h3 className="text-xl font-semibold">
+                    {itemName}
+                  </h3>
+
+                  <div className="flex items-center gap-3 mt-4">
+
+                    <span className="text-2xl font-bold">
+                      ₹{item.price}
+                    </span>
+
+                    <span className="text-gray-400 line-through">
+                      ₹{item.mrp}
+                    </span>
+
+                  </div>
+
+                 <Link href={`/products/${item.slug}`}>
+  <button
+    className="w-full h-12 mt-6 rounded-xl font-semibold text-black hover:opacity-90 transition"
+    style={{
+      background: 'rgba(201,162,39,.4)',
+    }}
+  >
+    {lang === 'en'
+      ? 'View Product'
+      : 'Подробнее'}
+  </button>
+</Link>
+
+                </div>
 
               </div>
 
-            </div>
-
-          ))}
+            )
+          })}
 
         </div>
 
-      </div>
 
     </section>
   )
