@@ -57,7 +57,7 @@ export default function About({ lang }: AboutProps) {
             <span className="eyebrow">{t.about.ey}</span>
             <h2 className="st" style={{ textAlign: 'left', marginBottom: '1.4rem' }}>{t.about.tl}</h2>
             <p>{t.about.p1}</p>
-            <p>{t.about.p2}</p>
+           
 
             <div className="st-g">
               <div className="stt">
