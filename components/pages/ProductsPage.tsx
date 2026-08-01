@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Search } from 'lucide-react'
-import { products } from '@/data/products'
+import { products } from '@/lib/products'
 import { Lang } from '@/lib/data'
 
 interface ProductsPageProps {
@@ -11,18 +11,13 @@ interface ProductsPageProps {
 }
 
 export default function ProductsPage({ lang }: ProductsPageProps) {
-  console.log("ProductsPage lang =", lang);
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('All')
   const [sort, setSort] = useState('')
 
   const currentLang: 'en' | 'ru' = lang === 'ru' ? 'ru' : 'en'
-  console.log("lang:", lang);
-console.log("currentLang:", currentLang);
 
   let filtered = products.filter((product) => {
-    console.log(product);
-console.log(product.name[currentLang]);
     const productName =
       typeof product.name === 'string'
         ? product.name
@@ -42,7 +37,6 @@ console.log(product.name[currentLang]);
 
     return searchMatch && categoryMatch
   })
-
   if (sort === 'low') {
     filtered = [...filtered].sort((a, b) => a.price - b.price)
   }

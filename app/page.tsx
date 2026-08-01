@@ -38,7 +38,8 @@ type Page =
   | 'contact'
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>('en')
+  
+ const [lang, setLang] = useState<Lang>("en");
   const [currentPage, setCurrentPage] = useState<Page>('home')
   const [menuOpen, setMenuOpen] = useState(false)
   const [paypalModal, setPaypalModal] = useState<{ service: string; amount: number } | null>(null)
@@ -50,9 +51,25 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const toggleLang = () => setLang(l => l === 'en' ? 'ru' : 'en')
+  const toggleLang = () => {
+  const newLang = lang === "en" ? "ru" : "en";
+
+  setLang(newLang);
+
+  const params = new URLSearchParams(window.location.search);
+  params.set("lang", newLang);
+
+  window.history.replaceState({}, "", `?${params.toString()}`);
+};
+useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  const urlLang = params.get("lang");
+
+  setLang(urlLang === "ru" ? "ru" : "en");
+}, []);
 
   // Intersection Observer for scroll reveals + tilt + specular + magnetic buttons
+  
   useEffect(() => {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
