@@ -1,5 +1,7 @@
 'use client'
+
 import { useState } from 'react'
+import Image from 'next/image'
 import { T, Lang } from '@/lib/data'
 
 interface ServicesPageProps {
@@ -95,7 +97,22 @@ export default function ServicesPage({ lang, openPaypalModal }: ServicesPageProp
         <div className="sv-g" id="det-sv-grid">
           {filtered.map((s, i) => (
             <div key={`${filter}-${i}`} className="sv-c rv in" style={{ display: 'flex', flexDirection: 'column' }}>
-              <span className="sv-ic">{s.ic}</span>
+              <div
+  className="sv-ic"
+  style={{
+    display: 'flex',
+   
+    marginBottom: '1rem',
+  }}
+>
+  <Image
+    src={s.ic}
+    alt={s.nm}
+    width={30}
+    height={30}
+    className="object-contain"
+  />
+</div>
               <div className="sv-tag">{s.tg}</div>
               <div className="sv-nm">{s.nm}</div>
               <div className="sv-ds" style={{ marginBottom: '0.75rem' }}>{s.ds}</div>
