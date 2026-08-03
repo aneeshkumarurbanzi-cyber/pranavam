@@ -1142,8 +1142,8 @@ nav.solid {
 }
 
 .sv-ic {
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
   margin: 0 auto 1.2rem;
 
   display: flex;
@@ -1162,8 +1162,8 @@ nav.solid {
 }
 
 .sv-ic img {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
 }

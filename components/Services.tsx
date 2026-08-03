@@ -66,8 +66,8 @@ export default function Services({
   <img
     src={s.ic}
     alt={s.nm}
-    width={42}
-    height={42}
+    width={32}
+    height={32}
   />
 </div>
 
