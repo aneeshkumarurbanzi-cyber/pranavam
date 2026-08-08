@@ -1,58 +1,8 @@
 
 export const products = [
-  {
-    id: 1,
-    slug: "ganapathy-idol",
-    name: {
-      en: "Ganapathy Idol",
-      ru: "Идол Господа Ганеши"
-    },
-    category: {
-      en: "Pooja Items",
-      ru: "Предметы для пуджи"
-    },
-    image: "/products/ganapathy.jpg",
-    images: [
-      "/products/ganapathy.jpg",
-      "/products/ganapathy.jpg",
-      "/products/ganapathy.jpg",
-      "/products/ganapathy.jpg",
-    ],
-    mrp: 1299,
-    price: 899,
-    rating: 4.9,
-    description: {
-      en: "Beautiful handcrafted Ganapathy Idol suitable for home temples, poojas, festivals and gifting. Made with premium quality craftsmanship.",
-      ru: "Красиво изготовленный вручную идол Господа Ганеши, идеально подходящий для домашнего алтаря, пуджи, праздников и подарков. Выполнен с высоким качеством."
-    }
-  },
 
-  {
-    id: 2,
-    slug: "brass-vilakku",
-    name: {
-      en: "Brass Vilakku",
-      ru: "Латунная Вилакку"
-    },
-    category: {
-      en: "Lamps",
-      ru: "Лампы"
-    },
-    image: "/products/lamp.jpg",
-    images: [
-      "/products/lamp.jpg",
-      "/products/lamp.jpg",
-      "/products/lamp.jpg",
-      "/products/lamp.jpg",
-    ],
-    mrp: 1599,
-    price: 1199,
-    rating: 4.8,
-    description: {
-      en: "Traditional brass vilakku crafted for daily pooja, temples and festive occasions. Elegant antique finish with premium quality.",
-      ru: "Традиционная латунная лампа Вилакку для ежедневной пуджи, храмов и праздничных церемоний. Элегантная отделка и высокое качество."
-    }
-  },
+
+ 
 
   {
     id: 3,
