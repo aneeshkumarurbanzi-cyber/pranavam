@@ -111,18 +111,7 @@ export default async function ProductDetails({
 
           <div className="flex items-center gap-5 mt-8 flex-wrap">
 
-            <span className="text-5xl font-bold">
-              ${product.price.toFixed(2)}
-            </span>
-
-            <span className="text-3xl line-through text-gray-400">
-              ${product.mrp.toFixed(2)}
-            </span>
-
-            <span className="text-green-600 font-semibold">
-              {text.save} ${(product.mrp - product.price).toFixed(2)}
-            </span>
-
+           
           </div>
 
           <p className="mt-8 text-gray-600 leading-8">
@@ -188,13 +177,7 @@ export default async function ProductDetails({
 
                 <div className="flex items-center gap-3 mt-4">
 
-                  <span className="text-2xl font-bold">
-                    ${item.price.toFixed(2)}
-                  </span>
-
-                  <span className="text-gray-400 line-through">
-                    ${item.mrp.toFixed(2)}
-                  </span>
+                  
 
                 </div>
 

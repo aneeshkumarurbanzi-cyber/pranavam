@@ -155,21 +155,10 @@ Please share more details.`
 
           <div className="flex items-center gap-4 mt-8">
 
-            <span className="text-5xl font-bold">
-              ₹{product.price}
-            </span>
-
-            <span className="text-2xl text-gray-400 line-through">
-              ₹{product.mrp}
-            </span>
-
+            
           </div>
 
-          <p className="mt-3 text-green-600 font-semibold">
-            {lang === 'en'
-              ? `You Save ₹${product.mrp - product.price}`
-              : `Экономия ₹${product.mrp - product.price}`}
-          </p>
+         
 
           <p className="mt-8 text-gray-600 leading-8">
             {productDescription}
@@ -275,13 +264,7 @@ Please share more details.`
 
                   <div className="flex items-center gap-3 mt-4">
 
-                    <span className="text-2xl font-bold">
-                      ₹{item.price}
-                    </span>
-
-                    <span className="text-gray-400 line-through">
-                      ₹{item.mrp}
-                    </span>
+                    
 
                   </div>
 

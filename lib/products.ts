@@ -76,8 +76,7 @@ export const products = [
       "/products/karingali-mala.jpg",
       "/products/karingali-mala.jpg",
     ],
-    mrp: 799,
-    price: 599,
+   
     rating: 4.8,
     description: {
       en: "Traditional Karingali Mala crafted from natural karingali wood. Suitable for spiritual practices, meditation and daily wear.",
@@ -103,8 +102,7 @@ export const products = [
       "/products/yantram.jpg",
       "/products/yantram.jpg",
     ],
-    mrp: 999,
-    price: 749,
+   
     rating: 4.8,
     description: {
       en: "Traditional Yantram designed for pooja, meditation and spiritual practices. Ideal for keeping in home temples and prayer spaces.",
@@ -130,8 +128,7 @@ export const products = [
       "/products/elas.jpg",
       "/products/elas.jpg",
     ],
-    mrp: 699,
-    price: 499,
+   
     rating: 4.7,
     description: {
       en: "Traditional spiritual item suitable for pooja, prayer and devotional practices. Carefully selected for quality and everyday use.",

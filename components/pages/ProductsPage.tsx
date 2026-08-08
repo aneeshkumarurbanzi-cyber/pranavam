@@ -37,14 +37,7 @@ export default function ProductsPage({ lang }: ProductsPageProps) {
 
     return searchMatch && categoryMatch
   })
-  if (sort === 'low') {
-    filtered = [...filtered].sort((a, b) => a.price - b.price)
-  }
-
-  if (sort === 'high') {
-    filtered = [...filtered].sort((a, b) => b.price - a.price)
-  }
-
+ 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
 
@@ -194,9 +187,7 @@ export default function ProductsPage({ lang }: ProductsPageProps) {
                 product.category?.en ??
                 ''
 
-          const discount = Math.round(
-            ((product.mrp - product.price) / product.mrp) * 100
-          )
+          
 
           return (
             <div
@@ -226,9 +217,7 @@ export default function ProductsPage({ lang }: ProductsPageProps) {
                 </span>
                                 {/* Discount */}
 
-                <span className="absolute right-4 top-4 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                  -{discount}% {lang === 'en' ? 'OFF' : 'СКИДКА'}
-                </span>
+                
 
                 {/* Wishlist */}
 
@@ -248,22 +237,11 @@ export default function ProductsPage({ lang }: ProductsPageProps) {
 
                 <div className="flex items-center gap-3 mt-4">
 
-                  <span className="text-2xl font-bold text-black">
-                    ₹{product.price.toFixed(2)}
-                  </span>
-
-                  <span className="text-gray-400 line-through">
-                    ₹{product.mrp.toFixed(2)}
-                  </span>
+                  
 
                 </div>
 
-                <p className="text-green-600 text-sm mt-2 font-medium">
-                  {lang === 'en'
-                    ? `You Save ₹${(product.mrp - product.price).toFixed(2)}`
-                    : `Экономия ₹${(product.mrp - product.price).toFixed(2)}`}
-                </p>
-
+               
                 <Link href={`/products/${product.id}?lang=${lang}`}>
                   <button
                     className="w-full mt-6 h-12 rounded-xl text-black font-semibold transition hover:scale-[1.02]"

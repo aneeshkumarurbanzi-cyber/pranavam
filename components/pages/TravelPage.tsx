@@ -444,36 +444,22 @@ export default function TravelPage({
 
                   <div className="travel-tour-bottom">
 
-                    <div>
-                      <small>
-                        {lang === 'ru'
-                          ? 'Начиная от'
-                          : 'Starting From'}
-                      </small>
+                   
 
-                      <strong>
-                        {tour.price}
-                      </strong>
-                    </div>
+                   <button
+              className="btn b-pri"
+              onClick={() =>
+                go('contact')
+              }
+            >
+              {lang === 'ru'
+                ? 'Обсудить путешествие'
+                : 'Plan Your Journey'}
 
-                    <button
-                      className="btn b-pri"
-                      onClick={() =>
-                        openPaypalModal(
-                          `${tour.nm} Booking Deposit`,
-                          tour.amt
-                        )
-                      }
-                    >
-                      {lang === 'ru'
-                        ? 'Забронировать'
-                        : 'Book Consultation'}
-
-                      <ArrowRight
-                        size={17}
-                      />
-                    </button>
-
+              <ArrowRight
+                size={18}
+              />
+            </button>
                   </div>
 
                 </div>
