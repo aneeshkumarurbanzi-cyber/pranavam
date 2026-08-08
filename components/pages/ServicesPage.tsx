@@ -152,15 +152,7 @@ export default function ServicesPage({ lang, openPaypalModal }: ServicesPageProp
                 paddingTop: '1rem',
                 borderTop: '1px solid rgba(212,175,55,0.18)',
               }}>
-                <div>
-                  <span style={{
-                    fontFamily: 'var(--cx)',
-                    color: 'var(--gb)',
-                    fontWeight: 700,
-                    fontSize: '1.05rem',
-                  }}>${s.price}.00</span>
-                  <span style={{ fontSize: '0.7rem', color: 'var(--crd)', marginLeft: '0.35rem' }}>USD</span>
-                </div>
+               
                 <button
                   className="btn b-pri"
                   style={{ padding: '0.45rem 1.2rem', fontSize: '0.75rem' }}

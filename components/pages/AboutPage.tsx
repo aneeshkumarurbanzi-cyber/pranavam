@@ -41,7 +41,7 @@ export default function AboutPage({ lang }: AboutPageProps) {
               <div className="ph-frame">
                 <img
                   className="ph-image"
-                  src="/pranavam_images/guruji.png"
+                  src="/pranavam_images/gurujii.png"
                   onError={(e) => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1617875216004-78f15839c578?w=480&h=640&fit=crop&q=85' }}
                   alt="Guruji Maneesh Madhusoodanan Potti"
                 />

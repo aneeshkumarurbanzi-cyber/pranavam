@@ -47,7 +47,7 @@ nav: {
       { ic: '/icons/swayamvara.png', nm: 'Swayamvara Parvathi Pooja', tg: 'Marriage & Love', cat: 'pooja', ds: 'Worship of Goddess Parvati to remove obstacles in marriage, find a suitable life partner, and strengthen the marital bond with divine grace.', bts: ['Removes obstacles delaying marriage', 'Helps find an ideal life partner', 'Strengthens and heals relationships between spouses'], price: 108 },
       { ic: '/icons/santana.png', nm: 'Santana Gopala Pooja', tg: 'Blessings for Children', cat: 'pooja', ds: 'Worship of Gopala Krishna with Tulasi leaves using the sacred Santhana Gopala Mantra to seek blessings for a child and family wealth.', bts: ['Blesses families seeking to conceive a child', 'Brings wealth and prosperity', 'Performed with the sacred Santhana Gopala Mantra'], price: 108 },
       { ic: '/icons/durga.png', nm: 'Durga Pooja', tg: 'Divine Power', cat: 'pooja', ds: 'Celebrates the triumph of good over evil, invoking Goddess Durga\'s power for protection, happiness, health, and overcoming all obstacles.', bts: ['Protection from enemies and evil eye', 'Brings happiness, wealth, and prosperity', 'Relief from prolonged illness and life obstacles'], price: 108 },
-      { ic: '/icons/guruthi.png', nm: 'Guruthi Pooja', tg: 'Supreme Worship', cat: 'pooja', ds: 'The most powerful pooja worshiping Goddess Rajarajeswari Devi — the combined powers of Lakshmi, Saraswati, and Bhadrakali — to remove all obstacles.', bts: ['Removes evil forces and all life obstacles', 'Relief from health, marriage & fertility issues', 'Financial stability and career improvements'], price: 151 },
+      { ic: '/icons/guruthy.png', nm: 'Guruthi Pooja', tg: 'Supreme Worship', cat: 'pooja', ds: 'The most powerful pooja worshiping Goddess Rajarajeswari Devi — the combined powers of Lakshmi, Saraswati, and Bhadrakali — to remove all obstacles.', bts: ['Removes evil forces and all life obstacles', 'Relief from health, marriage & fertility issues', 'Financial stability and career improvements'], price: 151 },
       { ic: '/icons/lakshmi-ganesha.png', nm: 'Lakshmi Ganesha Homam', tg: 'Wealth & Victory', cat: 'homam', ds: 'A sacred fire ritual invoking the combined blessings of Goddess Lakshmi and Lord Ganesha for wealth, success, and lasting family harmony.', bts: ['Attracts wealth, prosperity, and success', 'Removes all obstacles and negative energies', 'Brings harmony in family and business life'], price: 151 },
       { ic: '/icons/maha-vishnu.png', nm: 'Maha Vishnu Pooja', tg: 'Divine Grace', cat: 'pooja', ds: 'Ceremonial worship of Lord Vishnu for longevity, prosperity, peace, and freedom from fear, stress, anxiety, and diseases.', bts: ['Relief from fear of death and spiritual liberation', 'Reduces stress, anxiety, and protects from diseases', 'Blessings of longevity, peace, and prosperity'], price: 108 },
       { ic: '/icons/sayujya.png', nm: 'Sayujya Pooja', tg: 'Ancestral Peace', cat: 'pooja', ds: 'Removes obstacles in attaining eternal peace and salvation, offering blessings for the souls of departed ancestors at Lord Mahavishnu\'s feet.', bts: ['Eternal peace & salvation for departed ancestors', 'Attains salokyam, saroopyam & sameepyam', 'Spiritual liberation at Lord Mahavishnu\'s feet'], price: 108 },
@@ -60,8 +60,8 @@ nav: {
     tl: 'Guided Pilgrimages Through Kerala',
     sub: "Join our private group pilgrimages to Kerala's most sacred temples. Ritual participation, spiritual guidance, and accommodation included.",
     cta: 'Enquire About Tours',
-    lbl: 'Kerala · Sacred Temples',
-    dest: ['Guruvayur Sree Krishna Temple', 'Sabarimala Sree Ayyappa', 'Padmanabhaswamy Temple — Thiruvananthapuram','Sree Parasurama Temple in Thiruvallam', 'Thrissur Pooram — The Temple Festival', 'Ettumanoor Mahadeva Temple', 'Vaikom Mahadeva Temple']
+    lbl: "Discover Kerala's Sacred Journey",
+    dest: [ 'Sabarimala Sree Ayyappa','Sree Parasurama Temple in Thiruvallam', 'Thrissur Pooram — The Temple Festival', 'Ettumanoor Mahadeva Temple', 'Vaikom Mahadeva Temple']
   },
   testimonials: {
     ey: 'Testimonials',
@@ -200,59 +200,118 @@ nav: {
     filterHomam: 'Homam (Fire Rituals)',
     filterPooja: 'Pooja (Worship)',
   },
-  detTravel: {
-    ey: 'Temple Pilgrimages',
-    tl: 'Kerala Sacred Travels',
-    sub: "Experience Kerala's spiritual heart. Guruji offers fully guided private pilgrimage packages to historical temples, handling all accommodation, darshan entries, and sacred ceremonies.",
-    formTl: 'Custom Tour Inquiry',
-    formSub: "Looking for a custom family pilgrimage or specific dates? Submit your inquiry, and Guruji's team will contact you.",
-    formBtn: 'Inquire Now',
-    items: [
-      {
-        nm: 'South Kerala Temple Tour',
-        ds: 'A sacred pilgrimage to the majestic Sree Padmanabhaswamy Temple, the ancient rock-cut cave temples, and Vaikom Mahadeva Temple. Includes guided meditation, temple entry permits, and luxury stay.',
-        duration: '5 Days / 4 Nights',
-        price: 'Price: $650 per person (Deposit: $150)',
-        amt: 150
-      },
-       {
-      nm: " Thiruvallam Sree Parasurama Swami Temple For Belitharpanam",
-      ds: "Thiruvallam is a sacred riverbank suburb in Thiruvananthapuram, Kerala, famous for the ancient Thiruvallam Sree Parasurama Swami Temple, peaceful backwaters, and traditional ancestral rites.",
-      duration: "2 Days / 1 Night",
-      price: 'Price:$850 per person (Deposit: $250)',
-      amt: 200,
+ detTravel: {
+  ey: 'Temple Pilgrimages',
+  tl: 'Kerala Sacred Travels',
+  sub: 'Walk through ancient temples, receive authentic Vedic guidance, experience sacred rituals, and reconnect with your inner self.',
+
+  formTl: 'Custom Tour Inquiry',
+  formSub: "Looking for a custom family pilgrimage or specific dates? Submit your inquiry, and Guruji's team will contact you.",
+  formBtn: 'Inquire Now',
+
+  items: [
+    {
+      nm: 'South Kerala Temple Tour',
+      ds: 'A sacred pilgrimage through the temples of South Kerala, including Padmanabhaswamy Temple, Thiruvallam Sree Parasurama Temple, Attukal Bhagavathy Temple and Kanyakumari. Includes guided meditation, temple assistance and luxury stay.',
+      duration: '5 Days / 4 Nights',
+      price: 'Starting From $650',
+      amt: 150
     },
-      {
-        nm: 'North Kerala & Sabarimala Tour',
-        ds: 'Venture into central-north Kerala. Visit the famous Sree Krishna Temple of Guruvayur, Vadakkunnathan Temple, and Sabarimala. Complete with special Pujas conducted by Guruji, traditional stays, and vegetarian feast.',
-        duration: '7 Days / 6 Nights',
-        price: 'Price: $850 per person (Deposit: $250)',
-        amt: 250
-      },
-        {
-  nm: "Holy & Religious Places Tour",
-  ds: "Discover Kerala's most sacred temples and spiritual destinations including Guruvayur Temple, Sabarimala, Chottanikkara Bhagavathy Temple, Vaikom Mahadeva Temple, Ettumanoor Mahadeva Temple, Padmanabhaswamy Temple, and many more. Experience divine rituals, peaceful surroundings, and Kerala's rich spiritual heritage.",
-  duration: "5 Days / 4 Nights",
-  price:'Price:$399 per person (Deposit: $250)',
-  amt: 150,
+
+    {
+      nm: 'Thiruvallam Sree Parasurama Swami Temple',
+      ds: 'A spiritual journey to the sacred Thiruvallam Sree Parasurama Swami Temple in Thiruvananthapuram, known for ancestral rites and its peaceful riverside setting.',
+      duration: '2 Days / 1 Night',
+      price: 'Starting From $850',
+      amt: 200
+    },
+
+    {
+      nm: 'North Kerala & Sabarimala Tour',
+      ds: 'Venture through central and northern Kerala with visits to Vadakkunnathan Temple and Sabarimala. Includes special Pujas conducted by Guruji, traditional stays and vegetarian meals.',
+      duration: '7 Days / 6 Nights',
+      price: 'Starting From $850',
+      amt: 250
+    },
+
+    {
+      nm: 'Holy & Religious Places Tour',
+      ds: "Discover Kerala's most sacred destinations including Guruvayur Temple, Sabarimala, Chottanikkara Bhagavathy Temple, Vaikom Mahadeva Temple, Ettumanoor Mahadeva Temple and Padmanabhaswamy Temple.",
+      duration: '5 Days / 4 Nights',
+      price: 'Starting From $399',
+      amt: 150
+    }
+  ]
+
+  },
+ gallery: {
+  ey: 'Spiritual Moments',
+  tl: 'Sacred Gallery',
+  sub: 'Moments captured during temple rituals, pilgrimages, and spiritual gatherings.',
+
+  cats: {
+    all: 'All',
+    temple: 'Temples',
+    ritual: 'Rituals',
+    guruji: 'Guruji'
+  },
+
+  items: [
+    {
+      title: 'Temple Deity Worship',
+      cat: 'temple',
+      desc: 'A sacred moment of worship and offering before the beautifully decorated temple deity.'
+    },
+
+    {
+      title: 'Sacred Hilltop Ritual',
+      cat: 'ritual',
+      desc: 'A spiritual gathering and meditation ritual performed at a sacred hilltop shrine surrounded by nature.'
+    },
+
+    {
+      title: 'Vedic Fire Ritual',
+      cat: 'ritual',
+      desc: 'A traditional Vedic fire ceremony performed with sacred offerings, lamps, and devotional prayers.'
+    },
+
+    {
+      title: 'Traditional Kerala Temple Ritual',
+      cat: 'guruji',
+      desc: 'Guruji participating in a traditional Kerala temple ritual surrounded by sacred instruments and offerings.'
+    },
+
+    {
+      title: 'Shiva Darshan',
+      cat: 'temple',
+      desc: 'A spiritual gathering before the magnificent Shiva statue during a sacred pilgrimage.'
+    },
+
+    {
+      title: 'Sacred Shiva Ritual',
+      cat: 'ritual',
+      desc: 'An evening Shiva worship ceremony illuminated by sacred lamps and fire offerings.'
+    },
+
+    {
+      title: 'Temple Community Gathering',
+      cat: 'guruji',
+      desc: 'Guruji with devotees and participants during a traditional spiritual gathering in Kerala.'
+    },
+
+    {
+      title: 'Pilgrimage by the Sacred Pond',
+      cat: 'temple',
+      desc: 'A peaceful moment with devotees during a spiritual visit to a sacred temple pond.'
+    },
+
+    {
+      title: 'Devotees and Guruji',
+      cat: 'guruji',
+      desc: 'Guruji with spiritual seekers and devotees sharing a joyful moment during a pilgrimage.'
+    }
+  ]
 },
-    
-    ]
-  },
-  gallery: {
-    ey: 'Spiritual Moments',
-    tl: 'Sacred Gallery',
-    sub: 'Moments captured during temple rituals, pilgrimages, and spiritual gatherings.',
-    cats: { all: 'All', temple: 'Temples', ritual: 'Rituals', guruji: 'Guruji' },
-    items: [
-      { title: 'Guruvayur Temple Elephant', cat: 'temple', desc: 'Sacred temple elephants lining up for the daily seeveli procession at Guruvayur Sree Krishna Temple.' },
-      { title: 'Vedic Fire Ritual (Homam)', cat: 'ritual', desc: 'Guruji Maneesh performing Ganapathi Homam at sunrise for health and positive energy.' },
-      { title: 'Guruji in Moscow', cat: 'guruji', desc: 'Guruji giving a lecture on Vedic Astrology (Jyotisham) to spiritual practitioners in Moscow.' },
-      { title: 'Padmanabhaswamy Temple Pond', cat: 'temple', desc: 'The holy Padmatheertham pond in front of the grand gopuram of Sree Padmanabhaswamy Temple.' },
-      { title: 'Bhagavathi Seva Pooja', cat: 'ritual', desc: 'A traditional Kerala puja dedicated to Goddess Bhagavathi for protection and prosperity.' },
-      { title: 'Guruji Performing Abhishekam', cat: 'guruji', desc: 'Guruji performing ritual bath (abhishekam) to the deity at a Thrissur temple.' }
-    ]
-  },
   community: {
     ey: 'Spiritual Updates',
     tl: 'Community & News',
@@ -333,22 +392,20 @@ ru: {
     sub: 'Выберите из 16 традиционных ритуалов Кералы — каждый выполняется Гуруджи с подлинной ведической точностью.',
     cta: 'Подробнее',
     items: [
-      { ic: '/icons/ganesha.png', nm: 'Ганапати Хомам', tg: 'Новые Начала', cat: 'homam', ds: 'Проводится перед любым новым делом, бизнесом или переездом — призывает благословение Господа Ганеши для устранения препятствий и обеспечения процветания.', bts: ['Устраняет препятствия в работе и бизнесе', 'Приносит счастье, здоровье и процветание', 'Идеально для новых домов и новых начинаний'], price: 108 },
-      { ic: '/icons/dhanvantari.png', nm: 'Дханвантари Пуджа', tg: 'Здоровье и Исцеление', cat: 'pooja', ds: 'Призывает Господа Дханвантари, небесного целителя, для достижения здоровья, богатства и исцеления болезней, укрепления ума и тела.', bts: ['Исцеляет болезни и восстанавливает здоровье', 'Приносит богатство и довольство', 'Укрепляет разум и тело через ведические мантры'], price: 108 },
-      { ic: '/icons/mahamrityunjaya.png', nm: 'Маха Мритьюнджая Хомам', tg: 'Долголетие и Мир', cat: 'homam', ds: 'Мощный ведический ритуал для получения благословения Господа Шивы — защита от безвременной смерти, долголетие и духовное освобождение.', bts: ['Защита от безвременной смерти и несчастных случаев', 'Долголетие, мир и процветание', 'Преодоление негативных планетарных влияний'], price: 151 },
-      { ic: '/icons/sudarshana.png', nm: 'Сударшана Хомам', tg: 'Защита и Успех', cat: 'homam', ds: 'Призывает божественную энергию Господа Сударшаны для уничтожения негатива, устранения жизненных трудностей и привлечения здоровья и мира.', bts: ['Уничтожает негатив и сглаз', 'Способствует успеху и глубокому очищению', 'Предотвращает несчастные случаи и устраняет бедность'], price: 151 },
-      { ic: '/icons/bhagavati.png', nm: 'Бхагавати Сева Пуджа', tg: 'Божественное Женское Начало', cat: 'pooja', ds: 'Священная ведическая церемония в честь божественного женского начала для устранения препятствий, негативной энергии и планетарных влияний.', bts: ['Духовный рост и внутренний баланс', 'Устраняет чёрную магию и планетарные влияния', 'Финансовая стабильность и защита бизнеса'], price: 151 },
-      { ic: '/icons/kali.png', nm: 'Кали Пуджа', tg: 'Шакти', cat: 'pooja', ds: 'Проводится в Амавасью для умилостивления Богини Кали, снятия напряжения, исцеления болезней и устранения негативной энергии из дома.', bts: ['Исцеляет болезни и укрепляет психическое здоровье', 'Удаляет негативную энергию и восстанавливает мир', 'Помогает расплатиться с долгами и достичь стабильности'], price: 108 },
-      { ic: '/icons/aghora.png', nm: 'Агхора Хомам', tg: 'Духовная Защита', cat: 'homam', ds: 'Испрашивает благословения Господа Шивы в форме Агхора Рудры для отражения злых духов, разрушения заклятий и защиты от чёрной магии.', bts: ['Отражает злых духов и чёрную магию', 'Разрушает проклятия, заклятия и сглаз', 'Защищает дом и человека от всех негативных сил'], price: 201 },
-      { ic: '/icons/swayamvara.png', nm: 'Сваямвара Парвати Пуджа', tg: 'Брак и Любовь', cat: 'pooja', ds: 'Поклонение Богине Парвати для устранения препятствий в браке, обретения подходящего спутника жизни и укрепления супружеских уз.', bts: ['Устраняет препятствия, задерживающие брак', 'Помогает найти идеального спутника жизни', 'Укрепляет и восстанавливает отношения между супругами'], price: 108 },
-      { ic: '/icons/santana.png', nm: 'Сантана Гопала Пуджа', tg: 'Благословение Детей', cat: 'pooja', ds: 'Поклонение Гопала Кришне с листьями Туласи по мантре Сантана Гопала для получения благословения на ребёнка и семейное процветание.', bts: ['Благословляет семьи, желающие зачать ребёнка', 'Приносит богатство и процветание', 'Совершается с сакральной мантрой Сантана Гопала'], price: 108 },
-      { ic: '/icons/durga.png', nm: 'Дурга Пуджа', tg: 'Божественная Сила', cat: 'pooja', ds: 'Прославляет победу добра над злом, призывая силу Богини Дурги для защиты, счастья, здоровья и преодоления всех жизненных препятствий.', bts: ['Защита от врагов и сглаза', 'Приносит счастье, богатство и процветание', 'Исцеление затяжных болезней и устранение препятствий'], price: 108 },
-      { ic: '/icons/guruti.png', nm: 'Гурути Пуджа', tg: 'Высшее Поклонение', cat: 'pooja', ds: 'Мощнейшая пуджа Богине Раджараджешвари Дэви — объединённой силе Лакшми, Сарасвати и Бхадракали — для устранения всех жизненных препятствий.', bts: ['Устраняет злые силы и все жизненные препятствия', 'Помогает при болезнях, проблемах в браке и бесплодии', 'Финансовая стабильность и карьерный рост'], price: 151 },
-      { ic: '/icons/lakshmi-ganesha.png', nm: 'Лакшми Ганеша Хомам', tg: 'Богатство и Победа', cat: 'homam', ds: 'Священный огненный ритуал для получения объединённого благословения Богини Лакшми и Господа Ганеши — богатство, успех и семейная гармония.', bts: ['Привлекает богатство, процветание и успех', 'Устраняет все препятствия и негативную энергию', 'Приносит гармонию в семью и дела'], price: 151 },
-      { ic: '/icons/mahavishnu.png', nm: 'Маха Вишну Пуджа', tg: 'Милость Вишну', cat: 'pooja', ds: 'Торжественное поклонение Господу Вишну для долголетия, процветания, мира и освобождения от страха, стресса и болезней.', bts: ['Освобождение от страха смерти и духовное спасение', 'Снижает стресс, тревогу и защищает от болезней', 'Благословение долголетием, миром и процветанием'], price: 108 },
-      { ic: '/icons/sayujya.png', nm: 'Саюджья Пуджа', tg: 'Мир Предков', cat: 'pooja', ds: 'Устраняет препятствия на пути к вечному покою и спасению, даруя благословение душам ушедших предков у стоп Господа Махавишну.', bts: ['Вечный мир и спасение для душ предков', 'Достижение салокьям, сарупьям и самипьям', 'Духовное освобождение у стоп Господа Махавишну'], price: 108 },
-      { ic: '/icons/navagraha.png', nm: 'Навагра Пуджа', tg: 'Планетарные Ритуалы', cat: 'pooja', ds: 'Проверенный временем ведический ритуал поклонения всем девяти планетам (Наваграхам) для нейтрализации доша в гороскопе и процветания.', bts: ['Устранение Наваграха доша и дефектов гороскопа', 'Улучшение здоровья и финансового положения', 'Защита от опасных ситуаций, предсказанных в карте рождения'], price: 108 },
-      { ic: '/icons/navchandika.png', nm: 'Навчандика Пуджа', tg: 'Исполнение Желаний', cat: 'pooja', ds: 'Мощная Дурга-пуджа для исполнения сокровенных желаний и освобождения от страданий. Богиня Чанди немедленно откликается на искренние молитвы.', bts: ['Исполняет искренние желания и мечты', 'Освобождение от многолетних страданий', 'Один из самых мощных и отзывчивых ритуалов'], price: 151 }
+      { ic: '/icons/ganesha.png', nm: 'Ганапати Хомам', tg: 'Новые Начала', cat: 'homam', ds: 'Проводится перед любым новым делом, бизнесом или переездом — призывает благословение Господа Ганеши для устранения препятствий и обеспечения процветания.', bts: ['Устраняет препятствия в работе и бизнесе', 'Приносит счастье, здоровье и процветание', 'Идеально для новых домов и новых начинаний'], },
+      { ic: '/icons/dhanvantari.png', nm: 'Дханвантари Пуджа', tg: 'Здоровье и Исцеление', cat: 'pooja', ds: 'Призывает Господа Дханвантари, небесного целителя, для достижения здоровья, богатства и исцеления болезней, укрепления ума и тела.', bts: ['Исцеляет болезни и восстанавливает здоровье', 'Приносит богатство и довольство', 'Укрепляет разум и тело через ведические мантры'], },
+      { ic: '/icons/mahamrityunjaya.png', nm: 'Маха Мритьюнджая Хомам', tg: 'Долголетие и Мир', cat: 'homam', ds: 'Мощный ведический ритуал для получения благословения Господа Шивы — защита от безвременной смерти, долголетие и духовное освобождение.', bts: ['Защита от безвременной смерти и несчастных случаев', 'Долголетие, мир и процветание', 'Преодоление негативных планетарных влияний'],  },
+      { ic: '/icons/sudarshana.png', nm: 'Сударшана Хомам', tg: 'Защита и Успех', cat: 'homam', ds: 'Призывает божественную энергию Господа Сударшаны для уничтожения негатива, устранения жизненных трудностей и привлечения здоровья и мира.', bts: ['Уничтожает негатив и сглаз', 'Способствует успеху и глубокому очищению', 'Предотвращает несчастные случаи и устраняет бедность'], },
+      { ic: '/icons/bhagavati.png', nm: 'Бхагавати Сева Пуджа', tg: 'Божественное Женское Начало', cat: 'pooja', ds: 'Священная ведическая церемония в честь божественного женского начала для устранения препятствий, негативной энергии и планетарных влияний.', bts: ['Духовный рост и внутренний баланс', 'Устраняет чёрную магию и планетарные влияния', 'Финансовая стабильность и защита бизнеса'], },
+      { ic: '/icons/kali.png', nm: 'Кали Пуджа', tg: 'Шакти', cat: 'pooja', ds: 'Проводится в Амавасью для умилостивления Богини Кали, снятия напряжения, исцеления болезней и устранения негативной энергии из дома.', bts: ['Исцеляет болезни и укрепляет психическое здоровье', 'Удаляет негативную энергию и восстанавливает мир', 'Помогает расплатиться с долгами и достичь стабильности'], },
+      { ic: '/icons/santana.png', nm: 'Сантана Гопала Пуджа', tg: 'Благословение Детей', cat: 'pooja', ds: 'Поклонение Гопала Кришне с листьями Туласи по мантре Сантана Гопала для получения благословения на ребёнка и семейное процветание.', bts: ['Благословляет семьи, желающие зачать ребёнка', 'Приносит богатство и процветание', 'Совершается с сакральной мантрой Сантана Гопала'], },
+      { ic: '/icons/durga.png', nm: 'Дурга Пуджа', tg: 'Божественная Сила', cat: 'pooja', ds: 'Прославляет победу добра над злом, призывая силу Богини Дурги для защиты, счастья, здоровья и преодоления всех жизненных препятствий.', bts: ['Защита от врагов и сглаза', 'Приносит счастье, богатство и процветание', 'Исцеление затяжных болезней и устранение препятствий'], },
+      { ic: '/icons/guruty.png', nm: 'Гурути Пуджа', tg: 'Высшее Поклонение', cat: 'pooja', ds: 'Мощнейшая пуджа Богине Раджараджешвари Дэви — объединённой силе Лакшми, Сарасвати и Бхадракали — для устранения всех жизненных препятствий.', bts: ['Устраняет злые силы и все жизненные препятствия', 'Помогает при болезнях, проблемах в браке и бесплодии', 'Финансовая стабильность и карьерный рост'], },
+      { ic: '/icons/lakshmi-ganesha.png', nm: 'Лакшми Ганеша Хомам', tg: 'Богатство и Победа', cat: 'homam', ds: 'Священный огненный ритуал для получения объединённого благословения Богини Лакшми и Господа Ганеши — богатство, успех и семейная гармония.', bts: ['Привлекает богатство, процветание и успех', 'Устраняет все препятствия и негативную энергию', 'Приносит гармонию в семью и дела'], },
+      { ic: '/icons/mahavishnu.png', nm: 'Маха Вишну Пуджа', tg: 'Милость Вишну', cat: 'pooja', ds: 'Торжественное поклонение Господу Вишну для долголетия, процветания, мира и освобождения от страха, стресса и болезней.', bts: ['Освобождение от страха смерти и духовное спасение', 'Снижает стресс, тревогу и защищает от болезней', 'Благословение долголетием, миром и процветанием'],},
+      { ic: '/icons/sayujya.png', nm: 'Саюджья Пуджа', tg: 'Мир Предков', cat: 'pooja', ds: 'Устраняет препятствия на пути к вечному покою и спасению, даруя благословение душам ушедших предков у стоп Господа Махавишну.', bts: ['Вечный мир и спасение для душ предков', 'Достижение салокьям, сарупьям и самипьям', 'Духовное освобождение у стоп Господа Махавишну'],  },
+      { ic: '/icons/navagraha.png', nm: 'Навагра Пуджа', tg: 'Планетарные Ритуалы', cat: 'pooja', ds: 'Проверенный временем ведический ритуал поклонения всем девяти планетам (Наваграхам) для нейтрализации доша в гороскопе и процветания.', bts: ['Устранение Наваграха доша и дефектов гороскопа', 'Улучшение здоровья и финансового положения', 'Защита от опасных ситуаций, предсказанных в карте рождения'],  },
+      { ic: '/icons/navchandika.png', nm: 'Навчандика Пуджа', tg: 'Исполнение Желаний', cat: 'pooja', ds: 'Мощная Дурга-пуджа для исполнения сокровенных желаний и освобождения от страданий. Богиня Чанди немедленно откликается на искренние молитвы.', bts: ['Исполняет искренние желания и мечты', 'Освобождение от многолетних страданий', 'Один из самых мощных и отзывчивых ритуалов'],}
     ]
   },
   travel: {
@@ -356,8 +413,8 @@ ru: {
     tl: 'Духовные путешествия через Кералу',
     sub: 'Присоединитесь к нашим частным паломничествам к священным храмам Кералы. Духовное руководство и участие в ритуалах включены.',
     cta: 'Узнать о турах',
-    lbl: 'Керала · Священные Храмы',
-    dest: ['Храм Гуруваюр Шри Кришна', 'Шабаримала Шри Айяппа', 'Храм Падманабхасвами — Тируванантапурам', 'Тришур Пурам — Праздник храмов', 'Храм Эттуманур Махадева', 'Храм Вайком Махадева']
+    lbl: 'Откройте для себя священное путешествие по Керале',
+    dest: [ 'Шабаримала Шри Айяппа',  'Тришур Пурам — Праздник храмов', 'Храм Эттуманур Махадева', 'Храм Вайком Махадева']
   },
   testimonials: {
     ey: 'Отзывы',
@@ -496,43 +553,71 @@ ru: {
     filterHomam: 'Хомам (Огненные)',
     filterPooja: 'Пуджа (Поклонение)',
   },
-  detTravel: {
-    ey: 'Паломничество',
-    tl: 'Путешествия по храмам Кералы',
-    sub: 'Погрузитесь в духовное сердце Кералы. Гуруджи организует индивидуальные паломничества к древнейшим храмам, включая проживание, входные билеты и проведение священных церемоний.',
-    formTl: 'Запрос на индивидуальный тур',
-    formSub: 'Хотите составить индивидуальный маршрут или выбрать другие даты? Оставьте заявку, и мы свяжемся с вами.',
-    formBtn: 'Отправить запрос',
-    items: [
-      {
-  nm: 'Тур по храмам Южной Кералы',
-  ds: 'Священное паломничество в величественный храм Шри Падманабхасвами, древние высеченные в скалах пещерные храмы и храм Вайком Махадева. Включает сопровождение гида, медитацию, разрешения на посещение храмов и проживание в роскошном отеле.',
-  duration: '5 дней / 4 ночи',
-  price: 'Цена: 650 $ с человека (Депозит: 150 $)',
-  amt: 150
-},
-{
-  nm: 'Храм Шри Парашурама Свами в Тирувалламе (Белитарпанам)',
-  ds: 'Тируваллам — священный прибрежный район Тируванантапурама, штат Керала, известный древним храмом Шри Парашурама Свами, живописными заводями и традиционными обрядами почитания предков.',
-  duration: '2 дня / 1 ночь',
-  price: 'Цена: 850 $ с человека (Депозит: 250 $)',
-  amt: 200
-},
-{
-  nm: 'Тур по Северной Керале и Сабаримале',
-  ds: 'Путешествие по центральной и северной Керале с посещением знаменитого храма Шри Кришны в Гуруваюре, храма Вадаккуннатхан и Сабарималы. В программу входят специальные пуджи, проводимые Гуруджи, традиционное размещение и вегетарианские угощения.',
-  duration: '7 дней / 6 ночей',
-  price: 'Цена: 850 $ с человека (Депозит: 250 $)',
-  amt: 250
-},
-{
-  nm: 'Тур по святым и религиозным местам',
-  ds: 'Откройте для себя самые священные храмы и духовные достопримечательности Кералы, включая храм Гуруваюр, Сабарималу, храм Чоттаниккара Бхагавати, храм Вайком Махадева, храм Эттуманур Махадева, храм Падманабхасвами и многие другие. Почувствуйте атмосферу божественных ритуалов, умиротворения и богатого духовного наследия Кералы.',
-  duration: '5 дней / 4 ночи',
-  price: 'Цена: 399 $ с человека (Депозит: 250 $)',
-  amt: 150
-},
-    ]
+ detTravel: {
+  ey: 'Храмовые паломничества',
+
+  tl: 'Духовные путешествия по Керале',
+
+  sub: 'Пройдите по древним храмам, получите подлинные ведические наставления, примите участие в священных ритуалах и вновь обретите связь со своим внутренним миром.',
+
+  formTl: 'Индивидуальный запрос на тур',
+
+  formSub: 'Ищете индивидуальное семейное паломничество или хотите выбрать определённые даты? Отправьте свой запрос, и команда Гуруджи свяжется с вами.',
+
+  formBtn: 'Отправить запрос',
+
+  items: [
+
+    {
+      nm: 'Паломнический тур по храмам Южной Кералы',
+
+      ds: 'Духовное паломничество по храмам Южной Кералы, включая храм Падманабхасвами, храм Тируваллам Шри Парашурама, храм Аттукал Бхагавати и Каньякумари. В тур входят медитации с наставником, помощь при посещении храмов и проживание в отеле высокого класса.',
+
+      duration: '5 дней / 4 ночи',
+
+      price: 'От $650',
+
+      amt: 150
+    },
+
+    {
+      nm: 'Храм Тируваллам Шри Парашурама Свами',
+
+      ds: 'Духовное путешествие к священному храму Тируваллам Шри Парашурама Свами в Тируванантапураме, известному проведением обрядов для предков и спокойной атмосферой на берегу реки.',
+
+      duration: '2 дня / 1 ночь',
+
+      price: 'От $850',
+
+      amt: 200
+    },
+
+    {
+      nm: 'Тур по Северной Керале и Сабаримале',
+
+      ds: 'Путешествие по центральной и северной части Кералы с посещением храма Вадаккуннатхан и Сабарималы. В программу входят специальные пуджи, проводимые Гуруджи, проживание в традиционных местах и вегетарианское питание.',
+
+      duration: '7 дней / 6 ночей',
+
+      price: 'От $850',
+
+      amt: 250
+    },
+
+    {
+      nm: 'Тур по святым и религиозным местам',
+
+      ds: 'Откройте для себя самые священные места Кералы, включая храм Гуруваюр, Сабарималу, храм Чоттаниккара Бхагавати, храм Вайком Махадева, храм Эттуманур Махадева и храм Падманабхасвами.',
+
+      duration: '5 дней / 4 ночи',
+
+      price: 'От $399',
+
+      amt: 150
+    }
+
+  ]
+
   },
   gallery: {
     ey: 'Духовные мгновения',

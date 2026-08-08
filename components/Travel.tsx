@@ -43,7 +43,7 @@ export default function Travel({ lang, go }: TravelProps) {
             <div className="tr-frame">
               <img
                 className="tr-image"
-                src="/pranavam_images/kerala_travel.png"
+                src="/pranavam_images/keralatravel.png"
                 onError={(e) => { (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1625807161536-27903f2200fa?w=800&h=600&fit=crop&q=85' }}
                 alt="Sacred Temples of Kerala"
               />
